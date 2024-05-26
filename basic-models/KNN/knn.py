@@ -1,6 +1,6 @@
 import numpy as np
 
-class KNN:
+class KNNClassifier:
     def __init__(self,*,K=None,weights='uniform'):
         """
         Parameters
