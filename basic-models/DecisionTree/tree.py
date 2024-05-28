@@ -136,7 +136,7 @@ class DTreeClassifier:
 
 
             # Initially, the root node holds all the data indices.
-            root=self.__node_split(list(self.x_train.index))
+            root=self.__node_split(np.arange(self.x_train.shape[0]))
             if isinstance(root, dict):
                 self.__recursive_split(root, curr_depth=1)
 
