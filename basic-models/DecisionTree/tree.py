@@ -117,14 +117,14 @@ class DTreeClassifier:
         # recursion
         s=self.__node_split(left)
         if isinstance(s, dict): # split to the left, done.
-            node['left']=s
-            self.__recursive_split(node['left'], curr_depth+1)
+            node['left_child']=s
+            self.__recursive_split(node['left_child'], curr_depth+1)
             
 
         s=self.__node_split(right)
         if isinstance(s, dict): # split to the right, done.
-            node['right']=s
-            self.__recursive_split(node['right'], curr_depth+1)
+            node['right_child']=s
+            self.__recursive_split(node['right_child'], curr_depth+1)
 
         
 
@@ -148,13 +148,13 @@ class DTreeClassifier:
     # Estimate the target class of a test data
     def __x_predict(self,tree,x):
         if x[self.tree['fid']] <= self.tree['split_point']:
-            if isinstance(self.tree['left'], dict): # recursion if not leaf
-                return self.x_predict(tree['left'], x) # recursion
+            if isinstance(self.tree['left_child'], dict): # recursion if not leaf
+                return self.x_predict(tree['left_child'], x) # recursion
             else:
                 return tree['class']
         else:
-            if isinstance(self.tree['right'], dict): # recursion if not leaf
-                return self.x_predict(tree['right'], x) # recursion
+            if isinstance(self.tree['right_child'], dict): # recursion if not leaf
+                return self.x_predict(tree['right_child'], x) # recursion
             else:
                 return tree['class']
 
