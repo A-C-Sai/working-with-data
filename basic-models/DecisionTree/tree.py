@@ -107,8 +107,8 @@ class DTreeClassifier:
 
     # Create a binary tree using recursion
     def __recursive_split(self, node, curr_depth):
-        left=node['left']
-        right=node['right']
+        left=node['left_child']
+        right=node['right_child']
 
         # exit recursion
         if self.max_depth!=None and curr_depth==self.max_depth:
