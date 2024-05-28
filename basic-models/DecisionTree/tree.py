@@ -162,7 +162,7 @@ class DTreeClassifier:
     # Estimate the target class of x_test
     def predict(self, x_test):
         tree=self.tree # predictor
-        y_pred=[self.x_predict(tree, x) for x in x_test]
+        y_pred=[self.__x_predict(tree, x) for x in x_test]
         return np.array(y_pred)
 
     
