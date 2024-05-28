@@ -94,7 +94,7 @@ class DTreeClassifier:
                     b_point=c # best split point
                     l_node=left # data ids in left node
                     r_node=right # data ids in right node
-                    values=np.bincount(self.target[data_ids]) # number of data points belonging to each class
+                    values=np.bincount(self.y_train[data_ids]) # number of data points belonging to each class
             
         if max_ig > 0.: # split
             return dict([('fid',b_fid),('split_point',b_point),\
