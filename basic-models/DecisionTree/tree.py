@@ -98,7 +98,7 @@ class DTreeClassifier:
             
         if max_ig > 0.: # split
             return dict([('fid',b_fid),('split_point',b_point),\
-                         ('gini',p_gini),('samples',n),('values',list(values), \
+                         ('gini',p_gini),('samples',n),('values',list(values)), \
                          ('class',values.argmax()),('left_child',l_node),('right_child',l_node)])
         else:
             return None # No split
