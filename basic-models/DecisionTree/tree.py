@@ -105,65 +105,65 @@ class DTreeClassifier:
 
 
 
-        # Create a binary tree using recursion
-        def __recursive_split(self, node, curr_depth):
-            left=node['left']
-            right=node['right']
+    # Create a binary tree using recursion
+    def __recursive_split(self, node, curr_depth):
+        left=node['left']
+        right=node['right']
 
-            # exit recursion
-            if self.max_depth!=None and curr_depth==self.max_depth:
-                return
+        # exit recursion
+        if self.max_depth!=None and curr_depth==self.max_depth:
+            return
 
-            # recursion
-            s=self.__node_split(left)
-            if isinstance(s, dict): # split to the left, done.
-                node['left']=s
-                self.__recursive_split(node['left'], curr_depth+1)
+        # recursion
+        s=self.__node_split(left)
+        if isinstance(s, dict): # split to the left, done.
+            node['left']=s
+            self.__recursive_split(node['left'], curr_depth+1)
             
 
-            s=self.__node_split(right)
-            if isinstance(s, dict): # split to the right, done.
-                node['right']=s
-                self.__recursive_split(node['right'], curr_depth+1)
+        s=self.__node_split(right)
+        if isinstance(s, dict): # split to the right, done.
+            node['right']=s
+            self.__recursive_split(node['right'], curr_depth+1)
 
         
 
-        # Create a tree using training data, and return the result of the tree
-        def fit(self, x_train, y_train):
-            self.x_train=x_train
-            self.y_train=y_train
-            self.classes=np.unique(self.y_train)
+    # Create a tree using training data, and return the result of the tree
+    def fit(self, x_train, y_train):
+        self.x_train=x_train
+        self.y_train=y_train
+        self.classes=np.unique(self.y_train)
 
 
-            # Initially, the root node holds all the data indices.
-            root=self.__node_split(np.arange(self.x_train.shape[0]))
-            if isinstance(root, dict):
-                self.__recursive_split(root, curr_depth=1)
+        # Initially, the root node holds all the data indices.
+        root=self.__node_split(np.arange(self.x_train.shape[0]))
+        if isinstance(root, dict):
+            self.__recursive_split(root, curr_depth=1)
 
 
-            self.tree=root
+        self.tree=root
 
 
 
-        # Estimate the target class of a test data
-        def __x_predict(self,tree,x):
-            if x[self.tree['fid']] <= self.tree['split_point']:
-                if isinstance(self.tree['left'], dict): # recursion if not leaf
-                    return self.x_predict(tree['left'], x) # recursion
-                else:
-                    return tree['class']
+    # Estimate the target class of a test data
+    def __x_predict(self,tree,x):
+        if x[self.tree['fid']] <= self.tree['split_point']:
+            if isinstance(self.tree['left'], dict): # recursion if not leaf
+                return self.x_predict(tree['left'], x) # recursion
             else:
-                if isinstance(self.tree['right'], dict): # recursion if not leaf
-                    return self.x_predict(tree['right'], x) # recursion
-                else:
-                    return tree['class']
+                return tree['class']
+        else:
+            if isinstance(self.tree['right'], dict): # recursion if not leaf
+                return self.x_predict(tree['right'], x) # recursion
+            else:
+                return tree['class']
 
 
-        # Estimate the target class of x_test
-        def predict(self, x_test):
-            tree=self.tree # predictor
-            y_pred=[self.x_predict(tree, x) for x in x_test]
-            return np.array(y_pred)
+    # Estimate the target class of x_test
+    def predict(self, x_test):
+        tree=self.tree # predictor
+        y_pred=[self.x_predict(tree, x) for x in x_test]
+        return np.array(y_pred)
 
     
                 
