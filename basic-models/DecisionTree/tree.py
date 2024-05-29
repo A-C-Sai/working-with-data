@@ -1,5 +1,5 @@
 import numpy as np
-
+import copy
 
 class DTreeClassifier:
 
@@ -9,17 +9,14 @@ class DTreeClassifier:
         self.classes=None # classes present in y_train
         self.x_train=None 
         self.y_train=None 
-        self.tree=dict() # tree structure
+        self.estimator1=dict() # detailed result
+        self.estimator2=dict() # summarized result
         '''
             tree 
             ----
             {
                 'fid':
                 'split_point':
-                'gini': **
-                'samples': **
-                'values': **
-                'class': **
                 'left_child': value / {'fid': , 'split_point': , ...}
                 'right_child': value / {'fid': , 'split_point': , ...}
             }
@@ -94,12 +91,11 @@ class DTreeClassifier:
                     b_point=c # best split point
                     l_node=left # data ids in left node
                     r_node=right # data ids in right node
-                    values=np.bincount(self.y_train[data_ids]) # number of data points belonging to each class
+                   
             
         if max_ig > 0.: # split
             return dict([('fid',b_fid),('split_point',b_point),\
-                         ('gini',p_gini),('samples',n),('values',list(values)), \
-                         ('class',values.argmax()),('left_child',l_node),('right_child',l_node)])
+                         ('left_child',l_node),('right_child',r_node)])
         else:
             return None # No split
 
@@ -111,7 +107,7 @@ class DTreeClassifier:
         right=node['right_child']
 
         # exit recursion
-        if self.max_depth!=None and curr_depth==self.max_depth:
+        if curr_depth>=self.max_depth:
             return
 
         # recursion
@@ -126,22 +122,42 @@ class DTreeClassifier:
             node['right_child']=s
             self.__recursive_split(node['right_child'], curr_depth+1)
 
-        
+    
+    # Majority Vote
+    def __majority_vote(self, data_ids):
+        return np.bincount(self.y_train[data_ids]).argmax()
 
+
+    # Change the data ids in the leaf node to majority class
+    def __update_leaf(self, node):
+        if isinstance(node, dict):
+            for key, value in node.items():
+                if key == 'left_child' or key == 'right_child':
+                    rtn=self.__update_leaf(value)
+                    if rtn[0] == 1: # leaf node
+                        node[key]=rtn[1]
+            return 0,0 # first 0 means this is not a leaf node
+        else:
+            return 1, self.__majority_vote(node) # first 1 means this is a leaf node
+            
+   
     # Create a tree using training data, and return the result of the tree
     def fit(self, x_train, y_train):
         self.x_train=x_train
         self.y_train=y_train
         self.classes=np.unique(self.y_train)
 
-
         # Initially, the root node holds all the data indices.
         root=self.__node_split(np.arange(self.x_train.shape[0]))
         if isinstance(root, dict):
-            self.__recursive_split(root, curr_depth=1)
+            self.__recursive_split(root, curr_depth=0)
 
 
-        self.tree=root
+        self.estimator1=root # estimator1's leaf nodes contains data indices
+
+        delf.estimator2=copy.deepcopy(self.estimator1)
+        self.update_leaf(self.estimator2)
+        
 
 
 
@@ -151,17 +167,17 @@ class DTreeClassifier:
             if isinstance(self.tree['left_child'], dict): # recursion if not leaf
                 return self.__x_predict(tree['left_child'], x) # recursion
             else:
-                return tree['class']
+                return tree['left_child']
         else:
             if isinstance(self.tree['right_child'], dict): # recursion if not leaf
                 return self.__x_predict(tree['right_child'], x) # recursion
             else:
-                return tree['class']
+                return tree['right_child']
 
 
     # Estimate the target class of x_test
     def predict(self, x_test):
-        tree=self.tree # predictor
+        tree=self.estimator2 # predictor
         y_pred=[self.__x_predict(tree, x) for x in x_test]
         return np.array(y_pred)
 
