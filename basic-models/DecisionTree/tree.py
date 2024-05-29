@@ -156,7 +156,7 @@ class DTreeClassifier:
         self.estimator1=root # estimator1's leaf nodes contains data indices
 
         self.estimator2=copy.deepcopy(self.estimator1)
-        self.update_leaf(self.estimator2)
+        self.__update_leaf(self.estimator2)
         
 
 
