@@ -163,13 +163,13 @@ class DTreeClassifier:
 
     # Estimate the target class of a test data
     def __x_predict(self,tree,x):
-        if x[self.tree['fid']] <= self.tree['split_point']:
-            if isinstance(self.tree['left_child'], dict): # recursion if not leaf
+        if x[tree['fid']] <= tree['split_point']:
+            if isinstance(tree['left_child'], dict): # recursion if not leaf
                 return self.__x_predict(tree['left_child'], x) # recursion
             else:
                 return tree['left_child']
         else:
-            if isinstance(self.tree['right_child'], dict): # recursion if not leaf
+            if isinstance(tree['right_child'], dict): # recursion if not leaf
                 return self.__x_predict(tree['right_child'], x) # recursion
             else:
                 return tree['right_child']
