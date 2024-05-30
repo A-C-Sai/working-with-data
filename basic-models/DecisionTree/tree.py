@@ -114,13 +114,13 @@ class DTreeClassifier:
         s=self.__node_split(left)
         if isinstance(s, dict): # split to the left, done.
             node['left_child']=s
-            self.__recursive_split(node['left_child']['ids'], curr_depth+1)
+            self.__recursive_split(node['left_child'], curr_depth+1)
             
 
         s=self.__node_split(right)
         if isinstance(s, dict): # split to the right, done.
             node['right_child']=s
-            self.__recursive_split(node['right_child']['ids'], curr_depth+1)
+            self.__recursive_split(node['right_child'], curr_depth+1)
 
     
     # Majority Vote
