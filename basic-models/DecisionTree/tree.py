@@ -14,11 +14,11 @@ class DTreeClassifier:
         '''
             tree 
             ----
-            {
+            {   'is_leaf':
                 'fid':
                 'split_point':
-                'left_child': value / {'fid': , 'split_point': , ...}
-                'right_child': value / {'fid': , 'split_point': , ...}
+                'left_child': {'is_leaf': , 'ids':[...]} / {'is_leaf': ,'fid': , 'split_point': , ...}
+                'right_child': {'is_leaf': , 'ids':[...]} / {'is_leaf': ,'fid': , 'split_point': , ...}
             }
         '''
 
@@ -94,8 +94,8 @@ class DTreeClassifier:
                    
             
         if max_ig > 0.: # split
-            return dict([('fid',b_fid),('split_point',b_point),\
-                         ('left_child',l_node),('right_child',r_node)])
+            return dict([('is_leaf',False),('fid',b_fid),('split_point',b_point),\
+                         ('left_child',{'is_leaf':True,'ids':l_node}),('right_child',{'is_leaf':True,'ids':r_node})])
         else:
             return None # No split
 
@@ -103,8 +103,8 @@ class DTreeClassifier:
 
     # Create a binary tree using recursion
     def __recursive_split(self, node, curr_depth):
-        left=node['left_child']
-        right=node['right_child']
+        left=node['left_child']['ids']
+        right=node['right_child']['ids']
 
         # exit recursion
         if curr_depth>=self.max_depth:
@@ -114,13 +114,13 @@ class DTreeClassifier:
         s=self.__node_split(left)
         if isinstance(s, dict): # split to the left, done.
             node['left_child']=s
-            self.__recursive_split(node['left_child'], curr_depth+1)
+            self.__recursive_split(node['left_child']['ids'], curr_depth+1)
             
 
         s=self.__node_split(right)
         if isinstance(s, dict): # split to the right, done.
             node['right_child']=s
-            self.__recursive_split(node['right_child'], curr_depth+1)
+            self.__recursive_split(node['right_child']['ids'], curr_depth+1)
 
     
     # Majority Vote
@@ -130,7 +130,7 @@ class DTreeClassifier:
 
     # Change the data ids in the leaf node to majority class
     def __update_leaf(self, node):
-        if isinstance(node, dict):
+        if node['is_leaf']==False:
             for key, value in node.items():
                 if key == 'left_child' or key == 'right_child':
                     rtn=self.__update_leaf(value)
@@ -138,7 +138,7 @@ class DTreeClassifier:
                         node[key]=rtn[1]
             return 0,0 # first 0 means this is not a leaf node
         else:
-            return 1, self.__majority_vote(node) # first 1 means this is a leaf node
+            return 1, self.__majority_vote(node['ids']) # first 1 means this is a leaf node
             
    
     # Create a tree using training data, and return the result of the tree
