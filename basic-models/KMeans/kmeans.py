@@ -19,12 +19,7 @@ class KMeans:
         '''
         self.init=init
         self.n_clusters=n_clusters
-        
-        if self.init=='k-means++'
-            self.n_init=1
-        else:
-            self.n_init=n_init
-            
+        self.n_init=n_init   
         self.max_iter=max_iter
         
 
@@ -75,6 +70,7 @@ class KMeans:
     def __kmeanspp(self,data):
 
         xp=data.copy() # centroid candidates
+        N=data.shape[0] # the number of data points
         centroids=[]
         density=np.ones(xp.shape[0])/N # uniform distribution is used as initial probability distribution
 
@@ -110,17 +106,19 @@ class KMeans:
 
     def fit(self,data):
         
-        self.f_error=[999999] # final error history
+        self.f_error=[99999999999999999] # final error history
         self.f_centroids=None # final centroids
-
+    
+        
         if self.n_init==1:
             cluster_colors= self.__generate_colors()
-        
-        N=data.shape[0] # the number of data points
+
+        if self.init=='random':
+            N=data.shape[0] # the number of data points
 
         for _ in range(self.n_init): # Repeat n_init times, changing the initial
                                      # positions of centroids
-
+            
             # Initialize the centroids.
             if self.init=='random':
                 # Randomly select n_clusters data points and use them as initial centroids.
@@ -128,7 +126,7 @@ class KMeans:
                 centroids=data[idx]
             else:
                 centroids=self.__kmeanspp(data)
-                
+            
             error=[] # error histor for current run of algorithm
 
             for _ in range(self.max_iter):
@@ -164,7 +162,6 @@ class KMeans:
 
                 # update centroids
                 centroids=np.array(new_cent)
-
 
             # Among the n_init number of iterations, the one with the smallest error
             # is selected as the final result
