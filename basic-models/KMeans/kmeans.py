@@ -69,7 +69,7 @@ class KMeans:
         self.f_error=[999999] # final error history
         self.f_centroids=None # final centroids
 
-        cluster_colors= self.__generate_colors()
+        #cluster_colors= self.__generate_colors()
         
         N=data.shape[0] # the number of data points
 
@@ -109,8 +109,8 @@ class KMeans:
                 error.append(err) # tracking error history as centroids shift
 
                 # To observe centroids moving set n_init=1
-                self.__plot_cluster(data,assign,centroids,cluster_colors)
-                time.sleep(1)
+                #self.__plot_cluster(data,assign,centroids,cluster_colors)
+                #time.sleep(1)
 
                 # update centroids
                 centroids=np.array(new_cent)
