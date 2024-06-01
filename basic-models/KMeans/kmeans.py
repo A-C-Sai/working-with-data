@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import time
 
 class KMeans:
 
@@ -44,6 +46,22 @@ class KMeans:
         return d_matrix
 
 
+    def __generate_colors(self):
+
+        # generate unique color for each cluster
+        return np.random.rand(self.n_clusters,3)
+        
+
+    # visualize training data and clusters color-coded for 2-d data
+    def __plot_cluster(self,data,cluster,centroids):
+        plt.figure(figsize=(5,5))
+        color=[self.__generate_colors()[a] for a in cluster]
+        plt.scatter(data[:,0],data[:,1],s=30,c=color,alpha=0.5)
+        plt.scatter(centroids[:,0],centroids[:,1],s=500,c='white')
+        plt.scatter(centroids[:,0],centroids[:,1],s=250,c='black')
+        plt.scatter(centroids[:,0],centroids[:,1],s=80,c='yellow')
+       
+
 
     def fit(self,data):
 
@@ -86,6 +104,10 @@ class KMeans:
                     new_cent.append(np.mean(data_idx,axis=0))
 
                 error.append(err) # tracking error history as centroids shift
+
+                # To observe centroids moving set n_init=1
+                self.__plot_cluster(data,assign,centroids)
+                time.sleep(1)
 
                 # update centroids
                 centroids=np.array(new_cent)
