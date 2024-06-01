@@ -53,20 +53,23 @@ class KMeans:
         
 
     # visualize training data and clusters color-coded for 2-d data
-    def __plot_cluster(self,data,cluster,centroids):
+    def __plot_cluster(self,data,cluster,centroids,colors):
         plt.figure(figsize=(5,5))
-        color=[self.__generate_colors()[a] for a in cluster]
+        color=[colors[a] for a in cluster]
         plt.scatter(data[:,0],data[:,1],s=30,c=color,alpha=0.5)
         plt.scatter(centroids[:,0],centroids[:,1],s=500,c='white')
         plt.scatter(centroids[:,0],centroids[:,1],s=250,c='black')
         plt.scatter(centroids[:,0],centroids[:,1],s=80,c='yellow')
+        plt.show()
        
 
 
     def fit(self,data):
 
-        self.f_error=[999999]
-        self.f_centroids=None
+        self.f_error=[999999] # final error history
+        self.f_centroids=None # final centroids
+
+        cluster_colors= self.__generate_colors()
         
         N=data.shape[0] # the number of data points
 
@@ -97,7 +100,7 @@ class KMeans:
 
                     # the error is measured as the sum of the squares of the 
                     # distances b/w data points and their centroids
-                    err+= np.sum(np.sum(np.square(data_idx-xentroids[c]),axis=1))
+                    err+= np.sum(np.sum(np.square(data_idx-centroids[c]),axis=1))
 
                     # compute the average coordinates of the data points assigned to this centroid
                     # use this as new centroid
@@ -106,7 +109,7 @@ class KMeans:
                 error.append(err) # tracking error history as centroids shift
 
                 # To observe centroids moving set n_init=1
-                self.__plot_cluster(data,assign,centroids)
+                self.__plot_cluster(data,assign,centroids,cluster_colors)
                 time.sleep(1)
 
                 # update centroids
