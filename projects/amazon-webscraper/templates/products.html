@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/products.css') }}">
+{% endblock style %}
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{product[0]}}</td>
+            <td>${{product[1]}}</td>
+            <td>{{product[2]}}</td>
+            <td><img src="{{ url_for('static', filename=product[3].split('/',1)[1]) }}" alt='{{product[0]}}'></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
