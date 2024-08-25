@@ -3,7 +3,7 @@ Custom Shortcuts MacOS
 
 1. command+shift+t ---> Auto Sum
 2. control+u ---> Toggle edit/enter mode
-3. control+ + + ` ----> show formulas
+3. control+ ` ----> show formulas
 4. command+t -----> toggle cell referencing
 5. command+shift+p ----> percent formatting
 6. command+shift+n -----> format cells window
@@ -47,9 +47,13 @@ Custom Shortcuts MacOS
 
 31. Turn Filters On/Off ------> Cmd+Shift+F
 32. Open the filter drop-down menu ------> option+↓ 
-33. Open the filter drop-down menu anywhere ---> shift_option+↓
+33. Open the filter drop-down menu anywhere ---> shift+option+↓
 
 34. select visible cells (when range is selected) ---> control+command+;
 35. control+H ---> find and replace window
 
 36. Insert Table ---> control+T
+
+37. Ctrl+Enter can also be used to copy or fill down the formula/value to all the cells in the selected range.
+
+38. control+shift+T ---> add total row to table
