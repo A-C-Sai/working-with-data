@@ -1,0 +1,63 @@
+		=================================================
+		Steps for DEveloping Python Database Communication Applications
+		=================================================
+Phase
+-----------
+1. import Appropriate Database related Module  
+2. Python Program must get the connection From DB Software ( connect () )
+3. Create an object of Cursor 
+4. Prepare the Query, place it into object of cursor and execute the Query in DB
+5. Process the Query Result coming from DB 
+6. Close the connection
+---------------------------------------------------------------------------------------------------Explanation about steps
+---------------------------------------------------------------------------------------------------
+1. import Appropriate Database related Module  
+---------------------------------------------------------------------------------------------------=>To do any Database Operations, we must First import appropriate Database related module.
+Example:- To do any operation with Oracle DB, we first import cx_Oracle module
+				import cx_Oracle
+---------------------------------------------------------------------------------------------------
+2. Python Program must get the connection From DB Software
+---------------------------------------------------------------------------------------------------
+=>If a Python Program want to communicate with any DB software, we must get the 
+   connection by passing Connection URL.
+=>To get the connection from any database, we must use connect() present Appropriate Database related Module  
+=>Syntax:-             varname=DataBaseModuleName.connect("Connection URL")
+Here var name is an object of Connection class which is present ant Database Module
+
+=>Examples:  Get the connection ORACLE Db from Python Program
+
+				conobj=cx_Oracle.connect("Connection URL")	
+=>In the case of Oracle,Connection URL represents												"UserName/Password@DNS/Serviceid"
+							(OR)
+				"UserName/Password@IPAddress/Serviceid"
+Examples
+				conobj=cx_Oracle.connect("system/manager@localhost/XE")
+							(OR)
+				conobj=cx_Oracle.connect("scott/tiger@127.0.0.1/orcl")
+=>Here conobj is an object of <class, 'cx_Oracle.Connection'>
+=>If we enter wrong Connection URL details then we get DatabaseError as Exception.
+---------------------------------------------------------------------------------------------------
+=>Def. of DNS(Domain Naming Service):- It is the name of Physical Machine where Database Software Installed.
+ The Default DNS of Every Computer is "localhost"
+
+=>Def of IP Address(Internet Protocol Address):-It is the Address of Physical Machine										where	Database Software Installed.
+									The default IP Address of Every Computer is 127.0.0.1 ( also called Loop Back Address)
+
+---------------------------------------------------------------------------------------------------
+3. Create an object of Cursor
+---------------------------------------------------------------------------------------------------
+=>The purpose of Creating an object of Cursor  is that "To carry Python Program Request OR  Query to the Database Software and Bring Results of Database Software to Python Program.
+=>To create an object of cursor, we use cursor() which is present in Connection Class / object.
+	=>Syntax:      varname=conobj.cursor()	
+=>Here varname is an object of <class, 'cx_Oracle.Cursor '>
+	Example:     cur=conobj.cursor()
+---------------------------------------------------------------------------------------------------
+4. Prepare the Query , place it into object of cursor and execute the Query in DB
+---------------------------------------------------------------------------------------------------
+=>Query is a Request or Question given by Python Program to the Database Software.
+=>The Query Must send to Database software through an object of cursor.
+=>To Execute the Query, we use execute() which is present in 
+                                                                   <class,cx_Oracle.Cursor'>
+=>Syntax:             curobj.execute("Query")
+=>Here Query can be either  DDL , DML and DRL
+---------------------------------------------------------------------------------------------------

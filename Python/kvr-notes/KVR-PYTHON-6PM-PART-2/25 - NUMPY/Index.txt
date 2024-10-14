@@ -1,0 +1,22 @@
+		=============================================
+				Numpy Module---Data Scienece 
+		=============================================
+Index
+----------
+=>Purpose of Numpy
+=>History of Numpy
+=>Advantages of Numpy
+=>Similarities and Differences Between List and Numpy
+=>Importance of "ndarray"
+=>Number of Approaches ro create an object of nd array
+=>Attributes of ndarray
+=>Types of Ndarrays ( 1-D, 2-D and n-Dimesional Arrays)
+=>Basic Indexing and Slicing Operations on ndarray objects
+=>Advanced Indexing and Slicing Operations on ndarray objects
+=>Slecting or Filtering the values of ndarray objects
+=>deleting,updating and adding the values of ndrray
+=>Arithmetic or Matrix Operations on ndarray
+=>Statistical Operations on ndarray
+=>copy and view of ndarray
+=>Sorting the values of ndarray
+==========================x=====================================

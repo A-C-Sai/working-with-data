@@ -1,0 +1,58 @@
+			=====================================
+					set 
+			=====================================
+=>'set' is one of the pre-defined class and treated as set data type.
+=>The purpose of set data type is that "To store Multiple Values either Simiar Type or      
+    Different Type or Both the Types in Single Object with Unique  Values".
+=>The elements of set must be written within Curly braces {  } and Elements must separted by 
+    comma.
+=>An Object of set never maintains Insertion Order bcoz PVM can display any one of the 
+    possibility of elements of set object.
+=>On the object of set, we can't perform Indexing and Slicing Operations bcoz set object 
+    never maintains Insertion Order.
+=>An object of set belongs to both Immutable bcoz set' object does not support item 
+    assignment and mutable in the case of add()
+=>we can create two types of set objects. They are
+			a) Empty set
+			b) Non-Empty  set
+a) Empty set:
+------------------------
+=>An Empty  set is one, which does not contain any elements and whose length is 0
+=>Syntax:        setobj=set()
+
+b) Non-Empty set:
+------------------------
+=>A Non-Empty set is one, which  contains  elements and whose length is >0
+=>Syntax:         setobj={ val1, val2, ....val-n }
+=================================x===================================
+Examples:
+----------------------------------------------------------
+>>> s1={10,20,30,40}
+>>> print(s1,type(s1))---------------{40, 10, 20, 30} <class 'set'>
+>>> s2={10,20,10,20,10,30,15,12,-34}
+>>> print(s2,type(s2))------------------{20, -34, 10, 12, 30, 15} <class 'set'>
+>>> s3={10,"Rossum","Python",34.56,True}
+>>> print(s3,type(s3))---------------------{True, 34.56, 'Rossum', 10, 'Python'} <class 'set'>
+---------------------------------------------
+>>> s3={10,"Rossum","Python",34.56,True}
+>>> print(s3,type(s3))-----------------{True, 34.56, 'Rossum', 10, 'Python'} <class 'set'>
+>>> s3={10,20,30,40,10,50,20}
+>>> print(s3,type(s3))--------------------------{50, 20, 40, 10, 30} <class 'set'>
+>>> s3[0]-----------------TypeError: 'set' object is not subscriptable
+>>> s3[2:4]-------------TypeError: 'set' object is not subscriptable
+---------------------------------------------------------------------
+>>> s3={10,20,30,40,10,50,20}
+>>> print(s3,type(s3))--------------------{50, 20, 40, 10, 30} <class 'set'>
+>>> len(s3)-----------------5
+>>> s4={}
+>>> print(s4,type(s4))--------------{} <class 'dict'>
+>>> s5=set()
+>>> print(s5,type(s5))---------------set() <class 'set'>
+>>> len(s5)--------------0
+-----------------------------------------------------
+>>> s3={10,20,30,40,10,50,20}
+>>> print(s3,type(s3),id(s3))---------------{50, 20, 40, 10, 30} <class 'set'> 2227059430720
+>>> s3[0]=100------------TypeError: 'set' object does not support item assignment
+>>> s3.add(23.45)
+>>> print(s3,type(s3),id(s3))---{50, 20, 23.45, 40, 10, 30} <class 'set'> 2227059430720
+-----------------------------------------------------

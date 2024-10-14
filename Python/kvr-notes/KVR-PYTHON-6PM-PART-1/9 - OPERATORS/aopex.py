@@ -1,0 +1,15 @@
+#program for demonstrating the fun of AOPs
+#aopex.py
+a=float(input("Enter Value of a:"))
+b=float(input("Enter Value of b:"))
+print("="*50)
+print("\tResults of Arithmetic Operators")
+print("="*50)
+print("\tsum({},{})={}".format(a,b,a+b))
+print("\tsub({},{})={}".format(a,b,a-b))
+print("\tmul({},{})={}".format(a,b,a*b))
+print("\tDiv({},{})={}".format(a,b,a/b))
+print("\tFloor Div({},{})={}".format(a,b,a//b))
+print("\tMod({},{})={}".format(a,b,a%b))
+print("\tExp({},{})={}".format(a,b,a**b))
+print("="*50)

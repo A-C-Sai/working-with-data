@@ -1,0 +1,11 @@
+--------------------------------------------------------------------------------------------------------------------------
+			Python Inspired From
+---------------------------------------------------------------------------------------------------------------------------
+
+Python Inspired From from 4 Different Programming Languages. They are
+		1. Functional Programming from 	C
+		2. Object Oriented Programming from C++
+		3. Modular Programming Lang From Modulo3
+		4. Scripting Programming From PERL
+-----------------------------------------------------------------------------------------------------------
+		

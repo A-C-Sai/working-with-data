@@ -1,0 +1,94 @@
+		==============================================
+				4. Logical Operators
+		==============================================
+=>The purpose of Logical Operators is that " To Combine two or more relational 
+    Expressions or Test Conditions".
+=>If two or more  Relational Expressions are combined / connected with Logical Operators 
+    then it is called Logical Expression / Compound Conditions.
+=>The Result of Logical Expression / Compound Conditions is either True od False.
+=>In Python programming, we have 3 Logical Operators. They are
+
+			1) and
+			2) or
+			3) not 
+
+----------------------------------------------------------------------------------------------------------------
+1) and operator
+-----------------------------------------------------------------------------------------------------------------
+=>The Functionality of "and" operator can be expressed by using the following Truth 
+    Table.
+=>		-------------------------------------------------------------------------
+		  RelExpr1	RelExpr2    RelExpr1 and RelExpr2
+		-------------------------------------------------------------------------
+			False	True				False
+
+			True		False			False
+
+			False	False			False
+
+			True		True				True
+		-------------------------------------------------------------------------
+------------------
+Examples:
+------------------
+1.  10>20  and  20>30------False----->Short Circuit Evalaution
+2.   10>5   and 20!=30  and 10<2---False
+3.    100!=200  and 10<5  and 10>4---False---->Short Circuit Evalaution
+4.   10!=-10 and 20>10  an 23>2----True
+--------------------------------------------------------------------------------
+Short Circuit Evalaution in the case of "and" Operator
+---------------------------------------------------------------------------------
+=>if two or More Relational Expressions are connected with "and" operator and if First Expression is False then PVM Will not evaluate remaining expressions and result of entire Expression (Logical Expression) is False. This Process is called Short Circuit Evalaution
+----------------------------------------------------------------------------------------------------------------
+2) or operator
+-----------------------------------------------------------------------------------------------------------------
+=>The Functionality of "or" operator can be expressed by using the following Truth 
+    Table.
+=>		-------------------------------------------------------------------------
+		  RelExpr1	RelExpr2    RelExpr1 or  RelExpr2
+		-------------------------------------------------------------------------
+			False	True				True		
+
+			True		False			True
+
+			False	False			False
+
+			True		True				True
+		-------------------------------------------------------------------------
+Examples:
+-------------------
+1.  10>2  or 10!=30-------->True-----> Short Circuit Evalaution
+2.   10!=10 or 20>4 or 10<=20--->True-->Short Circuit Evalaution
+3.  10==20  or 10>=20  or 20>40---->False
+
+--------------------------------------------------------------------------------
+Short Circuit Evalaution in the case of "or" Operator
+---------------------------------------------------------------------------------
+=>if two or More Relational Expressions are connected with "or" operator and if First Expression is True then PVM Will not evaluate remaining expressions and result of entire Expression (Logical Expression) is True. This Process is called Short Circuit Evalaution
+---------------------------------------------------------------------------------------------------------------------------
+3) not operator
+-----------------------------------------------------------------------------------------------------------------
+=>The Functionality of "not" operator can be expressed by using the following Truth 
+    Table.
+=> -----------------------------------------------
+	Rel Expr		Not RelExpr
+	--------------------------------------------
+		True			False
+		False		True
+	-------------------------------------------
+Examples:
+-------------------
+>>> not True--------------False
+>>> not False-------------True
+>>> 10>2------------------True
+>>> not 10>2-------------False
+>>> (10>2 and 20>4)---------True
+>>> not (10>2 and 20>4)-------False
+>>> not 10----------------------False
+>>> not 0------------------------True
+>>> not -123--------------------False
+-----------------------------------------------------------------------------------------------------------------
+Special Points:
+----------------------------------------------------------------------------------------------------------------
+
+

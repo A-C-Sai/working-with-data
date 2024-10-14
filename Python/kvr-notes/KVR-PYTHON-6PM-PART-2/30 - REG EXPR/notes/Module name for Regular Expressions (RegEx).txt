@@ -1,0 +1,13 @@
+		=================================================
+			Module name for Regular Expressions (RegEx)  
+		=================================================
+=>To deal with Regular Expressions programs, we must use a pre-defined module called "re".
+=>"re" module contains the following functions. 
+			1) finditer()
+			2) findall()
+			3) search()
+			4) start()
+			5) end()
+			6) group()
+----------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,25 @@
+		================================================
+				1. Simple 
+		================================================
+=>Python is one of the Simple Programming Language Bcoz of 3 Important Technical Factors.
+---------------------------------------
+Factor1	
+---------------------------------------
+=>Python programming Provides "Rich set of APIs (libraries). So that Python programmers can re-use the pre-defined code without writing our own code and hence Python based application are easy to develop.
+---------------------
+Definition of API(Application Programming Interface):
+-----------------------
+=>An API is a collection of MODULES.
+=>A Module is a collection of Functions, variables and Class Names.
+Examples:    calendar, math, cmath, os, re,random...etc
+---------------------------------------
+Factor2
+---------------------------------------
+=>Python Programming provides Garbage Collector whose Role is running of regular Python program for collecting / removing Un-used Memory Space and improves Performnace of Python Based Application.
+=>Hence Garbage Collector takes care abount Automatical memory management.
+---------------------------------------
+Factor3
+---------------------------------------
+=>Python Programming Provides User-Friendly Syntaxes. So that Python Programmer can develop error-free programs in limited span of time.
+---------------------------------------
+

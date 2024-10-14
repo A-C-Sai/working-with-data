@@ -1,0 +1,22 @@
+			====================================================
+				Python Database Communication (PDBC)
+			====================================================
+Index
+---------------
+=>Purpose of Python Database Communication
+=>Importance of Database and How it is different From Files
+=>Setup for Python Database Communication and Installation of Dabase Modules in Python
+=>Steps for Dveloping Python Database Communication Applications
+=>Execution First Python Database Communication Program
+---------------------------------------------------------------------------------------------------------
+=>Execution Types of Queries
+		1) Executing DDL Queries (create, alter, drop)
+		2) Executing DML Queries ( insert, delete , update)
+		3) Executing DRL Queries  (select)
+=>Programming Examples on DDL Queries
+=>Programming Examples on DML Queries
+=>Programming Examples on DRL Queries
+---------------------------------------------------------------------------------------------------
+=>Meta Data
+=>Programming Examples on DRL Queries
+=============================x=================================

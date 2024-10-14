@@ -1,0 +1,10 @@
+		===========================================
+			Types  Arguments  and Parameters
+		===========================================
+=>Based on Passing Values of Arguments from Function Call to Formal parameters of Function Heading, Arguments are classified into 5 types.
+		1. Possitional Arguments 
+		2. Default Arguments 
+		3. Keyword Arguments 
+		4. Variable Length Arguments 
+		5. Keyword Variable Length Arguments 
+--------------------------------------------------------------------------------------------------------

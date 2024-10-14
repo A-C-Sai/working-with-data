@@ -1,0 +1,25 @@
+		===========================================
+			Programmer OR User  OR Custom Defined Exceptions.
+		===========================================
+=>These exceptions are Defined or Developed by Programmers and they are available in 
+     Python Project and they are used by other programmers of Same Project for dealing with Common Problems.
+=>Some of the common problems
+		a) Attempting to enter invalid pin in ATM Based Applications (PINError)
+		b) Attempting to enter Invalid User name and password (LoginError)
+		c) Attempting to withdraw Invalid amount from account..etc
+----------------------------------------------------------------------------------------------------------------------------
+Steps for Develping  Programmer OR User  OR Custom Defined Exceptions
+----------------------------------------------------------------------------------------------
+Step-1: Choose the Programmer-Defined Class Name
+Step-2: The Programmer-Defined Class Name must Inherit from Exception or BaseException for inheriting 
+              the  properties Exception Handling and hence Programmer-Defined Class Name is called Programmer Defined exception sub class.
+Step-3: Save the program (above Lines) on some file name with an extension .py (i.e FileName.py)
+===========================x=====================================
+Phases in Developing  Programmer  Defined Exceptions Based Applications
+-----------------------------------------------------------------------------------------------------------------
+Phase-1: DEVELOPMENT of PROGRAMMER-DEFINED EXCEPTIONS
+
+Phase-2: development of Programmer-defined common function which RAISING EXCEPTIONS (raise)
+
+Phase-3: development of specific Program which is HANDLING EXECPTIONS(try and except)
+-----------------------------------------------------------------------------------------------------------------

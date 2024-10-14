@@ -1,0 +1,39 @@
+		==================================================
+				 match  case  statement.
+		==================================================
+=>Here "match  case" is one the new feature in Python 3.10 Version onwards
+=>match  case  statement is recommeded to take in deciding Pre-designed Conditions in 
+   Menu Driven Applications.
+-------------------
+=>Syntax:
+-------------------
+			match(Choice Expr):
+			       case Choice Label1:
+					Block of Stements-1
+			       case Choice Label2:
+					Block of Stements-2
+			       case Choice Label3:
+					Block of Stements-3
+			       ----------------------------
+			       case Choice Label-n:
+					Block of Stements-n
+			       case _:					 # Default Case Block
+					default Block of Statements
+			
+			-------------------------------------------------------
+			Other Statements in Program
+			-------------------------------------------------------
+
+Explanation:
+----------------------
+=>Here "match" and "case" are the keywords
+=>"Choice Expr" represents either int or str  or bool
+=>If "Choice Expr" is matching with "case label1" then PVM executes Block of Staements-1 and later executes Other statements in program.
+=>If "Choice Expr" is matching with "case label2" then PVM executes Block of Staements-2 and later executes Other statements in program.
+=>In General "Choice Expr" is trying match with case label-1, case label-2,....case label-n then PVM executes corresponding block of statements and later executes Other statements in program.
+=>If "Choice Expr" is not matching with  any  of the specified case labels then PVM executes Default Block of Statements which are written under default case block (case _ ) and later executes Other statements in program.
+=>Writing default case block is optional and If we write then it must be written at last (Otherwise we get SyntaxError)
+=>When we represent multiple case labels under one case then those case labels must be combined with Bitwise OR Operator ( | )  .
+
+
+

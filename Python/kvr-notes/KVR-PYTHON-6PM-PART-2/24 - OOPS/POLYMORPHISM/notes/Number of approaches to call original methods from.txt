@@ -1,0 +1,26 @@
+	===============================================
+	Number of approaches to call original methods / constructors  from 
+			Overridden methods / Constructors
+	===============================================
+=>We have two approches to call original method / constructors of base class from overridden method / constructors of derived class. They are
+
+	1) By using   super()
+	2) By using Class Name
+------------------------------------------------------------------------
+1) By using   super():
+------------------------------------
+=>super() is one of the pre-defined function, which is used for calling super class  original method / constructor from overridden method / constructors of derived class.
+
+Syntax1:-        super().methodname(list of values if any)
+
+Syntax2:-        super().__init__(list of values if any)			
+
+=>with super() we are able to call only immediate base class method  but unable to call Specified method of base Class . To do this we must use class name approach.
+----------------------------------------------------------------
+2) By using Class Name:
+----------------------------------------------------------------
+=>By using ClassName approach, we can call any base class method / constructor name from the context of derived class method / constructor names.
+
+Syntax1:-        ClassName.methodname(self, list of values if any)
+Syntax2:-        ClassName.__init__(self, list of values if any)			
+-----------------------------------------------X----------------------------------------------------------------

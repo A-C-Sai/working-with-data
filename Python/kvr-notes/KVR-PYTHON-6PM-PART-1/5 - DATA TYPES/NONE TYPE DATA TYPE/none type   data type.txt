@@ -1,0 +1,22 @@
+		=======================================
+			NoneType   data type
+		=======================================
+=>'NoneType' is one the pre-defined class and treated as None type Data type
+=> "None" is keyword acts as value for <class,'NoneType'>
+=>The value of 'None' is not False, Space , empty  , 0 
+=>An object of NoneType class can't be created explicitly.
+--------------------------------------------------------------------
+Examples:
+------------------
+>>> a=None
+>>> print(a,type(a))------------None <class 'NoneType'>
+>>> a=NoneType()---------NameError: name 'NoneType' is not defined
+>>> l1=[]
+>>> print(l1.clear())------------None
+>>> s1=set()
+>>> print(s1.clear())---------None
+>>> d1=dict()
+>>> print(d1.clear())-----------None
+>>> d1={10:1.2,20:3.4}
+>>> print(d1.get(100))---------None
+-------------------------------------------------------------------------------------------------------------------

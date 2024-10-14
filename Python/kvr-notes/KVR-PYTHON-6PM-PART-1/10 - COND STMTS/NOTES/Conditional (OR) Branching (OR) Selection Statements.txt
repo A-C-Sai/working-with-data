@@ -1,0 +1,13 @@
+		====================================================
+		   1) Conditional (OR) Branching (OR) Selection Statements.
+		====================================================
+=>The purpose  Conditional (OR) Branching (OR) Selection Statements is that " To Perform  certain Operation Only Once".
+=>In Other words, Cond statements are used for Perform X-Operation when the condition is    True or Perform Y-Operation when the condition is False Only Once.
+=>In Python Programming, we have 4 Types of Conditional Statements. They are
+		1) Simple if statement
+		2) if...else statement
+		3) if..elif..else statement
+		4) match  case statement (Python 3.10)
+------------------------------------------------------x----------------------------------------------------------------
+
+

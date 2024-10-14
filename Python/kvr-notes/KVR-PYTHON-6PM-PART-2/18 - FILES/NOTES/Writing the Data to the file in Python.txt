@@ -1,0 +1,22 @@
+				===================================
+					Writing the Data to the file in Python
+				===================================
+=>To write the data to the file, we have 2 pre-defined function in the object of File Pointer. They are
+
+				1) write()
+				2) writelines()
+-------------------------------------------------------------------------------------------------------------------------
+1) write()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:     filepointer.write(Str Data)
+=>This Function is used for writing any type of data to the file in the form of str.
+Examples:Refer  FileWriteEx1.py
+-------------------------------------------------------------------------------------------------------------------------
+2) writelines()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:     filepointer.writelines(Iterable object )
+=>This Function is used for writing any type of Iterable object data to the file in the form of str.
+
+Examples:  Refer  FileWriteEx2.py
+-------------------------------------------------------------------------------------------------------------------------
+

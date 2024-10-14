@@ -1,0 +1,13 @@
+		===========================================
+			Parameters and Arguments
+		===========================================
+=>Parameter are of two types. They are
+		a) Formal parameters (variables)
+		b) Local Parameters (Varaibles)
+=>Formal Parameters are those which are used in FUNCTION HEADING and They are used for storing Inputs coming from Function Calls.
+=>Local Parameters or Variables are those which are used in FUNCTION BODY and 
+    They are used for storing Temporary results.
+=>Arguments are the variables / Values Used In FUNCTION CALLS.
+=>The Relationship between Arguments / Argument  value and Formal Parameters    is that "Every Value of Arguments becomes Formal Parameter OR The values of     Arguments of Function Call are storing in Formal parameters of corresp[onding     Function Heading".
+============================================================
+			

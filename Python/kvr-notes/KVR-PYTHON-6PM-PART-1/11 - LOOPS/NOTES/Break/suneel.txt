@@ -1,0 +1,26 @@
+		=====================================
+				break statement
+		=====================================
+
+
+		sir how to print carr from carrot
+
+
+s="carrot"
+for ch in s:
+     if ch=="o":
+         break
+     print(ch)
+
+-----------------------------------
+
+s="carrot"
+ind=-1
+for i in range(0,len(s))
+     ind=i
+     if ch[i]=="r" and ind==2
+         break
+     print(ch)
+     ind=ind+1
+
+		

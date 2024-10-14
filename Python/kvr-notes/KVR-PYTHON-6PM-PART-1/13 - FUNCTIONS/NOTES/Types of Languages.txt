@@ -1,0 +1,31 @@
+		==========================================
+				 Types of Languages 
+		==========================================
+=>In IT, we have Two Types of languages. They are
+
+			1. Un-Structured Programming Languages.
+			2. Structured Programming Languages.
+-----------------------------------------------------------------------------------------------------
+1. Un-Structured Programming Languages.
+-----------------------------------------------------------------------------------------------------
+=>Un-Structured Programming Languages does not contain the concept of Functions. so that whose applications having the following limitations.
+		1) Application development time is More
+		2) Application memory space is More
+		3) Application execution time is More
+		4) Appluication performance is Degraded
+		5) Redundency (Duplication) of the code is More
+Examples:    GW-BASIC
+-----------------------------------------------------------------------------------------------------
+2. Structured Programming Languages.
+-----------------------------------------------------------------------------------------------------
+=>Structured Programming Languages contains the concept of FUNCTIONS. so that whose applications contains the following advantages.
+
+		1) Application development time is Less
+		2) Application memory space is Less
+		3) Application execution time is Less
+		4) Appluication performance is Enhanced (Improved)
+		5) Redundency (Duplication) of the code is Minimized
+=>In Structured Programming Languages, If we come cross any common task / Operation then such type task related logic must be written as given some name to that and that name is called FUNCTION NAME.
+
+Examples:   C,C++,Java,PYTHON,C#.net...etc
+-----------------------------------------------------------------------------------------------------

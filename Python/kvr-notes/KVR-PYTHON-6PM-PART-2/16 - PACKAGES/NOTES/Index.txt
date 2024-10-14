@@ -1,0 +1,13 @@
+			=========================================
+					Packages in Python
+			=========================================
+Index
+-----------
+=>Purpose of Package
+=>Definition of Package
+=>Development of Package
+=>Number of Approaches to re-use Packages
+		a) By Using sys.path.append() 
+		b) By using PYTHONPATH   Environmental Variable
+=>Programming Examples
+-------------------------------------------------------------------------------------------------------------------

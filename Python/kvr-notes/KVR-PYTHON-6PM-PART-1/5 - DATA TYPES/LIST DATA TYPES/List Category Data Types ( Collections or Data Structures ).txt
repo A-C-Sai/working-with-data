@@ -1,0 +1,10 @@
+		=====================================================
+		   III. List Category Data Types ( Collections or Data Structures )
+		=====================================================
+=>The purpose of List Category Data Types is that " To store Collection or Multiple Values 
+     of same type or Different type in single Variable with Duplicate or Unique Values".
+=>We have 2 Daya types List  Category . They are
+
+				1. list  (mutable)
+				2. tuple (immutable)
+------------------------------------------------------------------------------------------------------------------------------

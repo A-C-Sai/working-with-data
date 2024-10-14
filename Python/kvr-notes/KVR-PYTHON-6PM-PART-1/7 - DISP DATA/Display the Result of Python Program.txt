@@ -1,0 +1,181 @@
+		==================================================
+			Display the Result of Python Program
+		==================================================
+=>In Python Programming, To display the result of Python program , we use a pre-defined 
+   called print()
+=>print() is one of the pre-defined function is used for displaying the result python program 
+    on the console (Moniter)
+=>print() contains the following Syntaxes
+-----------------------------------------------------------------------------------------------------------------------------
+Syntax-1:    print(Val)
+			(OR)
+		   print(Val1,Val2...Val-n)
+-----------------------------------------------------------------------------------------------------------------------------
+=>This Syntax displays the values on the console
+=>Examples:
+-------------------------
+>>> a=10
+>>> print(a)----------10
+>>> a=1.2
+>>> print(a)---------1.2
+>>> a=10
+>>> b=12.34
+>>> print(a,b)----------10 12.34
+-----------------------------------------------------------------------------------------------------------------------------
+Syntax-2:   print(msg)
+			(OR)
+		print(msg1,msg2,...msg-n)
+-----------------------------------------------------------------------------------------------------------------------------
+=>Here msg or msg1,msg2,----msg-n represents str data
+=>This Syntax displays always Messages on the console.
+Examples:
+-----------------------
+>>> print("Hello Python World")-----------Hello Python World
+>>> s="Hello Python World"
+>>> print(s)----------------------Hello Python World
+>>> print("Hello","python","world")--------Hello python world
+-----------------------------------------------------------------------------------------------------------------------------
+Syntax-3:   print(Message cum Values)
+				(OR)
+		  print(Values cum Message)
+-----------------------------------------------------------------------------------------------------------------------------
+=>This Syntax will display values cum messages OR Messages cum Values.
+Examples:
+------------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print(a)-----------10
+>>> print(b)----------20
+>>> print(c)----------30
+	(OR)
+>>> print("Val of a=",a)-----------Val of a= 10
+>>> print("val of b=",b)-----------val of b= 20
+>>> print("sum=",c)--------------sum= 30
+	(OR)
+>>> print(a," is the value of a")-------------10  is the value of a
+>>> print(b," is the value of b")------------20  is the value of b
+>>> print(c," is the sum")------------------30  is the sum
+	(OR)
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print("sum=",c)-------------sum= 30
+>>> print("sum of ",a," and ",b,"=",c)-----------sum of  10  and  20 = 30
+>>> a=10
+>>> b=20
+>>> c=30
+>>> d=a+b+c
+>>> print("sum of ",a,",",b," and ",c,"=",d)----sum of  10 , 20  and  30 = 60
+-------------------------------------------------------------------------------------------------------
+Syntax-4:   print(Message cum Values with  format() )
+				(OR)
+		  print(Values cum Messages with format() )
+-------------------------------------------------------------------------------------------------------
+Examples:
+----------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print("Sum={}".format(c))----------Sum=30
+>>> print("{} is the sum".format(c))-------30 is the sum
+>>> print("sum of {} and {}={}".format(a,b,c))-----sum of 10 and 20=30
+>>> a=10
+>>> b=20
+>>> c=30
+>>> d=a+b+c
+>>> print("sum of {},{} and {}={}".format(a,b,c,d))----sum of 10,20 and 30=60
+>>> rno=10
+>>> sname="Rossum"
+>>> print("My Roll No:{} and My Name is {}".format(rno,sname))
+				My Roll No:10 and My Name is Rossum
+>>> print("My Roll No:{} and My Name is '{}' ".format(rno,sname))
+			My Roll No:10 and My Name is 'Rossum'
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print("sum({},{})={}".format(a,b,c))--------sum(10,20)=30
+>>> print("{}+{}={}".format(a,b,c))-----------10+20=30
+>>> print("sum of {} and {}={}".format(10,20,10+20))----sum of 10 and 20=30
+-------------------------------------------------------------------------------------------------------
+Syntax-5:   print(Message cum Values with Format Specifiers  )
+				(OR)
+		  print(Values cum Messages with  Format Specifiers )
+---------------------------------------
+Note:   %d for Integer data
+	 %f  for float data
+	 %s for str data
+=>If any data does not contain format specifier then that value(s) must be converted into str type and use %s.
+-----------------------
+Examples:
+---------------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print("sum=",c)--------------sum= 30
+>>> print("sum={}".format(c))-----------sum=30
+>>> print("sum=%d" %c)-----------sum=30
+>>> print("%d is the sum" %c)---------30 is the sum
+>>> print("sum of %d and %d=%d" %(a,b,c))--------sum of 10 and 20=30
+>>> print("sum(%d,%d)=%d" %(a,b,c))--------sum(10,20)=30
+>>>d=10
+>>> print("val of d=%d" %d)--------val of d=10
+-------------------------
+>>> rno=10
+>>> sname="Rossum"
+>>> print("My Roll No:%d and My Name is '%s' " %(rno,sname))
+			My Roll No:10 and My Name is 'Rossum'
+-----------------------------------
+>>> a=10
+>>> b=1.2
+>>> c=a+b
+>>> print("sum of %d and %f=%f" %(a,b,c))---sum of 10 and 1.200000=11.200000
+>>> print("sum of %d and %0.2f=%0.3f" %(a,b,c))---sum of 10 and 1.20=11.200
+--------------------------
+>>> a=100
+>>> print("val of a=%d" %a)------------val of a=100
+>>> print("val of a=%f" %a)--------------val of a=100.000000
+>>> print("val of a=%0.2f" %a)----------val of a=100.00
+------------------------------------------------------------------------
+>>> lst=[10,"RS",34.56,True]
+>>> print(lst,type(lst))----------[10, 'RS', 34.56, True] <class 'list'>
+>>> print("content of list=",lst)-------content of list= [10, 'RS', 34.56, True]
+>>> print("content of list={}".format(lst))---content of list=[10, 'RS', 34.56, True]
+>>> print("content of list=%s" %(str(lst)))----content of list=[10, 'RS', 34.56, True]
+-----------------------------------------------------------------------------------------------------------------------------
+Syntax-6:   print("Value cum messages", end="    ")
+=>This Syntax display the values in same line.
+--------------------
+Examples:
+--------------------
+
+>>> for v in r:
+...     print(v)
+			...
+			10
+			11
+			12
+			13
+			14
+			15
+>>> for v in r:
+...     print(v,end=" ")
+		...
+			10 11 12 13 14 15
+
+>>> for v in r:
+...     print("{}".format(v),end=" ")
+...
+			10 11 12 13 14 15 
+>>> for v in r:
+...     print("%d" %v , end=" ")
+...
+			10 11 12 13 14 15
+
+Other print() parameters -----> sep
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

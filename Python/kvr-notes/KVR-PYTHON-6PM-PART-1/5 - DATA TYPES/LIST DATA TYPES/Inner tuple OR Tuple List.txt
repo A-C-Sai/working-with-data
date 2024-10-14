@@ -1,0 +1,108 @@
+			===========================================
+					Inner tuple OR Tuple List
+			===========================================
+=>The Process of defining one tuple in another tuple is called Inner or Nested tuple
+=>Syntax:
+-------------------
+		tupleobj=(Val1, Val2.......(Val11,Val12..) , ( Val21,Val22.....), Val-n)
+
+=>here (Val11,Val12..) is one Inner tuple
+=>Here ( Val21,Val22.....) is another Inner tuple
+
+=>(Val1, Val2......., Val-n ) is called Outer tuple
+
+NOTE:
+-------------
+=>We can define One Tuple Inside of Another Tuple
+=>We can define  One List Inside of Another Tuple
+=>We can define  One List Inside of Another List
+=>We can define One Tuple Inside of Another List
+
+--------------------------------------------------------------------------------------------------------------------
+Examples
+---------------------------
+>>> t1=(10,"Rossum",(15,18,17),(66,67,56),"OUCET")
+>>> print(t1,type(t1))-------------(10, 'Rossum', (15, 18, 17), (66, 67, 56), 'OUCET') <class 'tuple'>
+>>> t1[2]--------------(15, 18, 17)
+>>> print(t1[2],type(t2))------------(15, 18, 17) <class 'tuple'>
+>>> print(t1[-2],type(t2))------------(66, 67, 56) <class 'tuple'>
+-------------------------------
+>>> t1=(10,"Rossum",[15,18,17],(66,67,56),"OUCET")
+>>> print(t1,type(t1))------(10, 'Rossum', [15, 18, 17], (66, 67, 56), 'OUCET') <class 'tuple'>
+>>> print(t1[2],type(t1[2]))-----[15, 18, 17] <class 'list'>
+>>> print(t1[3],type(t1[3]))-------(66, 67, 56) <class 'tuple'>
+>>> t1[2].insert(1,16)
+>>> print(t1,type(t1))------(10, 'Rossum', [15, 16, 18, 17], (66, 67, 56), 'OUCET') <class 'tuple'>
+>>> t1[2].sort(reverse=True)
+>>> print(t1,type(t1))--------(10, 'Rossum', [18, 17, 16, 15], (66, 67, 56), 'OUCET') <class 'tuple'>
+------------------------------------
+>>> l1=[10,"Rossum",[15,18,17],(66,67,56),"OUCET"]
+>>> print(l1,type(l1))------------[10, 'Rossum', [15, 18, 17], (66, 67, 56), 'OUCET'] <class 'list'>
+>>> l1[2].remove(18)
+>>> print(l1,type(l1))----------[10, 'Rossum', [15, 17], (66, 67, 56), 'OUCET'] <class 'list'>
+=================================X=========================================
+
+Special Case:
+-----------------------
+sorted():
+----------------
+=>It is one of the general pre-defined function and is used for Sorting the elements of tuple (in this case) and gives the sorted elements in th form of list(But Sorted Elements will not place in tuple bcoz tuple is immutable).
+Syntax:       sorted(tuple object)
+				(OR)
+			listobj=sorted(tupleobj)
+
+--------------------
+Examples:
+--------------------
+>>> t1=(12,45,-3,3,0,14)
+>>> print(t1,type(t1))-------------------(12, 45, -3, 3, 0, 14) <class 'tuple'>
+>>> t1.sort()-------------AttributeError: 'tuple' object has no attribute 'sort'
+>>> sorted(t1)----------  [-3, 0, 3, 12, 14, 45]
+>>> print(t1,type(t1))-----------(12, 45, -3, 3, 0, 14) <class 'tuple'>
+>>> x=sorted(t1)
+>>> print(x,type(x))--------------[-3, 0, 3, 12, 14, 45] <class 'list'>
+			(OR)
+>>> t1=(12,45,-3,3,0,14)
+>>> print(t1,type(t1))-------------(12, 45, -3, 3, 0, 14) <class 'tuple'>
+>>> l1=list(t1)
+>>> print(l1,type(l1))-------------[12, 45, -3, 3, 0, 14] <class 'list'>
+>>> l1.sort()
+>>> print(l1,type(l1))-----------[-3, 0, 3, 12, 14, 45] <class 'list'>
+>>> t1=tuple(l1)
+>>> print(t1,type(t1))------(-3, 0, 3, 12, 14, 45) <class 'tuple'>
+-------------------------------------------------------------------------------------
+Examples:
+---------------------
+>>> t1=(10,"Rossum",(16,17,15),(77,75,78),"OUCET")
+>>> print(t1,type(t1))
+(10, 'Rossum', (16, 17, 15), (77, 75, 78), 'OUCET') <class 'tuple'>
+>>> print(t1[2],type(t1[2]))
+(16, 17, 15) <class 'tuple'>
+>>> print(t1[-2],type(t1[-2]))
+(77, 75, 78) <class 'tuple'>
+>>> t1[2].count(16)
+1
+>>> t1[2].count(160)
+0
+>>>
+>>> t1=(10,"Rossum",[16,17,15],[77,75,78],"OUCET")
+>>> print(t1,type(t1))
+(10, 'Rossum', [16, 17, 15], [77, 75, 78], 'OUCET') <class 'tuple'>
+>>> print(t1[2],type(t1[2]))
+[16, 17, 15] <class 'list'>
+>>> t1[2].append(18)
+>>> print(t1,type(t1))
+(10, 'Rossum', [16, 17, 15, 18], [77, 75, 78], 'OUCET') <class 'tuple'>
+>>> t1[3].insert(1,77)
+>>> print(t1,type(t1))
+(10, 'Rossum', [16, 17, 15, 18], [77, 77, 75, 78], 'OUCET') <class 'tuple'>
+>>>
+>>> l1=[10,"Rossum",(16,17,15),[77,75,78],"OUCET"]
+>>> print(l1,type(l1))
+[10, 'Rossum', (16, 17, 15), [77, 75, 78], 'OUCET'] <class 'list'>
+>>> print(l1[2],type(l1[2]))
+(16, 17, 15) <class 'tuple'>
+
+
+
+

@@ -1,0 +1,17 @@
+		=====================================================
+				Global Variables and Local Variables
+		=====================================================
+------------------------
+Local Variables
+------------------------
+=>Local Variables are those which are used in side of Function Body and they are used for 
+    storing Temporary result of Processing Logic.
+=>We can access the value of Local Variables Inside of Function Body only but not other part   of the program.
+-------------------------
+Global Variables
+-------------------------
+=>Global variables are those  Which are used for accesssing as common values in Multiple 
+     Different function Calls.
+=>Global Variables Must be defined before all Function Calls. so that we can use Global Variables values in corresponding Function Definitions.
+=>if we define Global Variables after all Function Calls then  we can't access  Global Variables values in corresponding Function Definitions( NameError we get).
+=================================x=======================================

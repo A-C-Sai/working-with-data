@@ -1,0 +1,34 @@
+			=============================================
+				Programmer-Defined Character Classes
+			=============================================
+=>The purpose of Programmer-Defined Character Classes is that "To design or Prepare the Search Pattern by the programmers  for searching / matching / finding in Given Data for obtaining Desired Result".
+=>Syntax:  "[ Search Pattern ]"
+-----------------------------------------------------------------------------------------------------------------------------------------
+1.  [ABC]------>Serches for either 'A' or 'B' or 'C' only
+
+2.  [^ABC]---->Searches for all except A or B Or C
+
+3.  [A-Z]------->Searches for all Upper  Alphabets only
+
+4.  [^A-Z]---->Searches for all except  Upper  Alphabets 
+
+5. [a-z]--------->Searches for all Lower  Alphabets only
+
+6. [^a-z]------->Searches for all except Lower  Alphabets
+
+7. [A-Za-z]---->Searches for all Alphabets( lower and upper) only
+
+8. [^A-Za-z]---->Searches for all  except Alphabets( lower and upper) 
+
+9. [0-9]--------->Searches for all digits only
+
+10. [^0-9]--------->Searches for all  except digits 
+
+11. [A-Za-z0-9]---->Searches for all alpha-numerics  only 
+
+12. [^A-Za-z0-9]---->Searches for all Spcial Symbols only
+
+13. [a-z0-9]------>searches for lower alphabets and Digits only
+
+14. [A-Z0-9]----->searches for upper case alphabets and Digits only
+---------------------------------------------------------------------------------------------------------------------------------------------

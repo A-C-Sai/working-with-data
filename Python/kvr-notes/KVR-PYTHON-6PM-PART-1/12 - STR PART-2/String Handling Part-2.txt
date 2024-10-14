@@ -1,0 +1,294 @@
+			========================================
+					String Handling Part-2
+			========================================
+=>We know that on str data, we can perform Both Indexing and Slicing Operations.
+=>To do more number of operations on str data, we use the pre-defined functions present 
+     in str object.
+-------------------------------------------------------------------------------------------------------------------------
+1)capitalize()
+-------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   varname=strobj.capitalize()
+				(OR)
+				strobj.capitalize()
+=>This Function is used for capitalizing the given word / sentence
+Examples:
+----------------
+>>> s="python"
+>>> s=s.capitalize()
+>>> print(s)-----------Python
+>>> s="python is an oop lang"
+>>> print(s)----------------python is an oop lang
+>>> s=s.capitalize()
+>>> print(s)-------------Python is an oop lang
+-------------------------------------------------------------------------------------------------------------------------
+2) title()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:-    strobj.title()
+			(OR)
+		varname=strobj.title()
+=>This Function is used for obtaining title case for every word / sentence . In Otherwords, this function converts every word First letter as Capital.
+-------------------
+=>Examples
+-------------------
+>>> s="python"
+>>> print(s)-----------python
+>>> s.title()-----------'Python'
+>>> s--------------'python'
+>>> s=s.title()
+>>> s-----------------'Python'
+>>> s="python is an oop lang"
+>>> print(s)------------python is an oop lang
+>>> s=s.title()
+>>> print(s)-------------Python Is An Oop Lang
+>>> s="123abc"
+>>> s.title()------------'123Abc'
+>>> s="_____python______java"
+>>> s.title()-------------'_____Python______Java'
+-------------------------------------------------------------------------------------------------------------------------
+3) swapcase()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:   var name=strobj.swapcase()
+			(OR)
+			strobj.swapcase()
+=>This Function is used for convering the case of alphabets (lower to upper and upper to lower)
+---------------
+Examples:
+-----------------
+>>> s="PyThOn"
+>>> print(s)-----------------PyThOn
+>>> s=s.swapcase()
+>>> print(s)-----------------pYtHoN
+-------------------
+>>> s="PyThOn"
+>>> print(s)--------------PyThOn
+>>> s.capitalize()-------'Python'
+>>> s="pyThOn"
+>>> s.capitalize()-------'Python'
+-----------------------
+>>> s="PyThOn"
+>>> print(s)--------------PyThOn
+>>> s.title()-------------'Python'
+-------------------------------------------
+>>> s="python"
+>>> s.swapcase()---------'PYTHON'
+>>> s="PYTHON"
+>>> s.swapcase()--------'python'
+>>> s="PYThon"
+>>> s.swapcase()--------'pytHON'
+----------------------------------------------------------------------------------------------------------------------------------
+4) upper()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    strobj.upper()
+			(OR)
+			varname=strobj.upper()
+=>This Function is used for converting any case of alphabets into Upper Case Alphabets.
+------------------- 
+Examples:
+-----------------
+>>> s="python"
+>>> print(s)-----------------python
+>>> s.upper()-------------'PYTHON'
+>>> s="PYTHON"
+>>> print(s)---------------PYTHON
+>>> s.upper()------------'PYTHON'
+>>> s="PYThon"
+>>> print(s)--------------PYThon
+>>> s.upper()------------'PYTHON'
+>>> s="PyThOn"
+>>> print(s)-------------PyThOn
+>>> s.upper()---------'PYTHON'
+>>> s="1234@#$%^a"
+>>> s.upper()-------------'1234@#$%^A'
+----------------------------------------------------------------------------------------------------------------------------------
+5) lower()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    strobj.lower()
+			(OR)
+			varname=strobj.lower()
+=>This Function is used for converting any case of alphabets into Lower Case Alphabets.
+Examples:
+---------------------
+>>> s="HYDERABAD"
+>>> print(s)-------------HYDERABAD
+>>> s.lower()-----------'hyderabad'
+>>> s="hyderabad"
+>>> print(s)------------hyderabad
+>>> s.lower()---------'hyderabad'
+>>> s="HYDErabad"
+>>> print(s)-----------HYDErabad
+>>> s.lower()---------'hyderabad'
+>>> s="HyDeRaBaD"
+>>> print(s)------------HyDeRaBaD
+>>> s.lower()----------'hyderabad'
+--------------------------------------------------------------------------------------------------------------------
+6) islower()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:     strobj.islower()
+=>This Function returns True provided strobj contains purely lower case alphabets otherwise it returns False.
+---------------------
+Examples:
+----------------------
+>>> s="PYTHON"
+>>> print(s)--------------PYTHON
+>>> s.islower()---------False
+>>> s="python"
+>>> print(s)-----------python
+>>> s.islower()------True
+>>> s="PYThon"
+>>> print(s)---------PYThon
+>>> s.islower()------False
+>>> s="1224#$$%"
+>>> s.islower()-------False
+>>> s = "1234^&%^a"
+>>> s.islower() ---------True
+
+----------------------------------------------------------------------------------------------------------------------------------
+7) isupper()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:     strobj.isupper()
+=>This Function returns True provided strobj contains purely Uppercase case alphabets otherwise it returns False.
+Examples:
+------------------
+>>> s="PYTHON"
+>>> print(s)----------PYTHON
+>>> s.isupper()---------True
+>>> s="python"
+>>> print(s)-------------python
+>>> s.isupper()-------False
+>>> s="PYTHOn"
+>>> print(s)-----------PYTHOn
+>>> s.isupper()-------False
+>>> s.islower()-------False
+----------------------------------------------------------------------------------------------------------------------------------
+8) isdigit()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:-    strobj.isdigit()
+=>This function returns True provided strobj contains purely Digits Otherwise It returns False.
+-----------------------
+Examples:
+------------------------
+>>> s="1234"
+>>> print(s)--------------1234
+>>> s.isdigit()----------True
+>>> s="java"
+>>> print(s)----------java
+>>> s.isdigit()---------False
+>>> s="python311"
+>>> print(s)----------python311
+>>> s.isdigit()---------False
+>>> s="@#$%"
+>>> print(s)------------@#$%
+>>> s.isdigit()--------False
+>>> s="12.4" -----------------------> HOW?
+>>> print(s)------------12.4
+>>> s.isdigit()--------False (because of .)
+----------------------------------------------------------------------------------------------------------------------------------
+9) isalpha()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    strobj.isalpha()
+=>This function returns True provided strobj contains purely Alphjabets Otherwise It returns False.
+---------------------
+Examples
+---------------------
+>>> s="Python"
+>>> print(s)---------------------Python
+>>> s.isalpha()----------------True
+>>> s="Dilip123"
+>>> print(s)-------------------Dilip123
+>>> s.isalpha()-------------False
+>>> s="1234$%^"
+>>> print(s)-------------------1234$%^
+>>> s.isalpha()--------------False
+----------------------------------------------------------------------------------------------------------------------------------
+9) isalnum()
+----------------------------------------------------------------------------------------------------------------------------------
+=>Syntax: strobj.isalpnum()
+=>=>This function returns True provided strobj contains purely Alphjabets + Numerics +Alpha Numerics Otherwise It returns False.
+
+Examples:
+--------------------
+>>> s="python311"
+>>> print(s)-----------------python311
+>>> s.isalnum()------------True
+>>> s="python"
+>>> print(s)-----------------python
+>>> s.isalnum()-----------True
+>>> s="311"
+>>> print(s)-----------------311
+>>> s.isalnum()------------True
+>>> s="python 311"
+>>> print(s)-----------------python  311 
+>>> s.isalnum()----------------False (because of space)  
+-------------------------------------------------------------------------------------------------------------------------------
+10) isspace()
+----------------------------------------------------------------------------------------------------------------------------------
+=>This function returns True provided strobj contains purely  spaces  Otherwise It returns False.
+----------------------
+Examples:
+---------------
+>>> s="   "
+>>> print(s)---------- No Output
+>>> s.isspace()---------True
+>>> s=""
+>>> print(s)---------- No Output
+>>> s.isspace()---------False
+>>> s="123"
+>>> print(s)-------------123
+>>> s.isspace()---------False
+>>> s="python 1234"
+>>> print(s)----------python 1234
+>>> s.isspace()----------False
+------------------------------------------------------------------------------------------------------------------------
+11) split():
+------------------------------------------------------------------------------------------------------------------------
+=>This is function is used for splitting the given line of text into words based on splitting parameter.
+=>Syntax1:       listobj=strobj.split()
+				(OR)
+			listobj=strobj.split("Split value")
+			
+Examples:
+-------------------
+>>> s="Python is an oop lang"
+>>> print(s)------------------Python is an oop lang
+>>> s.split()---------------['Python', 'is', 'an', 'oop', 'lang']
+-----------------------
+>>> s="Python is an oop lang"
+>>> print(s)------------Python is an oop lang
+>>> x=s.split()
+>>> print(x,type(x))--------------['Python', 'is', 'an', 'oop', 'lang'] <class 'list'>
+>>> len(x)------------5
+----------------------------
+>>> s="10-12-2022"
+>>> print(s)---------------------10-12-2022
+>>> s.split("-")-----------------['10', '12', '2022']
+>>> x=s.split("-")
+>>> print("day=",x[0])--------day= 10
+>>> print("month=",x[1])-------month= 12
+>>> print("year=",x[-1])---------year= 2022
+>>> s="apple#mango#kiwi"
+>>> print(s)---------------apple#mango#kiwi
+>>> s.split("#")-----------['apple', 'mango', 'kiwi']
+>>> s="apple#mango#kiwi-Guava"
+>>> s.split("#")---------------['apple', 'mango', 'kiwi-Guava']
+>>> s="apple#mango#kiwi-Guava"
+>>> s.split("#")[-1].split("-")------------['kiwi', 'Guava']
+--------------------------------------------------------------------------------------------------
+12) join()
+--------------------------------------------------------------------------------------------------
+syntax:   strobj=strobj.join(listobj)
+=>This Function is used for joining the values of Iterable object (list) as strobj.
+-----------------
+Examples:
+-----------------
+>>> lst=["Rossum","is","Father" "of","Python"]
+>>> print(lst,type(lst))------------['Rossum', 'is', 'Fatherof', 'Python'] <class 'list'>
+>>> kvr=" "
+>>> kvr=kvr.join(lst)
+>>> kvr-------------------------'Rossum is Fatherof Python'
+-------------------------------------------
+>>> lst=["Apple","keeps","the","doctor","away"]
+>>> print(lst,type(lst))-----------['Apple', 'keeps', 'the', 'doctor', 'away'] <class 'list'>
+>>> s=" "
+>>> s=s.join(lst)
+>>> s---------------------------'Apple keeps the doctor away'
+============================x=======================================

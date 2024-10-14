@@ -1,0 +1,9 @@
+			=====================================
+				Str Memory Management
+			=====================================
+=>str data stored in Main Memory in form of Two Types. They are
+		1) Forward (+VE) Indexing
+		2) Backward (-VE) Indexing
+=>In Forwrd Indexing, Indices  (Indexes) are assigned From Left to Right Associativity from 0 to Len(strobj)-1 .
+=>In Backward Indexing Indices are Assigned From Right to Left from -1 to - (len(strobj).
+===========================X======================================

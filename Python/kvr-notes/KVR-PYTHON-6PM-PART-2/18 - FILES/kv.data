@@ -1,0 +1,283 @@
+Guido Van Rossum
+FNO:3-4,HILL SIDE
+Python Software Foundation
+Nether lands-13
+Travis Oliphant
+HNO:13-14,RED SEA  SIDE
+NUMPY Software Foundation
+Nether lands-53
+#Porogram for finding number of lines, words and chars from the file
+#FileCounfInfo.py
+filename=input("Enter File Name:")
+nol,nowd,noc=0,0,0
+try:
+	with open(filename,"r" ) as fp:
+		filelines=fp.readlines()
+		for line in filelines:
+			nol=nol+1
+			nowd=nowd+len(line.split())
+			noc=noc+len(line)
+			#Code
+		else:
+			print("-"*50)
+			print("Number of Lines=",nol)
+			print("Number of Words=",nowd)
+			print("Number of Chars=",noc)
+			print("-"*50)
+except FileNotFoundError:
+	print("File does not exist")
+//LinkedListOpDemo.java
+import java.util.Scanner;
+class NareshLinkedList
+{
+		int data;
+		NareshLinkedList  addr;
+		NareshLinkedList root;
+	NareshLinkedList()
+	{
+		root=null;
+	}
+	NareshLinkedList(int data,NareshLinkedList  addr)
+	{
+		this.data=data;
+		this.addr=addr;
+	}
+	
+	//method for isEmpty()
+	boolean   isEmpty()
+	{	
+		if(root==null)
+			return true;
+		else
+			return false;
+	}
+	//define insertFirst() to the linkedlist
+	void  insertFirst(int data)
+	{
+		NareshLinkedList newnode=new NareshLinkedList(data,null);
+		if(root==null)
+			root=newnode;
+		else
+		{
+			newnode.addr=root;
+			root=newnode;
+		}//else
+		System.out.println(data+"Inserted First");		
+	}//insertFirst()
+	void  insertMiddle(int data,int pos)
+	{
+		if(isEmpty())
+		{
+			System.out.println("Linked List empty");
+		}
+		else
+		{
+			NareshLinkedList temp=root;
+			int totnodes=0;
+			while(temp!=null)
+			{
+				totnodes++;
+				temp=temp.addr;
+			}
+			if(pos>totnodes)
+			{
+				System.out.println("Invalid Position");
+			}
+			if(pos==1)
+			{
+				System.out.println("Invalid Position");
+			}
+			else
+			{
+				if((pos>1) &&(pos<totnodes+1))
+				{
+					temp=root;
+					int i=1;
+					 while((i<pos-1) &&(temp.addr!=null) )
+					{
+						 i++;
+						 temp=temp.addr;
+					}
+					NareshLinkedList newnode=new NareshLinkedList(data,null);
+					newnode.addr=temp.addr;
+					temp.addr=newnode;
+					System.out.println(data+" added at:"+pos);
+				}
+			}//else
+		}//else
+	}//insertMiddle()
+	void  insertLast(int data)
+	{
+		if(isEmpty())
+		{
+			System.out.println("Linked List empty");
+		}
+		else
+		{
+			NareshLinkedList temp=root;
+			while(temp.addr!=null)
+			{
+				temp=temp.addr;
+			}
+			NareshLinkedList newnode=new NareshLinkedList(data,null);
+			temp.addr=newnode;
+			System.out.println(data+"is addded at last:");
+		}//else
+	}//insertLast()
+	void  displist()
+	{
+		if(isEmpty())
+		     System.out.println("Linked is Empty");
+		else
+		{
+			System.out.println("-------------------------------------------");
+			NareshLinkedList temp=root;
+			//traverse thelinked List
+			while(temp!=null)
+			{
+				System.out.print(temp.data+"-->");
+				temp=temp.addr;
+			}
+			System.out.print("null");
+		}
+	}//displist()
+
+void   delete(int data)
+{
+	if(isEmpty())
+	{
+			System.out.println("Linked List empty");
+	}
+	else
+	{
+		NareshLinkedList temp=root;
+		if(temp.data==data)
+		{
+			root=temp.addr;
+			System.out.println(data+" Deleted From First ");
+		}
+		else
+		{	
+			temp=root;
+			NareshLinkedList prev=root;
+			while(temp.addr!=null)
+			{
+				temp=temp.addr;
+				if(temp.data==data)
+				{
+					System.out.println(data+" Deleted From Linked List");
+					prev.addr=temp.addr;
+				}
+				else
+				{
+					prev=temp;
+				}
+			}//while
+		}//else
+	}//else
+}//delete()
+void search(int skey)
+{
+	if(isEmpty())
+	{
+			System.out.println("Linked List empty");
+	}
+	else
+	{
+			NareshLinkedList temp=root;
+			int pos=1;
+			boolean found=false;
+		while(temp!=null)
+		{
+			if(temp.data==skey)
+			{
+				found=true;
+				break;
+			}
+			++pos;
+			temp=temp.addr;
+		}//while
+		if(found)
+			System.out.println(skey+" Found at :"+pos);
+		else
+			System.out.println(skey+" does not exist in Linked List:");
+	}//else
+}//search()
+
+		static void linkedlistmenu()
+		{
+			System.out.println("\n-----------------------------------------");
+			System.out.println("\tLinked List Operations");
+			System.out.println("-----------------------------------------");
+			System.out.println("\t1.Adding First");
+			System.out.println("\t2.Adding Middle ");
+			System.out.println("\t3.Adding Last");
+			System.out.println("\t4.Delete");
+			System.out.println("\t5.Search");
+			System.out.println("\t6.Display");
+			System.out.println("\t7.Exit");
+			System.out.println("-----------------------------------------");
+		}
+}//NareshLinkedList
+
+class LinkedListOpDemo
+{
+	public static void main(String[] args) 
+	{
+		NareshLinkedList ns=new NareshLinkedList();
+		Scanner s=new Scanner(System.in);
+		while(true)
+		{
+			NareshLinkedList.linkedlistmenu();
+			System.out.println("Enter Ur Choice:");
+			int ch=Integer.parseInt(s.nextLine());
+			switch(ch)
+			{
+				case 1:System.out.println("Enter Which Element u want to insert at First:");
+						int ele=Integer.parseInt(s.nextLine());
+						ns.insertFirst(ele);
+						break;
+				case 2:System.out.println("Enter Which Element u want to insert at In middle:");
+						int ele1=Integer.parseInt(s.nextLine());
+						System.out.println("Enter Which Position u want to insert :");
+						int pos=Integer.parseInt(s.nextLine());
+						ns.insertMiddle(ele1,pos);
+						break;
+						
+				case 3:System.out.println("Enter Which Element u want to insert at last:");
+						int ele2=Integer.parseInt(s.nextLine());
+						ns.insertLast(ele2);
+						break;
+			case 4:System.out.println("Enter Which Element u want to delete:");
+						int ele3=Integer.parseInt(s.nextLine());
+						ns.delete(ele3);
+						break;
+			case 5: ns.displist();
+						System.out.println("Enter Which Element u want to search:");
+						int ele4=Integer.parseInt(s.nextLine());
+						ns.search(ele4);
+						break;
+
+				case 6:	ns.displist();
+							break;
+				case 7:System.out.println("Thx for using this program");
+							System.exit(0);
+				default:
+					System.out.println("Ur Selection of Operation is wrong-try again");
+			}//switch
+		}//while
+	}//main()
+}// LinkedListOpDemo--ELC
+#Porogram for reading the data of the file
+#FileReadEx2.py
+filename=input("Enter File Name:")
+try:
+	with open(filename,"r") as fp:
+		filelines=fp.readlines()
+		print("content of file")
+		print("---------------------------------------")
+		for line in filelines:
+			print(line,end="")
+		print("---------------------------------------")
+except FileNotFoundError:
+	print("File does not exist:")

@@ -1,0 +1,9 @@
+			==========================================
+				Data Representation in Python= Literals + data types + variables
+			==========================================
+Index:
+----------
+=>Types Literals 
+=>Identifiers OR Variables
+=>Rules for Using  Variables in Python
+--------------------------------------------------------

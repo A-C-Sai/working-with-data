@@ -1,0 +1,39 @@
+		=======================================
+				Data Types in Python
+		=======================================
+=>The purpose of data types in Python is that " To allocate Sufficient Amount of 
+   Memory Space and stores Literals".
+=>In Python Programming, we have 14 Data Types and They are classified into 6 categories. They are
+		
+		I. Fundamental  Category Data Types (Single Values )
+		  -------------------------------------------------------------
+			1. int (immutable)
+			2. float (immutable)
+			3. bool (immutable)
+			4. complex (immutable)
+		  -------------------------------------------------------------
+		II. Sequence Category Data Types
+		  -------------------------------------------------------------
+			1. str (immutable)
+			2. bytes(immutable)
+			3. bytearray (mutable)
+			4. range  (immutable)
+		  -------------------------------------------------------------
+		III. List Category Data Types ( Collections or Data Structures )
+		  -------------------------------------------------------------
+			1. list (mutable)
+			2. tuple (immutable)
+		  -------------------------------------------------------------
+		IV. Set Category Data Types ( Collections or Data Structures )
+		  -------------------------------------------------------------
+			1. set       (mutable and immutable)              
+			2. frozenset  (immutable)
+		  -------------------------------------------------------------
+		V. Dict  Category Data Types ( Collections or Data Structures )
+		  -------------------------------------------------------------
+			1. dict
+		  -------------------------------------------------------------
+		VI. NoneType category Data Types
+		  -------------------------------------------------------------
+			1. NoneType
+  		  -------------------------------------------------------------

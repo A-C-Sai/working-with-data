@@ -1,0 +1,19 @@
+		============================================
+			Writing the Data to the file
+		============================================
+=>To write the data to the file, we have Two pre-defined functions in file pointer object. They are
+			1. write()
+			2. writelines()
+-----------------------------------------------------------------------------------------
+1) write()
+-----------------------------------------------------------------------------------------
+=>Syntax:        FilePointerObj.write( str data )
+=>This Function is used for Writing Any type of Data to the file in the form of Str.
+Example: Refer  FileWriteEx1.py
+-----------------------------------------------------------------------------------------
+2) writelines()
+-----------------------------------------------------------------------------------------
+Syntax:-    FilePointerObj.writelines( Iterable object )
+=>This Function is used for Writing Any type of Iterable Object Data to the file in the form of  Str.
+Example: Refer  FileWriteEx2.py
+-------------------------------------------------------------------------------------------

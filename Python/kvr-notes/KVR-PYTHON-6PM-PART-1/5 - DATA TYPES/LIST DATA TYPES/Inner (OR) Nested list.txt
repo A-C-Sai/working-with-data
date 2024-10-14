@@ -1,0 +1,47 @@
+		=======================================================
+					Inner (OR) Nested list
+		=======================================================
+=>The Process of Defining One List in another List is called Inner or Nested List
+
+=>Syntax:-lstobj1=[ Val1,Val2....[ Val11,Val12....Val1n ].....[Val21,Val22...Val2n]................Val-n ]
+=>Here  [Val11,Val12....Val1n] is called One Inner OR Nested List
+	      [Val21,Val22...Val2n]  is called another Inner OR Nested List
+         [ Val1,Val2........[Val11,Val12....Val1n].....[Val21,Val22...Val2n]...................Val-n ] is called Outer List
+=>All the pre-defined Functions of List can be applied on Inner or Nested list.
+=>On Inner or Nested List we can perform Index and Slicing Operations.
+-------------------------
+Examples:
+-------------------------
+>>> sf=[10,"RS",[17,18,16],[78,66,79],"OUCET"]
+>>> print(sf,type(sf))
+[10, 'RS', [17, 18, 16], [78, 66, 79], 'OUCET'] <class 'list'>
+>>> sf[0]--------------10
+>>> sf[1]------------'RS'
+>>> print(sf[2],type(sf[2]),type(sf))-------------[17, 18, 16] <class 'list'> <class 'list'>
+>>> print(sf[3],type(sf[3]),type(sf))------------[78, 66, 79] <class 'list'> <class 'list'>
+>>> sf[2][0]-----------17
+>>> sf[-3][-3]-----------17
+>>> sf[-3][1:]----------[18, 16]
+>>> sf[-4][::-1]----------'SR'
+>>> sf[-2][::-1]---------[79, 66, 78]
+>>> print(sf,type(sf)------------[10, 'RS', [17, 18, 16], [78, 66, 79], 'OUCET'] <class 'list'>
+>>> sf[2].append(15)
+>>> print(sf,type(sf))---------[10, 'RS', [17, 18, 16, 15], [78, 66, 79], 'OUCET'] <class 'list'>
+>>> sf[3].insert(1,80)
+>>> print(sf,type(sf))--------[10, 'RS', [17, 18, 16, 15], [78, 80, 66, 79], 'OUCET'] <class 'list'>
+>>> sf[2].clear()
+>>> print(sf,type(sf))------[10, 'RS', [], [78, 80, 66, 79], 'OUCET'] <class 'list'>
+>>> del sf[3]
+>>> print(sf,type(sf))------[10, 'RS', [], 'OUCET'] <class 'list'>
+>>> sf[2].append(12)
+>>> print(sf,type(sf))----------[10, 'RS', [12], 'OUCET'] <class 'list'>
+---------------------------------------------------
+l1=[[10,20,30],[40,50,60],[70,80,90]]
+>>> print(l1,type(l1))-------------[[10, 20, 30], [40, 50, 60], [70, 80, 90]] <class 'list'>
+>>> for val in l1:
+...     print(val)
+...
+				[10, 20, 30]
+				[40, 50, 60]
+				[70, 80, 90]
+==================================X============================================

@@ -1,0 +1,42 @@
+ 			==================================================
+				Types of Data Members in Class of Python
+			==================================================
+=>We know that, A class  is a collection of Data Members and Methods.
+=>In a class of Python, Data Members are Classified into 2 Types. They are
+			1. Instance Data Members
+			2. Class Leve Data Members
+-------------------------------------------------------------------------------------------------------------------------------------------------
+1. Instance Data Members
+-------------------------------------------------------------------------------------------------------------------------------------------------
+=>Instance Data memebers are those whose memory space created every time when we create object.
+=>Instance Data memebers are for storing Specific Data.
+=>Instance Data memebers are always avilable with object and hence They are also Know as  Object Level Data 
+    Members
+=>Instance Data members can be specified in 3 Ways. They are 
+				1. By Using Object Name 
+				2. By using Instance Methods
+				3. By using Constructors 
+=>Instance Data Members Must be accessed w.r.t Object name  OR  self
+						objectname.Instance Data MemberName
+								(OR)
+						self.Instance Data MemberName
+-------------------------------------------------------------------------------------------------------------------------------------------------
+2. Class Level Data Members
+-------------------------------------------------------------------------------------------------------------------------------------------------
+=>Class Level Data memebers are those whose memory space created Only One time Irrespective Number of 
+   objects we create.
+=>Class Level Data Members are for storing Common Data.
+=>Since Class Level Data Members are defining Inside of Class definition and they are common for all the 
+   objects of same class and they are called Class Level Data members.
+=>Class Level Data members can be specified in 2 Ways. They are 
+			1) Inside the class definition
+			2) Inside of Class Level Method
+=>Class Level Data members  can be accessed w.r.t Class Name or Cls or object Name or self
+				classname.ClassLevel Data members
+						(OR)
+				ObjectName.ClassLevel Data members
+						(OR)
+				cls.ClassLevel Data members
+						(OR)
+				self.ClassLevel Data members
+-------------------------------------------------------------------------------------------------------------------------------------------------

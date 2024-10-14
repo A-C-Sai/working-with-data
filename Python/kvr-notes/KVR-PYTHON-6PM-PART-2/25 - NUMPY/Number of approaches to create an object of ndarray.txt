@@ -1,0 +1,422 @@
+			=================================================
+			   Number of approaches to create an object of ndarray 
+			=================================================
+=>"ndarray" is one of the pre-defined class of numpy module and whose object is used for storing the data in numpy programming in the form of 1-D, 2-D and n-Dimensional Arrays.
+=>In numpy programming, we have the following essential approaches to create an object of ndarray.		
+		1. array()
+		2. arange()
+		3. zeros()
+		4. ones()
+		5. full()
+		6. identity()
+		7.hstack()
+		8.vstack()
+-----------------------------------------------------------------------------------------------------
+1)  array():
+-------------------------------------------------------------------------------
+=>This Function is used for converting Traditional Python Objects into ndarray object.
+=>Syntax:-              varname=numpy.array( Object,dtype )
+		=>Here var name is an object of <class,ndarray>
+		=>here array() is pre-defined function of numpy module used for converting		Traditional Python Objects into ndrray object.
+		=>object represents any Traditional Python Objects
+		=>dtype represents any numpy data type such as int8,int16,int32,float16, float 32, float64,....etc (Internal data types of C lang)
+
+Examples:
+------------------
+>>> import numpy as np
+>>> l1=[10,20,30,40,50,60]
+>>> print(l1,type(l1))-----------------[10, 20, 30, 40, 50, 60] <class 'list'>
+>>> a=np.array(l1)
+>>> print(a,type(a))----------------[10 20 30 40 50 60] <class 'numpy.ndarray'>
+>>> t=(10,20,30,40,50,60,70)
+>>> print(t,type(t))--------------(10, 20, 30, 40, 50, 60, 70) <class 'tuple'>
+>>> a=np.array(t)
+>>> print(a,type(a))--------------[10 20 30 40 50 60 70] <class 'numpy.ndarray'>
+>>> d1={10:1.2,20:4.5,30:6.7}
+>>> a=np.array(d1)
+>>> a----array({10: 1.2, 20: 4.5, 30: 6.7}, dtype=object)
+---------------------------------------------------------------------------------------
+>>> t=(10,20,30,40,50,60)
+>>> a=np.array(t)
+>>> a--------------array([10, 20, 30, 40, 50, 60])
+>>> a.ndim------------1
+>>> a.dtype----------dtype('int32')
+>>> a.shape-------------(6,)
+>>> b=a.reshape(3,2)
+>>> c=a.reshape(2,3)
+>>> b--------------
+		array([[10, 20],
+		       [30, 40],
+		       [50, 60]])
+>>> c
+	array([[10, 20, 30],
+	       [40, 50, 60]])
+>>> print(b,type(b))
+		[[10 20]
+		 [30 40]
+		 [50 60]] <class 'numpy.ndarray'>
+>>> print(c,type(c))
+			[[10 20 30]
+			 [40 50 60]] <class 'numpy.ndarray'>
+>>> b.ndim-------------2
+>>> c.ndim------------2
+>>> b.shape---------------(3, 2)
+>>> c.shape-------------(2, 3)
+>>> d=a.reshape(3,3)-------ValueError: cannot reshape array of size 6 into shape (3,3)
+----------------------------------------------------------------------------------------------------------------------------
+>>> t1=((10,20),(30,40))
+>>> print(t1,type(t1))--------------((10, 20), (30, 40)) <class 'tuple'>
+>>> a=np.array(t1)
+>>> a
+		array([[10, 20],
+		       [30, 40]])
+>>> a.ndim----------2
+>>> a.shape----------(2, 2)
+------------------------------------------------------------------------------------------------------------
+>>> t1=( ((10,20,15),(30,40,25)),( (50,60,18),(70,80,35) ))
+>>> print(t1,type(t1))
+(((10, 20, 15), (30, 40, 25)), ((50, 60, 18), (70, 80, 35))) <class 'tuple'>
+>>> a=np.array(t1)
+>>> a
+array([[[10, 20, 15],
+        [30, 40, 25]],
+
+       [[50, 60, 18],
+        [70, 80, 35]]])
+>>> print(a)
+[[[10 20 15]
+  [30 40 25]]
+
+ [[50 60 18]
+  [70 80 35]]]
+>>> a.ndim
+3
+>>> a.shape
+(2, 2, 3)
+>>> b=a.reshape(4,3)
+>>> b
+array([[10, 20, 15],
+       [30, 40, 25],
+       [50, 60, 18],
+       [70, 80, 35]])
+>>> c=a.reshape(3,4)
+>>> c
+array([[10, 20, 15, 30],
+       [40, 25, 50, 60],
+       [18, 70, 80, 35]])
+>>> d=a.reshape(3,2,2)
+>>> d
+array([[[10, 20],
+        [15, 30]],
+
+       [[40, 25],
+        [50, 60]],
+
+       [[18, 70],
+        [80, 35]]])
+>>> d[0]
+array([[10, 20],
+       [15, 30]])
+>>> d[1]
+array([[40, 25],
+       [50, 60]])
+>>> d[2]
+array([[18, 70],
+       [80, 35]])
+>>>
+
+------------------------------------------------------------------------------------------------------------------------------
+2. arange():
+------------------------------------------------------------------------------------
+Syntax1:-  varname=numpy.arange(Value)
+Syntax2:-  varname=numpy.arange(Start,Stop)
+Syntax3:-  varname=numpy.arange(Start,Stop,Step)
+	=>Here var name is an object of <class,ndarray>
+
+=>Syntax-1 creates an object of ndarray with the values from 0 to value-1
+=>Syntax-2 creates an object of ndarray with the values from Start to Stop-1
+=>Syntax-3 creates an object of ndarray with the values from Start to Stop-1 with equal 
+                    Interval of Value-----step
+=>arange() always create an object of ndarray in 1-D array only but not Possible to create directly 2-D and Multi Dimesional Arrays.
+=>To create 2-D and Multi Dimesional Arrays, we must use reshape() or shape attribute
+
+Examples:
+-----------------
+>>> import numpy as np
+>>> a=np.arange(10)
+>>> a-----------array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> a.ndim--------1
+>>> a=np.arange(50,62)
+>>> print(a,type(a))---[50 51 52 53 54 55 56 57 58 59 60 61] <class 'numpy.ndarray'>
+>>> a.ndim------1
+>>> a=np.arange(10,23,2)
+>>> a-----array([10, 12, 14, 16, 18, 20, 22])
+>>> a=np.arange(10,22,2)
+>>> a--------array([10, 12, 14, 16, 18, 20])
+>>> b=a.reshape(2,3)
+>>> c=a.reshape(3,2)
+>>> b-----
+		array([[10, 12, 14],
+		       [16, 18, 20]])
+>>> c
+		array([[10, 12],
+		       [14, 16],
+		       [18, 20]])
+>>> b.ndim------ 2
+>>> c.ndim------- 2
+>>> b.shape-----(2, 3)
+>>> c.shape-----(3, 2)
+>>> l1=[ [[10,20],[30,40]], [[15,25],[35,45]] ]
+>>> l1----------[[[10, 20], [30, 40]], [[15, 25], [35, 45]]]
+>>> a=np.arange(l1)----------TypeError: unsupported operand type(s) for -: 'list' and 'int'
+==================================================================
+3. zeros():
+------------------------
+=>This Function is used for building ZERO matrix either with 1-D or 2-D or n-D 
+=>Syntax:   varname=numpy.zeros(shape,dtype)
+
+=>Here Shape can be 1-D(number of Zeros)  or 2-D(Rows,Cols)  or n-D( Number of Matrices,Number of Rows, Number of Columns) 
+-----------------------
+Examples:
+--------------------
+>>> import numpy as np
+>>> a=np.zeros(12)
+>>> a-----------array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+>>> a=np.zeros(12,dtype=int)
+>>> a------------array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+>>> a.reshape(3,4)
+			array([[0, 0, 0, 0],
+			       [0, 0, 0, 0],
+			       [0, 0, 0, 0]])
+>>> a.reshape(4,3)
+			array([[0, 0, 0],
+			       [0, 0, 0],
+			       [0, 0, 0],
+			       [0, 0, 0]])
+>>> a.reshape(6,2)
+			array([[0, 0],
+			       [0, 0],
+			       [0, 0],
+			       [0, 0],
+			       [0, 0],
+			       [0, 0]])
+>>> a.reshape(2,6)
+		array([[0, 0, 0, 0, 0, 0],
+		       [0, 0, 0, 0, 0, 0]])
+>>> a.reshape(2,3,2)
+				array([[[0, 0],
+					[0, 0],
+					[0, 0]],
+
+				       [[0, 0],
+					[0, 0],
+					[0, 0]]])
+
+>>> a.reshape(2,2,2,2)------ValueError: cannot reshape array of size 12 into shape (2,2,2,2)
+>>> a.reshape(3,2,2)
+			array([[[0, 0],
+				[0, 0]],
+
+			       [[0, 0],
+				[0, 0]],
+
+			       [[0, 0],
+				[0, 0]]])
+>>> a.reshape(2,3,2)
+			array([[[0, 0],
+				[0, 0],
+				[0, 0]],
+
+			       [[0, 0],
+				[0, 0],
+				[0, 0]]])
+>>> a.reshape(2,2,3)
+			array([[[0, 0, 0],
+				[0, 0, 0]],
+
+			       [[0, 0, 0],
+				[0, 0, 0]]])
+----------------------------------------------------------------------------
+>>> import numpy as np
+>>> a=np.zeros((3,3),dtype=int)
+>>> a
+		array([[0, 0, 0],
+		       [0, 0, 0],
+		       [0, 0, 0]])
+>>> a=np.zeros((2,3))
+>>> a
+		array([[0., 0., 0.],
+		       [0., 0., 0.]])
+>>> a=np.zeros((2,3),int)
+>>> a
+		array([[0, 0, 0],
+		       [0, 0, 0]])
+>>> a=np.zeros((3,2,3),dtype=int)
+>>> a
+		array([[[0, 0, 0],
+			[0, 0, 0]],
+
+		       [[0, 0, 0],
+			[0, 0, 0]],
+
+		       [[0, 0, 0],
+			[0, 0, 0]]])
+>>> print(a,type(a))
+			[[[0 0 0]
+			  [0 0 0]]
+
+			 [[0 0 0]
+			  [0 0 0]]
+
+			 [[0 0 0]
+			  [0 0 0]]]     <class 'numpy.ndarray'>
+-------------------------------------------------------------------------------------------------------------------------------
+4. ones()
+---------------------------------------
+=>This Function is used for building ONEs matrix either with 1-D or 2-D or n-D 
+=>Syntax:   varname=numpy.ones(shape,dtype)
+
+=>Here Shape can be 1-D(number of ones)  or 2-D(Rows,Cols)  or n-D( Number of Matrices,Number of Rows, Number of Columns) 
+
+Examples:
+-----------------------------
+>>> import numpy as np
+>>> a=np.ones(10)
+>>> print(a,type(a))----------[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.] <class 'numpy.ndarray'>
+>>> a=np.ones(10,dtype=int)
+>>> print(a,type(a))-------------[1 1 1 1 1 1 1 1 1 1] <class 'numpy.ndarray'>
+>>> a.shape-----------(10,)
+>>> a.shape=(5,2)
+>>> a
+	array([[1, 1],
+	       [1, 1],
+	       [1, 1],
+	       [1, 1],
+	       [1, 1]])
+>>> a.ndim--------------	2
+>>> a.shape------------ (5, 2)
+>>> a.shape=(2,5)
+>>> a
+	array([[1, 1, 1, 1, 1],
+	       [1, 1, 1, 1, 1]])
+>>> a.shape----------------------(2, 5)
+>>>
+>>> a=np.ones((3,4),dtype=int)
+>>> a
+		array([[1, 1, 1, 1],
+		       [1, 1, 1, 1],
+		       [1, 1, 1, 1]])
+>>> a=np.ones((4,3),dtype=int)
+>>> print(a,type(a))
+			[[1 1 1]
+			 [1 1 1]
+			 [1 1 1]
+			 [1 1 1]] <class 'numpy.ndarray'>
+>>> a.shape----------(4, 3)
+>>> a.shape=(3,2,2)
+>>> a
+		array([[[1, 1],
+			[1, 1]],
+
+		       [[1, 1],
+			[1, 1]],
+
+		       [[1, 1],
+			[1, 1]]])
+>>> a=np.ones((4,3,3),dtype=int)
+>>> a
+			array([[[1, 1, 1],
+				[1, 1, 1],
+				[1, 1, 1]],
+
+			       [[1, 1, 1],
+				[1, 1, 1],
+				[1, 1, 1]],
+
+			       [[1, 1, 1],
+				[1, 1, 1],
+				[1, 1, 1]],
+
+			       [[1, 1, 1],
+				[1, 1, 1],
+				[1, 1, 1]]])
+
+
+================================================================
+5) full()
+-------------------------
+=>This is function is used for building a matrix by specifying fill value either 1-D or 2-D or n-D
+=>Syntax:-
+			varname=numpy.full(shape,fill_value,dtype)
+=>varname is an obejct of <class, numpy.ndarray>
+=>Here Shape can be 1-D(number of  Fill_Value)  or 2-D(Rows,Cols)  or n-D( Number of Matrices,Number of Rows, Number of Columns) 
+=>fill_value can be any number of programmer choice 
+
+Examples:
+-------------------
+>>> a=np.full(3,1)
+>>> a---------array([1, 1, 1])
+>>>print(type(a))--------<class,numpy.ndarray>
+>>> a=np.full(3,9)
+>>> a------------array([9, 9, 9])
+>>> a=np.full(6,8)
+>>> a-------------array([8, 8, 8, 8, 8, 8])
+>>> a.shape=(3,2)
+>>> a
+	array([[8, 8],
+	       [8, 8],
+	       [8, 8]])
+>>> a=np.full(6,9)
+>>> a----------array([9, 9, 9, 9, 9, 9])
+>>> a.reshape(2,3)
+		array([[9, 9, 9],
+		       [9, 9, 9]])
+>>> a=np.full((3,3),9)
+>>> a
+		array([[9, 9, 9],
+		       [9, 9, 9],
+		       [9, 9, 9]])
+>>> a=np.full((2,3),6)
+>>> a
+	array([[6, 6, 6],
+	       [6, 6, 6]])
+>>> a.reshape(3,2)
+	array([[6, 6],
+	       [6, 6],
+	       [6, 6]])
+>>> a=np.full((3,3,3),7)
+>>> a
+	array([[[7, 7, 7],
+		[7, 7, 7],
+		[7, 7, 7]],
+
+	       [[7, 7, 7],
+		[7, 7, 7],
+		[7, 7, 7]],
+
+	       [[7, 7, 7],
+		[7, 7, 7],
+		[7, 7, 7]]])
+==================================================================
+6)  identity():
+----------------------------------
+=>This function always bulid Identity or unit matrix 
+=>Syntax:-  varname=numpy.identity(N,dtype)
+=>Here N represents Either we can take Rows or Columns and PVM takes as NXN Matrix (Square Matrix--Unit or Identity)
+
+Examples:
+--------------------------
+>>> import numpy as np
+>>> a=np.identity(3,dtype=int)
+>>> print(a,type(a))-------------
+		[[1 0 0]
+		 [0 1 0]
+		 [0 0 1]] <class 'numpy.ndarray'>
+>>> a=np.identity(5,dtype=int)
+>>> print(a,type(a))
+			[[1 0 0 0 0]
+			 [0 1 0 0 0]
+			 [0 0 1 0 0]
+			 [0 0 0 1 0]
+			 [0 0 0 0 1]] <class 'numpy.ndarray'>
+======================================X========================================

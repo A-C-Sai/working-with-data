@@ -1,0 +1,23 @@
+		====================================================
+			Steps for developing Server Side Applications
+		====================================================
+Step-1:   import socket module
+Step-2:   Every Server Side Program Must Run At Certain DNS/IP Address and port Number.
+Step-3:   Every Server Side Program Must Configure in such way that to how many client side programs gives 
+              Response.    
+Step-4:   Every Server Side Program must ACCEPT  Client Side Program request.
+Step-5:   Every Server Side Program Must Read, and PROCESS the Client Side Program request.
+Step-6:   Every Server Side Program Must give RESPONSE to Client Side Program request.
+
+=>Note: Repeat Step-4,step-5 and Step-6 until All Client Side Programs Request Complets.
+==========================================================================
+			Steps for developing Client Side Applications
+==========================================================================
+Step-1: import socket module
+Step-2: Every Client Side Program must get the connection from Server Side Program by passing (DNS/IP 
+            Address and Port Number )
+Step-3: Every Client Side Program must  SEND a Request to Server Side Program.
+Step-4: Every Client Side Program must RECEIVE the Response from Server Side Program.
+Step-5: Repeat Step-3 and Step-4 when client side program want to send multiple Requests for multiple 
+            responses.
+================================================================================

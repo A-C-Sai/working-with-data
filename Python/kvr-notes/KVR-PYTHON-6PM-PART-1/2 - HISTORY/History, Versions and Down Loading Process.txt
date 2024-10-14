@@ -1,0 +1,34 @@
+		=======================================
+				History of Python
+		=======================================
+=>Python is one of the General Purpose Programming language used in Many Application 
+    Developments (Real Time Applications).
+=>The Python Programming Language was conceived in the year 1980.
+=>The Python Programming Language implemented (Bring into action) in year 1989.
+=>The Python Programming Language Officially Released to the Industry in the year 1991 
+    Feb 20.
+=>The Python Programming Language developed  By "Guido Van Rossum".
+=>The Python Programming Language Developed at Centrum Wiskunde Informatica (CWI) 
+    Institute in Nether Lands
+=>ABC Programming Language is the predecessor of  Python Programming Language.
+=>The Python Programming Language managed and maintained By a Non-Commercial 
+     Organization called "Python Software Foundation(PSF)".
+=>The official web site of Python Software Foundation is www.python.org
+-------------------------------------------------------------------------------------------------------------------------------
+				Versions of Python--MNC Using
+-------------------------------------------------------------------------------------------------------------------------------
+=>Version is one the Numerical IDentity given by Product / Project vendors.
+=>Python Programming Language contains 3 Types of Versions. They are
+
+			1. Python 1.x------ Here 1 is called Major Version and 
+						   Here x represents  0 1,2,3,4,5,6,7--are called Minor Versions
+						   (Outdated)
+			=>Python  programming does not Support Backward Compatability
+
+			2. Python 2.x------ Here 2 is called Major Version and 
+						   Here x represents  0 1,2,3,4,5,6,7--are called Minor Versions
+						   (Outdated)
+			3. Python 3.x---------- Here 1 is called Major Version and 
+						   Here x represents  0 1,2,3,4,5,6,7 8 9 10 11(Latest)   12--are called Minor Versions
+=>We are recommended to download Python 3.11 Version from www.python.org.						
+==========================================================================

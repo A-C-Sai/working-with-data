@@ -1,0 +1,12 @@
+			=============================================
+					Constructors in Python
+			=============================================
+Index
+----------
+=>purpose of Constructor
+=>Definition of Constructor
+=>Syntax for defining Constructor
+=>Rules / Properties of Constructors
+=>Types of Constructors
+=>Programming Examples
+-----------------------------------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+#Program for inserting the records in employee table in Oracle by reading employee values fromk Key board
+#InsertRecordEx3.py
+import cx_Oracle
+def   insertrecord():
+	while(True):
+		try:
+			con=cx_Oracle.connect("system/manager@localhost/xe")
+			cur=con.cursor()
+			#Accept employee values
+			empno=int(input("Enter Employee Number:"))
+			ename=input("Enter Employee Name:")
+			sal=float(input("Enter Employee Salary:"))
+			cname=input("Enter Employee Comp Name:")
+			#Design  and execute the query
+			dq="insert into employee values(%d,'%s',%f,'%s')"
+			cur.execute(dq %(empno,ename,sal,cname))
+			#OR cur.execute("insert into employee values(%d,'%s',%f,'%s')" %(empno,ename,sal,cname))
+			con.commit()
+			print("%d Employee Record Inserted Sucessfully" %cur.rowcount)
+			print("-"*50)
+			ch=input("Do u want to insert another record(yes/no):")
+			if(ch.lower()=="no"):
+				break
+		except cx_Oracle.DatabaseError as kv:
+			print("Problem in Db:",kv)
+		except ValueError:
+			print("Don't Enter alnums,strs,symbols for empno and salary")
+		except:
+			print("Oooops ,wome thing went wrong")
+#main program
+insertrecord()

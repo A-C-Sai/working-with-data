@@ -1,0 +1,13 @@
+		==============================================
+			Types of Inheritances
+		==============================================
+=>A Type of Inheritance is a model / Paradigm , which makes us to understand how the 
+    features are Inherited from Base Class into Derived Class.
+=>In Python Programming, we have 5 types of Inheritances.  They  are
+
+		1. Single Inheritance
+		2. Multi Level Inheritance
+		3. Hierarchical Inheritance
+		4. Multiple Inheritance
+		5. Hybrid Inheritance
+

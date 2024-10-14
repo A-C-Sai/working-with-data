@@ -1,0 +1,10 @@
+	=============================================================
+		Set Category Data Types ( Collections or Data Structures )
+	=============================================================
+=>The purpose of Set Category Data Types is that " To store Collection or Multiple Values 
+     of same type or Different type in single Variable with  Unique Values".
+=>We have 2 Daya types set  Category . They are
+
+				1. set (mutable and Immutable)
+				2. frozenset (immutable)
+-------------------------------------------------------------------------------------------------------------------------------

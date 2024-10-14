@@ -1,0 +1,32 @@
+			======================================
+					Functions in Python
+			======================================
+=>The purpose of Functions in Python is that " To Perform certain Operation and Provides  Code Re-Usability".
+--------------------------------
+Definition of Function
+--------------------------------
+=>Sub Program of Main Program is Called Function
+				(OR)
+=>A Part of Main Program is Called Function.
+Examples:   withdraw() , deposit(), balenq()..etc are the parts of ATM Project.
+-----------------------------------------------------------
+Parts of Functions.
+-----------------------------------------------------------
+=>At the time of dealing with Functions Concept, we must ensure that there must exist 2 Parts. they are
+		1) Function Definition
+		2) Function Call(s)
+=>Function Definition exist Only Once
+=>Function Definition executes by Calling Function Call(s). In otherwords Function Definitions are executing by calling it through Function Calls otherwise Function Definition will not execute.
+=>For Every Function call, There must exist a Function Definition Otherwise we get NameError.
+-----------------------------------------------------------------------------------
+Phases in Functions
+------------------------------------------------------------------------------------
+=>At time of Function Execution, we must ensure that it should 3 Phases. They are
+		1. Every Function takes INPUT
+		2. Every Function Must PROCESS the input
+		3. Every Function Must give OUTPUT / RESULT 
+--------------------------------------------------------------------------------------
+
+
+
+   

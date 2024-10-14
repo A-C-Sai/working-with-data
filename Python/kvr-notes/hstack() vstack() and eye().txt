@@ -1,0 +1,135 @@
+			====================================
+					hstack() and vstack()
+			====================================
+
+------------------------------------------------------------------------------------------
+		numpy.hstack()
+-----------------------------------------------------------------------------------------
+=>numpy()hstack stacks arrays horizontally. 
+=>All the input arrays must have same number of dimensions, but the nested arrays of different input arrays can have different number of columns. This is because the horizontal stack is not restricted to the vertical alignments.
+		varname=numpy.hstack(ndarrayobj1,(ndarrayobj2)
+Examples:
+------------------
+import numpy as np
+a = np.array([1, 2, 3]) 
+b = np.array([4, 5, 6])
+np.hstack((a,b))---------#  [1, 2, 3, 4, 5, 6]
+--------------------------------------------------
+import numpy as np
+a = np.array([[1, 2], [3, 4]]) 
+b = np.array([[4, 5, 6], [7, 8, 9]])
+np.hstack((a,b)) # [[1, 2, 4, 5, 6],
+			   [3, 4, 7, 8, 9]]
+-----------------------------------------------------------------------------------------------------------
+			numpy.vstack()
+---------------------------------------------------------------------------------------------------------
+numpy.vstack() stacks arrays vertically, and the number of columns of input arrays must be the same. This is because NumPy array requires all the nested arrays to have the same size. If you try to vertically stack 2 arrays with different number of columns we get ValueError.
+Syntax:
+------------
+		varname=numpy.hstack(ndarrayobj1,(ndarrayobj2)
+
+Examples:
+-------------------
+import numpy as np
+a = np.array([1, 2, 3]) 
+b = np.array([4, 5, 6])
+np.vstack((a,b))---------# [[1 2 3], 
+				   [4 5 6]]
+-----------------------------------------------------------------------------------
+import numpy as np
+a = np.array([[1, 2], [3,4]])
+b = np.array([[4, 5], [5,6]])
+np.vstack((a,b))    # [[1, 2],
+			      [3, 4],
+			      [4, 5],
+			      [5, 6]]
+==============================x====================================
+				 eye()
+==================================================================
+ =>This function is used for generating an identity matrix (or) returns 2-D array with 
+1's on the principle diagnal and 0's else where.
+Syntax:- 
+-------------
+              ndarrayobj=numpy.eye(N,M=None,k=0)
+=>Here N Represents  Rows
+=>         M represents Columns
+=>	 K represents Principle diagnal (if k=0 then it is principle Diagnal--by default)
+                                                         if k=-1,-2,-3.. then it is bellow principle Diagnal
+							 if k=1,2,3..then it is above principle Diagnal
+------------------
+Examples:
+------------------
+>>> import numpy as np
+>>> a=np.eye(6)
+>>> a
+array([[1., 0., 0., 0., 0., 0.],
+       [0., 1., 0., 0., 0., 0.],
+       [0., 0., 1., 0., 0., 0.],
+       [0., 0., 0., 1., 0., 0.],
+       [0., 0., 0., 0., 1., 0.],
+       [0., 0., 0., 0., 0., 1.]])
+>>> import numpy as np
+>>> a=np.eye(6,dtype=int)
+>>> a
+array([[1, 0, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 0, 1]])
+>>> a=np.eye(6,k=-1,dtype=int)
+>>> a
+array([[0, 0, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 1, 0]])
+>>> a=np.eye(6,k=-2,dtype=int)
+>>> a
+array([[0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0]])
+>>> a=np.eye(6,k=1,dtype=int)
+>>> a
+array([[0, 1, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 0, 1],
+       [0, 0, 0, 0, 0, 0]])
+>>> a=np.eye(6,k=4,dtype=int)
+>>> a
+array([[0, 0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 0, 1],
+       [0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0]])
+>>> a=np.eye(3,4,dtype=int)
+>>> a
+array([[1, 0, 0, 0],
+       [0, 1, 0, 0],
+       [0, 0, 1, 0]])
+>>> a=np.eye(4,3,dtype=int)
+>>> a
+array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1],
+       [0, 0, 0]])
+>>> a=np.eye(4,3,k=-1,dtype=int)
+>>> a
+array([[0, 0, 0],
+       [1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+>>> a=np.eye(4,3,k=1,dtype=int)
+>>> a
+array([[0, 1, 0],
+       [0, 0, 1],
+       [0, 0, 0],
+       [0, 0, 0]])
+===================================================

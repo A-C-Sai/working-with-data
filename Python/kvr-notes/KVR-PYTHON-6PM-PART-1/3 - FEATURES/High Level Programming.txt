@@ -1,0 +1,22 @@
+		================================================
+				6. High Level Programming
+		================================================
+=>In general, we have two types of Programming languages. They are
+			a) Low Level Programming Languages.
+			b) High Level Programming Languages.
+--------------------------------------------------------------------------------------------------------------
+a) Low Level Programming Languages:
+------------------------------------------------------------------
+=>In These Programming Languages, we represent the data in lower level data like Binary, Octal and Hexa decimal  and This type data is not by default understanble by Programmers and end users.
+
+Examples: -         a=0b1111110000111101010---binary data
+			     b=0o23-----octal
+			     c=0xface----Hexa Decimal
+--------------------------------------------------------------------------------------------------------------
+b) High Level Programming Languages.
+--------------------------------------------------------------------------------------------
+=>In These Programming Languages, Even we represent the data in lower level data like Binary, Octal and Hexa decimal , the High Level Programming Languages automatically converts into Decimal number System data, which is understanble by Programmers and end-users   and python is one High Level Programming Language.
+
+Example : Python
+=================================x=================================
+

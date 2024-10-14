@@ -1,0 +1,10 @@
+		=========================================
+			8. Extensible   and		9. Embedded 
+		=========================================
+
+Extensible---->Python programming Provides it Services / APIs to Other Langugaes to use
+
+
+Embedded:-   Python Programming also can use Other Language  we can use .
+-------------------------------------------------------------------------------------------------------------------------------
+			

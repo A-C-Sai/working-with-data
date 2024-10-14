@@ -1,0 +1,30 @@
+			=========================================
+				1. Arithmetic Operators
+			=========================================
+=>The purpose of Arithmetic Operators is that "To Perform Arithmetic Operatorations such 
+    as addition, substraction multiplication..etc".
+=>If an Arithmetic Operator connected with two or more variables then it is called Arithmetic     Expression.
+=>We have 7 Arithmetic Operators and they given given in the following table.
+----------------------------------------------------------------------------------------------------------------------------
+	SLNO		Symbol			Meaning			Examples
+----------------------------------------------------------------------------------------------------------------------------
+	1.			+				Addition			print(10+3)---->13
+	
+	2.			-				Subtract			print(10-3)----->7
+
+	3.			*				Multiplication		print(10*3)---->30
+print("="*50) ---> repetition
+
+	4.			/				Division			print(10/3)---->3.33333333335
+							  (Float Quotient )	
+								 
+	5.			//				Floor Division		print(10//3)----> 3
+							 (Integer Quotient )	
+
+	6.			%				Modulo Division     print(10%3)----> 1
+								(remainder)
+
+	7.			**			Exponentiation		print(10**3)--->1000	
+
+----------------------------------------------------------------------------------------------------------------------------
+

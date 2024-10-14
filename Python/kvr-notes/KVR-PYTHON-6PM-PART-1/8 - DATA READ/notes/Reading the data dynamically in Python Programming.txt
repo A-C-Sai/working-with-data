@@ -1,0 +1,18 @@
+		================================================
+		    Reading the data dynamically in Python Programming
+		================================================
+=>To read the data Dynamically from Key Board, we have two pre-defined functions. They are
+			1) input()
+			2) input(Mesagge)
+------------------------------------------------------------------------------------------------------------------------------
+1) input()
+------------------------------------------------------------------------------------------------------------------------------
+Syntax:       varname=input()
+=>here input() is used for reading any type of data in the form str and placed that value in LHS Varname.
+=>Programatically, we can convert str values into other type of values by using type casting functions.
+------------------------------------------------------------------------------------------------------------------------------
+2) input(Message)
+------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   varname=input(Message)
+=>Here input(Message) is used for reading any type of data in the form of str and always gives User prompting Message and place reading value in LHS Varname.
+------------------------------------------------------------------------------------------------------------------------------

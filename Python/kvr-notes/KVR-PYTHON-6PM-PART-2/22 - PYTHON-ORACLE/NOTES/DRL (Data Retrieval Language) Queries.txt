@@ -1,0 +1,28 @@
+		==========================================
+		      3. DRL (Data Retrieval Language) Queries 
+		==========================================
+=>The purpose DRL (Data Retrieval Language) Queries is that " To read or select the records  from table".
+=> "select" comes under DRL (Data Retrieval Language) Query.
+=>In otherwords, select query is used for Reading or Viewing the records from table.
+
+=>Syntax-1:
+----------------------
+			SQL>select * from table name
+
+=>Syntax-2:
+----------------------
+			SQL>select * from table name where cond list
+--------------------------------------------------------------------------------------------------------------------------
+=>After Executing DRL statements, the result of DRL statements is present in cursor object. To extract the from cursor object, have 3 Functions in cursor object. They are
+		a) fetchone()
+		b) fetchmany(no. of records)
+		c) fetchall()
+=>fetchone() is used for obtaining One Record at a Time in the form of tuple. if no records found then we  this function returns None.
+=>fetchmany(no. of records) is used for obtaining specified number of records.
+	case-1: if specified number of records==0 then this function obtains all records
+	case-2:  if specified number of records<=Total Number of Records and specified number of records>0 then this function gives specified number of records only.
+	case-3:  if specified number of records >Total Number of Records then this function 
+	              obtains all records
+	case-4: if specified number of records<0 then this function  never gives any records.
+
+=>fetchall()  is used for obtaining all the records from cursor object.

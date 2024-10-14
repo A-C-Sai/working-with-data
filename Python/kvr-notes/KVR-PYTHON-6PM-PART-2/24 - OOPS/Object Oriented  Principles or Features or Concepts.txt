@@ -1,0 +1,26 @@
+		=================================================
+		      Object Oriented  Principles or Features or Concepts
+		=================================================
+=>In real time, to develop any project or application, we must choose a language and it can satisfy two types of principles. They are
+	1. Functional(Procedure) Oriented Principles
+			Examples:  C,Pascal, cobol,8086,oracle7.3,  PYTHON
+
+	2. Object Oriented Priciples.
+			Examples:  PYTHON C++ JAVA, .NET.......etc
+=>Even though, PYTHON programming Belongs to both  Functional and  Object Oriented Programming language and internally every thing is treated as object.
+
+-------------------------------------------------------------------------------------------------------
+		"Every Thing is an object " --Benifits
+			(OR)
+	 Adavtanges of Object Oriented Principles
+--------------------------------------------------------------------------------------------------------
+1. Objects allows us to store Large Volume of Data (Platform Indepenedent--Python)
+2. The Data is visiting between two machines in the form of Ciphet Text (encrypted 
+   Format). So that we can achieve the Security .
+3. The Large Volume of Data can be transfered between multiple machines all at once in 
+    the  form of objects and obtains effective communication.
+4. With Objects we can build high effective Re-Usable Applications.
+5. The Data is always available arround Objects (Effective Memory Usage) and functions 
+    can operate on the objects.
+-------------------------------------------------------------------------------------------------
+

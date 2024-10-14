@@ -1,0 +1,63 @@
+				=============================================
+							2. tuple
+				=============================================
+=>'tuple' is one of the pre-defined class and treated as List Data Type.
+=>The purpose of tuple data type is that "To store Multiple Values either of same 
+     type or Different type or both the types in single object with Unique and Duplicate Values".
+=>The Elements or Data in tuple must be organized or Stored in  braces  ( )  and 
+    Elements must be separated by Comma.
+		Syntax:   varname=( Val1,Val2.....Val-n )
+		here varname is an object of tuple type.
+=>An object of tuple maintains Insertion Order
+=>On the object of tuple, we can perform Both Indexing and Slicing Operations.
+=>We can convert One type values into tuple type value by using  tuple()
+		Syntax:-     varname= tuple(object)
+=>An object of tuple belongs to Immutable bcoz tuple object  does not support Item Assigment.
+=>with tuple data type, we can create two types of tuple objects. They are
+			a) Empty tuple
+			b) Non-Empty tuple
+-------------------------------
+a) Empty tuple
+-------------------------------
+=> Empty tuple is one which does not contain any elements and whose length is 0
+=>Syntax:-       varname=( )
+				(OR)
+			varname=tuple()
+--------------------------------------------------------------
+b) Non-Empty tuple
+------------------------------------------------------------------
+=> Non-Empty tuple  is one which  contains  elements and whose length is>0
+=>Syntax:-       varname=(Val1,Val2....Val-n)
+				(OR)
+			varname=tuple ( [10,20,30,10,20]  )
+				(OR)
+			 varname= Val1,Val2....Val-n
+				(OR)
+			varna me = tuple(Object)
+---------------------
+NOTE:
+---------------------
+=>The Functionality of tuple is extarctly similar to list but an object of list belongs to mutable where as an object tuple belongs to immutable.
+===============================================================================
+Examples
+---------------------------
+>>> t1=(10,20,30,40,50,60,10,20)
+>>> print(t1,type(t1))-----------------(10, 20, 30, 40, 50, 60, 10, 20) <class 'tuple'>
+>>> t2=(10,"RS",34.56,"Python",2+3j,True)
+>>> print(t2,type(t2))--------(10, 'RS', 34.56, 'Python', (2+3j), True) <class 'tuple'>
+>>> t2[0]-----------------10
+>>> t2[1]------------------'RS'
+>>> t2[1:4]----------------('RS', 34.56, 'Python')
+>>> t2[::-1]--------------(True, (2+3j), 'Python', 34.56, 'RS', 10)
+-------------------------------------------------
+>>> t2=(10,"RS",34.56,"Python",2+3j,True)
+>>> print(t2,type(t2))------------(10, 'RS', 34.56, 'Python', (2+3j), True) <class 'tuple'>
+>>> t2[0]=110-----TypeError: 'tuple' object does not support item assignment
+-----------------------------------------------------------
+>>> t1=10,"KVR",34.56,"Hyd"
+>>> print(t1,type(t1))---------------(10, 'KVR', 34.56, 'Hyd') <class 'tuple'>
+>>> l1=[10,"RS",67.89,"Python"]
+>>> print(l1,type(l1))-----------[10, 'RS', 67.89, 'Python'] <class 'list'>
+>>> t1=tuple(l1)
+>>> print(t1,type(t1))---------(10, 'RS', 67.89, 'Python') <class 'tuple'>
+---------------------------------------------------------------------

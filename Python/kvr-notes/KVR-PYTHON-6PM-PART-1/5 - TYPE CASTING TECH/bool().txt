@@ -1,0 +1,96 @@
+		========================================
+				3. bool()
+		========================================
+=>bool() is used for Converting Any Type of Possible Value into bool type value.
+=>Syntax:		varname=bool(int / float / complex / str)
+=>IMP POINT: ALL NON-ZERO VALUES ARE TREATED AS TRUE
+			ALL ZERO VALUES ARE TREATED AS FALSE
+---------------------------------------------------------------------------------------------------------------------------
+Examples:  int ----->bool---->Possible
+---------------------------------------------------------------------------------------------------------------------------
+>>> a=123
+>>> print(a,type(a))------------------123 <class 'int'>
+>>> b=bool(a)
+>>> print(b,type(b))---------------True <class 'bool'>
+>>> a=-34
+>>> print(a,type(a))--------------  -34 <class 'int'>
+>>> b=bool(a)
+>>> print(b,type(b))-----------------True <class 'bool'>
+>>> a=0
+>>> print(a,type(a))------------0 <class 'int'>
+>>> b=bool(a)
+>>> print(b,type(b))--------------False <class 'bool'>
+---------------------------------------------------------------------------------------------------------------------------
+Examples: float ----->bool---->Possible
+---------------------------------------------------------------------------------------------------------------------------
+>>> a=12.34
+>>> print(a,type(a))---------------------12.34 <class 'float'>
+>>> b=bool(a)
+>>> print(b,type(b))-----True <class 'bool'>
+>>> a=0.0000000000000000000000000000000000000006
+>>> print(a,type(a))-----6e-40 <class 'float'>
+>>> b=bool(a)
+>>> print(b,type(b))----------True <class 'bool'>
+>>> a=0.0
+>>> print(a,type(a))----------0.0 <class 'float'>
+>>> b=bool(a)
+>>> print(b,type(b))-----------False <class 'bool'>
+---------------------------------------------------------------------------------------------------------------------------
+Examples: complex ----->bool---->Possible
+---------------------------------------------------------------------------------------------------------------------------
+>>> a=2+3j
+>>> print(a,type(a))-------------(2+3j) <class 'complex'>
+>>> b=bool(a)
+>>> print(b,type(b))-----------True <class 'bool'>
+>>> a=0+0j
+>>> print(a,type(a))-------------0j <class 'complex'>
+>>> b=bool(a)
+>>> print(b,type(b))-------------False <class 'bool'>
+---------------------------------------------------------------------------------------------------------------------------
+Examples: str ----->bool
+---------------------------------------------------------------------------------------------------------------------------
+>>> a="1234"
+>>> print(a,type(a))
+1234 <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> a="0"
+>>> print(a,type(a))
+0 <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> len(a)
+1
+>>> a="12.34"
+>>> print(a,type(a))
+12.34 <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> a="2+3j"
+>>> print(a,type(a))
+2+3j <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> a="False"
+>>> print(a,type(a))
+False <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> a="    "
+>>> print(a,type(a))
+     <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+True <class 'bool'>
+>>> a=""
+>>> print(a,type(a))
+ <class 'str'>
+>>> b=bool(a)
+>>> print(b,type(b))
+False <class 'bool'>
+===============================X=================================

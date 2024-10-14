@@ -1,0 +1,36 @@
+		========================================
+				Number of Approaches to Open the File IN pYTHON
+		========================================
+=>In python programming, we have Two approaches to Open the files. They are
+			
+			1. By using open()
+
+			2. By using  "with open() as "
+---------------------------------------------------------------------------------------------------------------------
+1. By using open()
+---------------------------------------------------------------------------------------------------------------------
+=>Syntax:      varname=open("File Name","File Mode")
+=>"varname" represents File Pointer  which is pointing to the file and it is one of the object and whose type 
+     is <class, '_io.TextIOWrapper">
+=>open() is a pre-defined function used for opening the Specified  File Name in Specified  File Mode.
+=>"File Name" represents Name of the file
+=>"File Mode" represnts r,w,a,r+,w+,a+,x,x+ 
+=>Once we open the file name  by using open() , It recommended to close the file explicitly by using close(). There is no pissibility auto-closeability property with open()
+---------------------------------------------------------------------------------------------------------------------
+2. By using  "with open() as "
+---------------------------------------------------------------------------------------------------------------------
+=>Syntax:     with  open("File Name","File Mode") as <varname>:
+				-------------------------------------------------------
+				-------------------------------------------------------
+				-------------------------------------------------------
+			-------------------------------------------------------------
+			-------------------------------------------------------------
+Explanation
+-------------------
+=>  here "with" 'as" are keywords
+=>open() is a pre-defined function used for opening the Specified  File Name in Specified  File Mode.
+=>"File Name" represents Name of the file
+=>"File Mode" represnts r,w,a,r+,w+,a+,x,x+ 
+=>"varname" represents File Pointer  which is pointing to the file and it is one of the object and whose type is <class, '_io.TextIOWrapper">
+=>Once we open the file name  by using "with open() as " , It is not necessary to close file explicitly. By default when PVM Comes out of "with open() as " indemtation Block, PVM closes the file atomatically and this property is called "auto-closeability of file".
+---------------------------------------------------------------------------------------------------------------------

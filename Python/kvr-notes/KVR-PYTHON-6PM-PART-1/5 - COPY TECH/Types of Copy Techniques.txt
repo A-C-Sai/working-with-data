@@ -1,0 +1,57 @@
+			======================================
+				Types of Copy Techniques
+			======================================
+=>The purpose of Copy Techniques  is that "To copy the content of one object into another object".
+=>In Python Programming, we have 2 types of Copy Techniques. They are
+		1) Shallow Copy
+		2) Deep Copy
+------------------------------------------------------------------------------------------------------------------------
+1) Shallow Copy:
+------------------------------------------------------------------------------------------------------------------------
+=>The Properties of Shallow Copy are
+		
+		1) Intial Content of Both the Objects are SAME
+		2) The Memory Address (reference) of Both the Objects are DIFFERENT
+		3) Modifications are INDEPENDENT ( Whatever the changes we do on one object, 
+		                                                           It is not reflecting on anothetr object)
+=>To Implement Shallow Copy, we use copy()
+=>Syntax:
+			obj2=obj1.copy()
+
+Examples:
+----------------------
+>>> l1=[10,"Rossum"]
+>>> print(l1,id(l1))-------------------------[10, 'Rossum'] 2875920539904
+>>> l2=l1.copy()  # Shallow Copy
+>>> print(l2,id(l2))-------------------------[10, 'Rossum'] 2875920538944
+>>> l1.append("Python")
+>>> l2.insert(1,"HYD")
+>>> print(l1,id(l1))---------------------------[10, 'Rossum', 'Python'] 2875920539904
+>>> print(l2,id(l2))---------------------------[10, 'HYD', 'Rossum'] 2875920538944
+------------------------------------------------------------------------------------------------------------------------
+2) Deep Copy:
+------------------------------------------------------------------------------------------------------------------------
+=>The Properties of Deep Copy are
+		
+		1) Intial Content of Both the Objects are SAME
+		2) The Memory Address (reference) of Both the Objects are SAME
+		3) Modifications are DEPENDENT ( Whatever the changes we do on one object, 
+		                                                           and  reflecting on anothetr object)
+
+=>To Implement Deep Copy, we use Assigment Operator (= )
+=>Syntax:
+			obj2=obj1 
+
+Examples:
+-----------------
+>>> l1=[10,"Rossum"]
+>>> print(l1,id(l1))-------------------[10, 'Rossum'] 2875920539968
+>>> l2=l1 # Deep Copy
+>>> print(l2,id(l2))-------------------[10, 'Rossum'] 2875920539968
+>>> l1.append("Python")
+>>> print(l1,id(l1))--------------[10, 'Rossum', 'Python'] 2875920539968
+>>> print(l2,id(l2))-------------[10, 'Rossum', 'Python'] 2875920539968
+>>> l2.insert(1,"HYD")
+>>> print(l1,id(l1))-------------[10, 'HYD', 'Rossum', 'Python'] 2875920539968
+>>> print(l2,id(l2))---------------[10, 'HYD', 'Rossum', 'Python'] 2875920539968
+===========================================================

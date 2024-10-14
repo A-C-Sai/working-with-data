@@ -1,0 +1,14 @@
+			========================================
+					Destructors in Python
+			========================================
+Index
+---------
+=>Purpose of destructor
+=>Definition of destructor
+=>Syntax for defining Destructor
+=>relation between Destructor and Garbage Collector 
+=>Internal flow of Destructor with Garbage Collector
+=>Program Examples
+=>gc modules
+=>Programming Examples
+---------------------------------------------------------------x--------------------------------------------------------------

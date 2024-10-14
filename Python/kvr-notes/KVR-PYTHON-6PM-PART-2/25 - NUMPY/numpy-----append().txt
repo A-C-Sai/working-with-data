@@ -1,0 +1,13 @@
+		====================================
+			numpy-----append() 
+		====================================
+Numpy module in python, provides a function to numpy.append() to add an element in a numpy array. 
+Syntax: Varname=numpy.append( ndarrayobj, value)
+         Example.         	
+	import numpy as np
+	#Create a Numpy Array of integers
+	arr = np.array([11, 2, 6, 7, 2])
+	# Add / Append an element at the end of a numpy array
+	new_arr = np.append(arr, 10)
+	print('New Array: ', new_arr)
+	print('Original Array: ', arr)

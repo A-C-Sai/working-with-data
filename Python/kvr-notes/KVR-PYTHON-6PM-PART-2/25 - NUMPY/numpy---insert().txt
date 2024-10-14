@@ -1,0 +1,11 @@
+		======================================
+			numpy---insert()
+		======================================
+Numpy module in python, provides a function numpy.insert() to insert the element  in ndarray at particular Index.
+Syntax:  varname=np.insert( (ndarray , index, value)
+         Example.         	
+	 import numpy as np
+	 a=np.array([10,20,30,40]) 
+	 a=np.array([10,20,30,40])
+	 b=np.insert(a,1,35)
+	 print(a)# array([10, 35, 20, 30, 40])

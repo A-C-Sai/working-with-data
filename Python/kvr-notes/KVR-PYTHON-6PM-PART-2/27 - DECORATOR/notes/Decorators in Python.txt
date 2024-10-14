@@ -1,0 +1,19 @@
+		======================================
+				Decorators in Python
+		======================================
+=>Decorator is one of the Function which will provides Additional Processing capability to the normal Function value and returns the modified value.
+=>A Decorator Function is always takes Normal Function as parameter
+--------------
+Syntax:-
+-------------
+	def     functionname1( functionname ):  # Decorator 
+	          def  innerfunctionname():  # Inner Function name
+		          val=functionname()
+			  --------------------------
+			  #do the operation on ' val '
+			  -------------------------
+			  return resut   #   Inner Funtion must return modified value
+		  return   innerfunctionname   # Decorator returns inner function name
+
+=>here  functionname1 is called Decorator function
+=>here Functionname as a formal parameter . Every decorator function must take normal function as parameter.

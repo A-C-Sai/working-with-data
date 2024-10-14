@@ -1,0 +1,24 @@
+		=========================================
+			Quantifiers in Regular Expressions
+		=========================================
+=>Quantifiers in Regular Expressions are used for searching number of occurences of the specified value (alphabets or digits or special symbols) used in search pattern  to search in the given data and obtains desired result.
+
+1)  "k"------->It search for only one 'k' at a time
+2) "k+"------>It search for either one 'k' more 'k' s
+3) "k*"------>It search for either zero 'k'  or one 'k'  and  more 'k' s
+4) "k?"----->>It search for either zero 'k'  or one 'k' 
+5)  ". " ---->It searches for all
+
+---------
+Note:
+---------
+\ddd  or   \d{3}----->searches for 3 digits
+\dd.\dd----searhes for 2 integer values and 2 decimal values
+\d{2,4}----searches for min 2 digit number and max 4 digit number.
+[A-Za-z]+ ---searches one alphabet   or More alphabets.
+\w+
+[0-9]+   or   \d+
+
+
+
+

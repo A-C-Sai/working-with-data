@@ -1,0 +1,36 @@
+		=====================================
+				Handling the Exceptions
+		=====================================
+=>Handling the Exceptions is nothing converting Technical Error Messages into User-Freindly Error Messages.
+=>To convert Technical Error Messages into User-Freindly Error Messages, in Python, we have 5 keywords. They are
+
+		1. try
+		2. except
+		3. else
+		4. finally
+		5. raise
+---------------------------------------------------------------------------------------
+Syntax for Handling Exception
+-----------------------------------------------------------------------------------------
+		try:
+		      Block of Statements
+		      generates exceptions
+		except exception-class-name-1:
+			Block of statements
+			generates User-Freindly Error Messages
+		except exception-class-name-2:
+			Block of statements
+			generates User-Freindly Error Messages
+		--------------------------------
+		--------------------------------
+		except exception-class-name-n:
+			Block of statements
+			generates User-Freindly Error Messages
+		else:
+		      block of statements gives
+		      Result of the program
+		finally:
+		      block of statements executes
+		      compulsoriy
+
+		     

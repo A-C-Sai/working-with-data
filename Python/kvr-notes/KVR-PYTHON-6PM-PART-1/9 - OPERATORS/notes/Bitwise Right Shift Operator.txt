@@ -1,0 +1,19 @@
+			=======================================
+				2. Bitwise Right Shift Operator ( >> )
+			=======================================
+------------
+Syntax:		varname=GivenNumber >> No. of Bits
+------------
+--------------
+Concept:	     The Bitwise Right Shift Operator ( >> )  shifts No. of Bits TowardsRight Side -------------       By	Adding No. of Zero at Left  Side (depends on No. of Bits). So that					result value will displayed in the form decial number system data.
+Same a //'ing x by 2**n
+
+
+Examples:
+-----------------
+>>> a=10
+>>> b=3
+>>> c=a>>b
+>>> print(c)----------------1
+>>> print(10>>2)----------2
+>>> print(25>>4)----------1

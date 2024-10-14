@@ -1,0 +1,61 @@
+		=========================================			
+				3. bytearray
+		=========================================			
+=>bytearray  is one of the pre-defined class and treated as Sequence Data Type.
+=>The purpose of bytearray data type is that " To maintain End-End Encryption(Converting 
+    Plain Text into Cipher text / Encrypted Format)".
+=>In Order to impelement End-End Encryption Process, bytearray data data type orangizes the data in the form of Possitive Numerical Integer values ranges from [0,256) ".
+=>bytearray data type does not contain any symbolic notation but we can convert other type of values into bytearray by using bytearray()
+=>bytearray object maintains Insertion Order. i.e In whichever order, we enter the data in the  same order data will be displayed.
+=>on the object of bytearray, we can perform Both Indexing and Slicing Operations.
+=>An Object of bytearray belongs to mutable bcoz bytearray' object  supports item 
+    assignment
+-----------------------------------------------------------------------------------------------------------------------------
+Note:  The Functionality of bytearray data type is exactly similar to bytes data but an object bytes belongs to Immutable and bytearray belongs to Mutable
+-----------------------------------------------------------------------------------------------------------------------------
+Examples:
+-------------------------
+>>> l1=[10,25,12,45,256,0]
+>>> print(l1,type(l1))
+[10, 25, 12, 45, 256, 0] <class 'list'>
+>>> ba=bytearray(l1)----------ValueError: byte must be in range(0, 256)
+>>> l1=[10,-25,12,45,256,0]
+>>> print(l1,type(l1))------------[10, -25, 12, 45, 256, 0] <class 'list'>
+>>> ba=bytearray(l1)----------ValueError: byte must be in range(0, 256)
+>>> l1=[10,25,12,45,255,0]
+>>> print(l1,type(l1))---------------[10, 25, 12, 45, 255, 0] <class 'list'>
+>>> ba=bytearray(l1)
+>>> print(ba,type(ba),id(ba))----bytearray(b'\n\x19\x0c-\xff\x00') <class 'bytearray'> 
+											2675652806320
+>>> for val in ba:
+...     print(val)
+			...
+			10
+			25
+			12
+			45
+			255
+			0
+
+>>> ba[0]=100   # Mutability
+>>> print(ba,type(ba),id(ba))--bytearray(b'd\x19\x0c-\xff\x00') <class 'bytearray'>														2675652806320
+>>> for val in ba:
+...     print(val)
+...
+			100
+			25
+			12
+			45
+			255
+			0
+>>> ba[0]--------------------100
+>>> ba[-1]--------------------0
+>>> ba[0:4]--------------bytearray(b'd\x19\x0c-')
+>>> for val in ba[0:4]:
+...     print(val)
+...
+			100
+			25
+			12
+			45
+====================================x==================================

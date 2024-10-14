@@ -1,0 +1,10 @@
+			========================================
+				Types Literals 
+			========================================
+=>A Literal is nothing but a Value enterd by End-user in Real Time Projects.
+=>In Programming Languages, Literals are classified into 4 types. They are
+			1. Integer Literals
+			2. Floating Point Literals
+			3. String Literals
+			4. Boolean Literals.
+------------------------------------------------------------------------------------------------------------------------

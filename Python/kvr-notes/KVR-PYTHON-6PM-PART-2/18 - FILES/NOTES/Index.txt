@@ -1,0 +1,53 @@
+		=================================
+				Files OR Stream Handling
+		=================================
+Index
+------------
+=>Purpose  of Files
+=>Types of applications
+		a) Non-Persistant Applications
+		b) Persistant Applications
+=>Definition of Files
+=>Operations on Files
+=>Types of Files
+=>File Opening Modes
+		i) r
+		ii) w
+		iii) a
+		iv) r+
+		v) w+
+		vi) a+
+		vii) x
+		viii) x+
+=>Number of approaches to Open Files
+		a) By using open()
+		b) By using with open() 
+=>Programming Examples
+=>Functions for writing the data to the file
+		a) write()
+		b) writelines()
+=>Functions for Reading the data from the file
+		a) read()
+		b) readlines()
+=>Random Acceses Files
+		a) seek()
+		b) tell()
+=>Programming Examples
+---------------------------------------------------------------------------------------------
+=>Pickling (Object Serialiuzation ) and un-pickling (Object De-serialization)
+=>pickle module
+=>Programming Examples
+---------------------------------------------------------------------------------------------
+=>Working with CSV (Comma  Separated Files) Files
+=>csv module
+		a) csv.reader
+		b) csv.writer
+		c) csv.DictReader
+		d) csv.DictWriter
+=>Programming Examples
+---------------------------------------------------------------------------------------------
+=>Working OS Operations
+=>os Modules
+--------------------------------------------------------------------------------------------
+
+

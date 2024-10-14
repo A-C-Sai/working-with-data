@@ -1,0 +1,249 @@
+		================================================
+					Identity Operators
+		================================================
+=>The purpose of Identity Operators is that " To compare the Memory Addresses  / ID of two Objects"
+=>In Python Programming, we have 2 Identity Operators. They are
+			1) is -----> syntactic sugar for id(a) == id(b)
+			2) is not
+---------------------------------------------------------------------------------------------------------------------
+1) is
+---------------------------------------------------------------------------------------------------------------------
+Syntax:     object1  is  object2
+=>"is" operator returns True provided object1 and object2 contains Same Address / ID
+=>"is" operator returns False provided object1 and object2 contains Different Address / ID
+---------------------------------------------------------------------------------------------------------------------
+2) is not
+---------------------------------------------------------------------------------------------------------------------
+Syntax:     object1  is not object2
+=>"is not" operator returns True provided object1 and object2 contains Different Address.
+=>"is not " operator returns False provided object1 and object2 contains Same Address 
+========================================================================
+Examples:
+========================================================================
+>>> a=None
+>>> b=None
+>>> print(a, type(a),id(a))----------None <class 'NoneType'> 140726307137528
+>>> print(b, type(b),id(b))--------None <class 'NoneType'> 140726307137528
+>>> a is b------------------True
+>>> a is not b---------------False
+----------------------------------------------------------------------
+>>> d1={10:"Apple",20:"Mango",30:"Kiwi"}
+>>> d2={10:"Apple",20:"Mango",30:"Kiwi"}
+>>> print(d1,type(d1),id(d1))--------{10: 'Apple', 20: 'Mango', 30: 'Kiwi'} <class 'dict'>											2774179007168
+>>> print(d2,type(d2),id(d2))---{10: 'Apple', 20: 'Mango', 30: 'Kiwi'} <class 'dict'>									2774179007296
+>>> d1 is d2----------------False
+>>> d1 is not d2----------True
+------------------------------------------------------------------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20,30,40}
+>>> print(s1,type(s1),id(s1))----------{40, 10, 20, 30} <class 'set'> 2774179211840
+>>> print(s2,type(s2),id(s2))-------{40, 10, 20, 30} <class 'set'> 2774183201696
+>>> s1 is s2-------------False
+>>> s1 is not s2---------True
+>>> fs1=frozenset(s1)
+>>> fs2=frozenset(s1)
+>>> print(fs1,type(fs1),id(fs1))---frozenset({40, 10, 20, 30}) <class 'frozenset'> 2774183202144
+>>> print(fs2,type(fs2),id(fs2))--frozenset({40, 10, 20, 30}) <class 'frozenset'> 2774183203488
+>>> fs1 is fs2----------False
+>>> fs1 is not fs2-------True
+-------------------------------------------------------------------------------------------------------
+>>> l1=[10,"Java","Python",2.3]
+>>> l2=[10,"Java","Python",2.3]
+>>> print(l1,type(l1),id(l1))---[10, 'Java', 'Python', 2.3] <class 'list'> 2774179054016
+>>> print(l2,type(l2),id(l2))---[10, 'Java', 'Python', 2.3] <class 'list'> 2774179054592
+>>> l1 is l2--------False
+>>> l1 is not l2-----True
+>>> t1=(10,10,10,20)
+>>> t2=(10,10,10,20)
+>>> print(t1,type(t1),id(t1))---(10, 10, 10, 20) <class 'tuple'> 2774179453888
+>>> print(t2,type(t2),id(t2))---(10, 10, 10, 20) <class 'tuple'> 2774179457968
+>>> t1 is t2--------False
+>>> t1 is not t2--------True
+----------------------------------------------------------------------------------------------------------------------------
+>>> r1=range(10,21)
+>>> r2=range(10,21)
+>>> print(r1,type(r1),id(r1))----range(10, 21) <class 'range'> 2774179667840
+>>> print(r2,type(r2),id(r2))---range(10, 21) <class 'range'> 2774179672256
+>>> r1 is r2--------False
+>>> r1 is not r2---True
+-----------------------------------
+>>> t1=(10,20,30,10)
+>>> b1=bytearray(t1)
+>>> b2=bytearray(t1)
+>>> print(b1,type(b1),id(b1))--bytearray(b'\n\x14\x1e\n') <class 'bytearray'> 2774183251632
+>>> print(b2,type(b2),id(b2))--bytearray(b'\n\x14\x1e\n') <class 'bytearray'> 2774183251824
+>>> b1 is b2----False
+>>> b1 is  not b2---True
+>>> t1=(10,20,30,10)
+>>> b1=bytes(t1)
+>>> b2=bytes(t1)
+>>> print(b1,type(b1),id(b1))--------b'\n\x14\x1e\n' <class 'bytes'> 2774179673312
+>>> print(b2,type(b2),id(b2))--------b'\n\x14\x1e\n' <class 'bytes'> 2774179672592
+>>> b1 is b2--------------------False
+>>> b1 is not b2-------------True
+----------------------------------------------------------
+>>> s1="Srinivas"
+>>> s2="Srinivas"
+>>> print(s1,type(s1),id(s1))---------------Srinivas <class 'str'> 2774183251824
+>>> print(s2,type(s2),id(s2))---------------Srinivas <class 'str'> 2774183251824
+>>> s1 is s2------------True
+>>> s1 is not s2------False
+--------------------------------------------
+>>> s1="Aditya"
+>>> s2="aditya"
+>>> print(s1,type(s1),id(s1))-----------Aditya <class 'str'> 2774183251760
+>>> print(s2,type(s2),id(s2))--------aditya <class 'str'> 2774183251696
+>>> s1 is s2----------False
+>>> s1 is not s2------True
+-------------------------------------------------
+>>> s1="ABC"
+>>> s2="ACB"
+>>> print(s1,type(s1),id(s1))---------ABC <class 'str'> 2774178986608
+>>> print(s2,type(s2),id(s2))--------ACB <class 'str'> 2774183251760
+>>> s1 is s2-----------False
+>>> s1 is not s2--------True
+-----------------------------------------------------
+>>> a=2+3.5j
+>>> b=2+3.5j
+>>> print(a,type(a),id(a))------------(2+3.5j) <class 'complex'> 2774174723504
+>>> print(b,type(b),id(b))----------(2+3.5j) <class 'complex'> 2774174719824
+>>> a is b----------False
+>>> a is not b-----True
+-----------------------------------------------
+>>> a=True
+>>> b=True
+>>> print(a,type(a),id(a))-----------True <class 'bool'> 140726307085160
+>>> print(b,type(b),id(b))---------True <class 'bool'> 140726307085160
+>>> a is b-----------------True
+>>> a is not b------------False
+-------------------------------------------------
+>>> a=12.3
+>>> b=12.3
+>>> print(a,type(a),id(a))--------12.3 <class 'float'> 2774174714064
+>>> print(b,type(b),id(b))--------12.3 <class 'float'> 2774174718192
+>>> a is b---------False
+>>> a is not b------True
+------------------------------------------------------------------
+MOST IMP
+------------------
+>>> a=10
+>>> b=10
+>>> print(a,type(a),id(a))
+10 <class 'int'> 2774173680144
+>>> print(b,type(b),id(b))
+10 <class 'int'> 2774173680144
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=123
+>>> b=123
+>>> print(a,type(a),id(a))
+123 <class 'int'> 2774173683760
+>>> print(b,type(b),id(b))
+123 <class 'int'> 2774173683760
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=345
+>>> b=345
+>>> print(a,type(a),id(a))
+345 <class 'int'> 2774174723632
+>>> print(b,type(b),id(b))
+345 <class 'int'> 2774174723536
+>>> a is b
+False
+>>> a is not b
+True
+>>> a=256
+>>> b=256
+>>> print(a,type(a),id(a))
+256 <class 'int'> 2774173688016
+>>> print(b,type(b),id(b))
+256 <class 'int'> 2774173688016
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=257
+>>> b=257
+>>> print(a,type(a),id(a))
+257 <class 'int'> 2774174723632
+>>> print(b,type(b),id(b))
+257 <class 'int'> 2774174723440
+>>> a is b
+False
+>>> a is not b
+True
+>>> a=0
+>>> b=0
+>>> print(a,type(a),id(a))
+0 <class 'int'> 2774173679824
+>>> print(b,type(b),id(b))
+0 <class 'int'> 2774173679824
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=-3
+>>> b=-3
+>>> print(a,type(a),id(a))
+-3 <class 'int'> 2774173679728
+>>> print(b,type(b),id(b))
+-3 <class 'int'> 2774173679728
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=-5
+>>> b=-5
+>>> print(a,type(a),id(a))
+-5 <class 'int'> 2774173679664
+>>> print(b,type(b),id(b))
+-5 <class 'int'> 2774173679664
+>>> a is b
+True
+>>> a is not b
+False
+>>> a=-6
+>>> b=-6
+>>> print(a,type(a),id(a))
+-6 <class 'int'> 2774174723440
+>>> print(b,type(b),id(b))
+-6 <class 'int'> 2774174723632
+>>> a is b
+False
+>>> a is not b
+True
+=====================================================================
+Most Special Imp
+-----------------------------------------------------------------------
+>>> a,b=345,345
+>>> print(a,type(a),id(a))
+345 <class 'int'> 2774174723536
+>>> print(b,type(b),id(b))
+345 <class 'int'> 2774174723536
+>>> a is b
+True
+>>> a is not b
+False
+>>> a,b=-12,-12
+>>> print(a,type(a),id(a))
+-12 <class 'int'> 2774174719792
+>>> print(b,type(b),id(b))
+-12 <class 'int'> 2774174719792
+>>> a is b
+True
+>>> a is not b
+False
+>>> a,b=[10,"Python"],[10,"Python"]
+>>> print(a,type(a),id(a))
+[10, 'Python'] <class 'list'> 2774179773312
+>>> print(b,type(b),id(b))
+[10, 'Python'] <class 'list'> 2774179773184
+>>> a is b
+False
+>>> a is not b
+True
+=====================================================================

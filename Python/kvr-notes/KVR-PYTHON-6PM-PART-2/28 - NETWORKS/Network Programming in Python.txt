@@ -1,0 +1,38 @@
+		====================================================
+				Network Programming in Python 
+		====================================================
+=>The purpose of Network Programming is that "To share the data between multiple remote machines which are located across the universe".
+-------------------------------------
+=>Definition of Network:
+-------------------------------------
+=>A Network is a collection of Autonomous Interconnected  Computers connected with Server
+-------------------------------------
+=>To share the between multiple machines, we must write two types of programs. They are
+			1. Server Side Program
+			2. Client Side Program
+------------------------------------------------------------------------------------------------------------------------------------------
+Definition of Server Side Program
+------------------------------------------------------------------------------------------------------------------------------------------
+=>A Server Side Program reveives the request of Client, Process the Request and gives Response back to Client Side Program.
+------------------------------------------------------------------------------------------------------------------------------------------
+Definition of Client Side Program
+------------------------------------------------------------------------------------------------------------------------------------------
+=>A Client Side Programs always makes a request to Server Side Program and Obtains Response from Server Side Programs.
+---------------------------------------------------------------------------------------------------------------------------------------
+Definition of DNS (Domain naming Servic)
+--------------------------------------------------------------------------------------------------------------------------------------
+=>It is Name of the Physical machine , where server Side program Resides.
+=>Default default DNS of every computer is "localhost".
+---------------------------------------------------------------------------------------------------------------------------------------
+Definition of IP Address (Internet Protocol Address)
+--------------------------------------------------------------------------------------------------------------------------------------
+=>It is Numerical Address of the Physical machine , where server Side program Resides.
+=>Default IP Address of  every computer is "127.0.0.1"
+--------------------------------------------------------------------------------------------------------------------------------------
+Definition of Port Number
+--------------------------------------------------------------------------------------------------------------------------------------
+=>A Port Number is one of the Logical Numerical ID, where Server Side is Running.
+--------------------------------------------------------------------------------------------------------------------------------------
+Note: If Client Program want to get Connection from Server Side Program, then It must pass (DNS/IP Address, Port Number).
+-------------------------------------------------------------------------------------------------------------------------------------
+

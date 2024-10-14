@@ -1,0 +1,43 @@
+		
+		===========================================================
+		     Real Time Applications developed By using Python Programming
+		===========================================================
+=>Python is one of The General  Purpose, Simple, platform Indepedent, highly interpreted and High Level Programming language....etc
+
+=>By Learning Python Coding , we are developing the following Applications.
+
+		1. Web Application development( Web Sites) ------ 
+					a) Java Prog Lang---->Servlets, JSP, ...(tech)
+					b) C#.net Prog Lang---->ASP.net (tech)
+					------------------------
+					c) Python Programming Lang--->Dajngo,Bottle,Pyramid,Flask...etc
+							( Easy , less code with More Meaning )
+
+		2. Development of Gaming Applications.
+		3. Artificial Intelligence Applications. 
+				a) Machine Learning
+				b) Deep Learning
+		4. Desktop GUI Applications.				
+		5. Image Processing Applications
+		6. Text Processing Based Applications.
+		7.Bussiness Application 
+		8.Audio and Video Based Applications. ( YouTube)
+		9. Web Scrapping / Harvesting  Application
+		10. Data Visualization 
+		11. Numerical and Complex Math Operations
+		12. Software Development (Project Level )--Database( Oarcle, MySQL)
+		13. Operating System Installers.
+		14. CAD and CAM  Applications
+		15. Embedded Application (VLSI) 
+		16. IOT Based Applications
+		17. Console Based Application.
+		18. Automation of Testing 
+		19. Animation of Application. 
+		20. Data Analysis and Data Analytics.
+		21. Computer Vision.
+		22. Education Programs.......etc
+
+-------------------------------------------------------------------------------------------------------------------------
+		getting started with python--- zero Level	--next class	
+
+		Next Class is on Tuesday------25th OCT 2022--6PM

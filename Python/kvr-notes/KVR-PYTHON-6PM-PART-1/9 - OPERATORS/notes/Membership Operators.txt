@@ -1,0 +1,114 @@
+			====================================
+				6. Membership Operators
+			====================================
+=> Membership Operators are used for Checking the existence of Perticular value in an    
+     Iterable object.      
+=>An Iterable object is one, which contains Two or More Number of Values (Sequnce 
+    Type,List Type, Set Type, dict type ).
+=>In Python Programming, we have Two Membership Operators. They are
+				
+				1) in
+				2) not in
+---------------------------------------------------------------------------------------------------------------------
+1) in
+---------------------------------------------------------------------------------------------------------------------	
+Syntax:-     Value in Iterable object
+=>"in" operator returns True Provided "Value" present in Iterable object.
+=>"in" operator returns False Provided "Value" not present in Iterable object.
+---------------------------------------------------------------------------------------------------------------------
+2) not in
+---------------------------------------------------------------------------------------------------------------------	
+Syntax:-     Value not in Iterable object
+=>"not in" operator returns True Provided "Value" not present in Iterable object.
+=>"not in" operator returns False Provided "Value"  present in Iterable object.
+=======================================================================
+Examples:
+-------------------------------------------------------------------------------------------------------------------------------
+>>> s="PYTHON"
+>>> "P" not in s--------------False
+>>> "p" not in s--------------True
+>>> 'o' not in s---------------True
+>>> "O" in s------------------True
+>>> "Y" in s------------------True
+>>> "Y" not in s-------------False
+-----------------------------------------------------------------------------------------------------------------------------
+>>> s="PYTHON"
+>>> "PYT" in s------------True
+>>> "HON" not in s---------False
+>>> s="PYTHON"
+>>> "PON" in s----------False
+>>> "PON" not in s---------True
+>>> "THON" not in s------False
+>>> "THON" in s----------True
+-----------------------------------------------------------------------------------------------------------------------------
+>>> s="PYTHON"
+>>> "ON" in s----------True
+>>> "NO" not in s--------True
+>>> "NOH" in s------False
+>>> "NO" in s[::-1]-------True
+>>> "NOH" in s[::-1]------True
+>>> "NOH" not in s[::-1]------False
+>>> "HON" not in s[::-1][::]--------True
+----------------------------------------------------------
+>>> s="PYTHON"
+>>> s[0:3] in s[::]--------------True
+>>> s[0:3] in s[::][::-1]-------False
+>>> s[0:3][::-1] in s[::][::-1]---------True
+>>> s[::2] in s-------------False
+>>> s[::2] not in s[::-1]--------True
+>>> s[::2][::-1] not in s[::-1]-------True
+------------------------------------------------------------------------
+>>> lst=[10,"Rossum",34.56,True,2+3j]
+>>> 10 in lst---------------- True
+>>> "Rossum" not in s------True
+>>> "Rossum" not in lst-------False
+----------------------
+>>> lst=[10,"Rossum",34.56,True,2+3j]
+>>> lst[1] in lst------------True
+>>> lst[1][0:4] in lst---------False
+>>> lst[1][0:4] in lst[1]------True
+>>> lst[1][0:4][::-1] not in lst[1][::-1]-------False
+>>> lst[1][0:4][::-1] in lst[1][::-1]--------True
+>>> lst[-1] in lst----------True
+>>> lst[-1] in lst[-1]-------TypeError: argument of type 'complex' is not iterable
+>>> lst[::] in lst------False----MOST IMP
+>>> lst in lst----------False
+>>> lst[-1].real in lst[-1]-----TypeError: argument of type 'complex' is not iterable
+--------------------------------------------------------------------------------------------
+>>> t1=(10,"DILIP",True)
+>>> 10 in t1-------True
+>>> t1[-2] not in t1-----------False
+>>> t1[-2][0:3] not in t1------True
+>>> t1[-2][0:3] in t1[1]-------True
+--------------------------------------------------------------------------------------------
+>>> d1={10:"Python",20:"Java",30:"GO"}
+>>> 10 in d1----------True
+>>> "Python" in d1----------False
+>>> "Python" in d1.get(10)-------True
+>>> "Python" not in d1[10][::-1]------True
+>>> "Python" not in d1[10]-------False
+>>> "Python" not in d1[20]---------True
+----------------------------------------------------------
+>>> d1 in d1---------TypeError: unhashable type: 'dict'
+----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

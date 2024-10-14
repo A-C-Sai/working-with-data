@@ -1,0 +1,46 @@
+		============================================
+				Files in Python
+		============================================
+Index
+---------------
+=>Purpose of Files
+=>Types of Application in the context of Files
+		a) Non-Persistant Applications
+		b) Persistant Applications
+=>Types of Files
+		a) Text Files
+		b) Binary Files
+=>Operations on Files
+	a) Write Operation and steps
+	b) Read Operation and steps
+=>File Opening Opening Modes
+	1. r		2. w		3. a
+	4. r+		5. w+	6. a+
+	7. x		8. x+
+=>Number of Approaches for Opening Files
+		a) By using open()
+		b)  By using " with open() as "
+=>Programming Examples
+=>Functions for Writing the data to the file.
+		a) write()
+		b) writelines()
+=>Functions for Reading the data from the file.
+		a) read()
+		b) readlines()
+=>Programming Examples
+-----------------------------------------------------------------------------------------------------------
+=>Pickling(Object Serialization) and Un-Pickling (Object De-serailization)
+=>Implementation of Piackling and Un-pickling
+=>Pickle Module
+=>Programming Examples
+-----------------------------------------------------------------------------------------------------------
+=>Working with CSV Files 
+		a) csv.Reader
+		b) csv.Writer
+		c) csv.DictWriter
+		d) csv.DictReader
+=>Programming Examples
+=>Woking with Excel Sheets 
+=>Programming Examples
+------------------------------------------------------------------------------------------------------------------
+

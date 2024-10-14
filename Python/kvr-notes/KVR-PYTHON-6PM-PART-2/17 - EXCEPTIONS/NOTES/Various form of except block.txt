@@ -1,0 +1,56 @@
+		========================================
+			Various form of except block
+		========================================
+=>The except block can be used in Various Forms. They are
+---------------------------------------------------------------------------------------------
+Form-1: This format can handle one specific exception at a time
+---------------------------------------------------------------------------------------------
+Syntax:			try:
+				   ----------------------
+				   ----------------------
+				except exception-class-name-1:
+				            ----------------------------
+					    ----------------------------
+				except exception-class-name-2:
+				            ----------------------------
+					    ----------------------------
+Examples:   refer Div2.py
+--------------------------------------------------------------------------------------------
+Form-2: This format can handle Multiple specific exceptions at a time by using single except 
+               block. This facility is called "Multi Exception handling Block "
+---------------------------------------------------------------------------------------------
+Syntax:			try:
+				   ----------------------
+				   ----------------------
+				except (class-name-1,class-name-2,...class-name-n):
+				            block of statements generates 
+					    User Freindly Error Messages for
+					    all Specific Exception
+				--------------------------------------
+Examples:   refer Div3.py
+--------------------------------------------------------------------------------------------
+Form-3: This format can handle one specific exception at a time with alias name
+---------------------------------------------------------------------------------------------
+Syntax:			try:
+				   ----------------------
+				   ----------------------
+				except exception-class-name-1 as alias name:
+				            ----------------------------
+					    ----------------------------
+				except exception-class-name-2 as alias name:
+				            ----------------------------
+					    ----------------------------
+Examples:   refer Div4.py
+--------------------------------------------------------------------------------------------
+Form-4: This format can handle all types of exceptions
+---------------------------------------------------------------------------------------------
+Syntax:			try:
+				   ----------------------
+				   ----------------------
+				except:
+				      ----------------------------
+				      ----------------------------
+				            
+Examples:   refer Div5.py ----Not recommended
+                    refer  Div6.py----recommeded
+--------------------------------------------------------------------------------------------

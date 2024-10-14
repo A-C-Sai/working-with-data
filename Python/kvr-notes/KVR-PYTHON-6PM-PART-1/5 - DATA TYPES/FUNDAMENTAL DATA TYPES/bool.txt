@@ -1,0 +1,34 @@
+		==============================================
+				3. bool
+		==============================================
+Properties
+------------------------
+=>bool is one of the pre-defined class and treated as Fundamental Category Data Type.
+=>The Purpose of bool data type is that "To store True and False values".
+=>The True and False are the keywords and ther are treated as values for bool data type.
+=>Internally, True is Considered as 1 and False is considered as 0
+----------------------------------------------------------
+Examples:
+----------------------------------------------------------
+>>> a=True
+>>> print(a,type(a))-------------True <class 'bool'>
+>>> b=False
+>>> print(b,type(b))-------------False <class 'bool'>
+----------------------------------------------
+>>> a=True
+>>> print(a,type(a))--------------------True <class 'bool'>
+>>> b=False
+>>> print(b,type(b))-------------------False <class 'bool'>
+>>> print(a+b)-------------------------1
+>>> c=a+b
+>>> print(c,type(c))------------------1 <class 'int'>
+>>> print(True*10)------------------10
+>>> print(False+True-1)-----------0
+>>> print(0b1111-True)--------------14
+>>> print(True*2.3-False-True)----------1.2999999999999998
+>>> print(False+False)---------------0
+>>> print(False-False)---------------0
+---------------------------------------------------------------------------
+>>> print(true+true)-----------NameError: name 'true' is not defined.
+>>>print(false)-----------------NameError: name 'false' is not defined.
+---------------------------------------------------------------------------------------------------------

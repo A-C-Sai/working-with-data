@@ -1,0 +1,72 @@
+			============================================
+					4. complex
+			============================================
+=>complex is one of the pre-defined data type in Fundamental Category 
+=>The Purpose of complex data type is that " To Store Complex Values".
+=>The general format of complex number is given bellow.
+
+				a+bj   OR   a-bj
+
+		Here 'a' is called Real Part 
+		Here 'b' is called Imaginary Part
+		and Letter 'j' represents sqrt(-1)
+=>To extract the real and imaginary parts of complex object, we Two Pre-defined Attributes 
+     present in complex object. They are
+			a) real
+			b) imag
+	=>Syntax:    complexobj.real---->Gives Real Part of Complex Object
+			    complexobj.imag--->Gives imag Part of Complex Object.
+=>Internally, In the complex object, real and imginary  parts is treated as float by default.
+---------------------------------------------------------------------------------------------------------------------------------
+Examples:
+------------------
+>>> a=2+3j
+>>> print(a,type(a))------------------------(2+3j) <class 'complex'>
+>>> b=-2-3j
+>>> print(b,type(b))-----------------------(-2-3j) <class 'complex'>
+>>> c=2.3+4.5j
+>>> print(c,type(c))-------------------------(2.3+4.5j) <class 'complex'>
+>>> d=-2.3-4.5j
+>>> print(d,type(d))---------------------(-2.3-4.5j) <class 'complex'>
+---------------------------------------
+>>> a=10+3j
+>>> print(a,type(a))-----------------------(10+3j) <class 'complex'>
+>>> print(a.real)----------------------------10.0
+>>> print(a.imag)-------------------------3.0
+>>> b=2.3+4.5j
+>>> print(b.real)-----------------------------2.3
+>>> print(b.imag)---------------------------4.5
+>>> c=-2.3+4j
+>>> print(c.real)-----------------------------   -2.3
+>>> print(c.imag)--------------------------   4.0
+--------------------------------------------------------------------------
+>>> a=3j
+>>> print(a,type(a))--------------3j <class 'complex'>
+>>> print(a.real)----------------- 0.0
+>>> print(a.imag)-----------------3.0
+>>> b=-3.4j
+>>> print(b,type(b))--------------- (-0-3.4j) <class 'complex'>
+>>> print(b.real)------------------   -0.0
+>>> print(b.imag)------------------   -3.4
+-----------------------------------------------------------------------------
+>>> a=30
+>>> print(a,type(a))------------------30 <class 'int'>
+>>> print(a.real)----------------------30
+>>> print(a.imag)------------------- 0
+>>> b=1.2
+>>> print(b,type(b))--------------1.2 <class 'float'>
+>>> print(b.real)------------------ 1.2
+>>> print(b.imag)---------------- 0.0
+----------------------------------------------------------------------------------
+>>> a=2+3j
+>>> print(a,type(a))-----------------(2+3j) <class 'complex'>
+>>> print(a.real)----------------2.0
+>>> print(a.imginary)------------AttributeError: 'complex' object has no attribute 'imginary'
+----------------------------------------------------------------------------------------
+>>> a=2+3j
+>>> b=3+4j
+>>> c=a+b  # Complex Numbers Addition.
+>>> print(c,type(c))--------------(5+7j) <class 'complex'>
+>>> d=a*b  # Complex Numbers Multiplication
+>>> print(d,type(d))-----------(-6+17j) <class 'complex'>
+===============================x======================================

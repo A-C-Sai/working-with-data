@@ -1,0 +1,11 @@
+		===============================================
+			I. Fundamental  Category Data Types
+		===============================================
+=>The purpose of Fundamental  Category Data Types is that " To Store Single Values".
+=>In Python , we have 4 Data types in  Fundamental  Category. They are
+
+			1. int (immutable)
+			2. float (immutable)
+			3. bool (immutable)
+			4. complex (immutable)
+---------------------------------------------------------------------------------------------------

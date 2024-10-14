@@ -1,0 +1,71 @@
+				=============================================
+					Pre-Defined Functions in tuple
+				=============================================
+=>tuple object contains the following pre-defined Function
+
+			1) index()
+			2)count()
+---------------------
+Examples:
+----------------------
+>>> t1=(10,"Rossum")
+>>> print(t1,id(t1))------------(10, 'Rossum') 2339185999936
+>>> t1.index(10)------------0
+>>> t1.index("Rossum")-----------1
+>>> t1.index("HYD")----------ValueError: tuple.index(x): x not in tuple
+>>> t1=(10,10,10,20,20,30,40,50,10)
+>>> t1.count(10)------------------4
+>>> t1.count(20)----------------2
+>>> t1.count(30)-----------------1
+>>> t1.count(300)-------------0
+-------------------------------------
+Note:
+----------
+>>> t1=(10,20,30)
+>>> t2=("satish","srinivas","moin")
+>>> print(t1,id(t1))------------(10, 20, 30) 2339186329920
+>>> print(t2,id(t2))----------('satish', 'srinivas', 'moin') 2339190202432
+>>>t1.extend(t2)   # Error
+>>> t1=t1+t2
+>>> print(t1,id(t1))---------(10, 20, 30, 'satish', 'srinivas', 'moin') 2339186111104
+------------------
+Note:
+------------------
+>>> t1=(10,20,30)
+>>> print(t1,id(t1))----------------------(10, 20, 30) 2339186329920
+>>> del t1[0]-------------TypeError: 'tuple' object doesn't support item deletion
+>>> del t1[0:2]-----------TypeError: 'tuple' object does not support item deletion
+>>> del t1  # Possible
+>>> t1------------NameError: name 't1' is not defined.
+--------------------------------------------------------------------------------------------------
+Note:
+--------------------------------------------------------------------------------------------------
+=>sorted()
+-------------------------
+=>Syntax:   varname=sorted(tupleobj)
+=>here Varname is an object of list.
+=>This Function is used for sorting tuple Data and returns sorted values in the form of list
+-----------------------------------------------------------------
+Examples:
+---------------------------------------------------------------------
+>>> t1=(12,34,56,-5,67,0,-23)
+>>> print(t1,type(t1))------------------(12, 34, 56, -5, 67, 0, -23) <class 'tuple'>
+>>> x=sorted(t1)
+>>> print(x,type(x))------------------[-23, -5, 0, 12, 34, 56, 67] <class 'list'>
+>>> a=sorted("Sarang")
+>>> a---------------------['S', 'a', 'a', 'g', 'n', 'r']
+---------------------------------
+>>> t1=("Ram","Raj","Anil","Rani","Srithi","Trump")
+>>> print(t1,type(t1))----('Ram', 'Raj', 'Anil', 'Rani', 'Srithi', 'Trump') <class 'tuple'>
+>>> y=sorted(t1)
+>>> print(y,type(y))--------------['Anil', 'Raj', 'Ram', 'Rani', 'Srithi', 'Trump'] <class 'list'>
+>>> y[::-1]------------------['Trump', 'Srithi', 'Rani', 'Ram', 'Raj', 'Anil']
+-------------------------------------------------------------------------------------------
+The Following Function does not exist in tuple bcoz tuple object is Immutable
+-------------------------------------------------------------------------------------------
+1) append()	2) insert()
+3) remove()     4) pop(index)
+5) pop()		6) clear()
+7) copy()		8) reverse()
+9) sort()		10) extend()
+-----------------------------------------------------------------------------------------------

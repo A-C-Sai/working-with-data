@@ -1,0 +1,23 @@
+		=============================================
+				Mutablity and Immutability
+		=============================================
+
+------------------
+Mutablity
+------------------
+=>An object is said to be MUTABLE if and only if It allows us to perform changes / Updations / Modifications at Same Address.
+
+Examples:     list ,set ,dict , bytearray...etc
+
+------------------
+Immutablity
+------------------
+=>An object is said to be IMMUTABLE if and only if It satisfies the following Properties.
+		
+	1) It never allows to modify / update / changes  at  Same Address ( It allows us to 
+	    do the changes and changed value placed into Different Address)
+	2) It never allows us to Perform "Item Assigment" (OR) does not support item 
+	                                                                                        assignment
+
+Examples:   int, float,bool, complex, str, tuple, set, frozenset.
+===============================x=====================================

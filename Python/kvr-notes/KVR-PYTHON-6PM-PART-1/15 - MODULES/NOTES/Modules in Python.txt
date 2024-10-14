@@ -1,0 +1,30 @@
+			=============================================
+					Modules in Python
+			=============================================
+=>We know that Functions concept makes us to understand How to perform operations and we can re-use within the same program but not able to re-use the functions across the programs.
+=>To reuse the functions and global variables   across the programs, we must use the concept of MODULES.
+---------------------------------------
+=>Definition of Module:
+---------------------------------------
+=>A Module is a collection of variables (global variables) , Functions and Classes.
+-----------------------------------
+=>Types of Modules:
+-----------------------------------
+=>In Python Programming, we have two types of Modules. They are
+		1) Pre-defined (or) Built-in Modules
+		2) Programmer or user or custom-defined modules.
+-----------------------------------------------------
+1) Pre-defined (or) Built-in Modules:
+----------------------------------------------------
+=>These modules are developed by Python Language Developers and they are avialable in Python Software (APIs)  and they are used python programmers for dealing with Universal Requirements.
+
+Examples:     math   cmath   functools  sys  calendar  os  
+                      re   threading   pickle    random.......etc
+		       
+=>Out of many pre-defined modules, in  python programming one implicit pre-defined module imported to every python program called "builtins" .	
+--------------------------------------------------------------------------------------------------------
+2) Programmer or user or custom-defined modules:
+---------------------------------------------------------------------------------------
+=>These modules are developed by Python Programmers and they are avialable in Python Project and they are used by other python programmers who are in project development to deal with common requirements.
+=>Examples:-       aop  mathsinfo  icici ......etc
+---------------------------------------------------------------------------------------------------------------------------

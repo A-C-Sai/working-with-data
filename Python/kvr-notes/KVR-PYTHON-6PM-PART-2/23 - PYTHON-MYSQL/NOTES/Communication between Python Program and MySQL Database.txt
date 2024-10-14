@@ -1,0 +1,77 @@
+		=================================================================
+			Communication between Python Program and MySQL Database
+		=================================================================
+=>In order to write python program to communicate with MySQL Database, we must follow 6 steps. They are
+
+		1. import mysql.connector  module
+		2. Python Program must get the connection from Oracle DB
+		3. Create an object Cursor
+		4. Python program must  Prepare the Query and Execute the Query in Oracle DB
+		5. Python Program Process the Result of the Query.
+		6. Python Program closes the connection.
+--------------------------------------------------------------------------------------------------------------------------------
+Explanation:
+-----------------------
+1. import mysql.connector  module:
+----------------------------------------------------
+=>If a python Program want to perform any database operations(insert , delete , update record , read records..etc) then we must import a pre-defined third  party module "mysql-connector ".
+=>We know that a module is a collection of Variables, Function Name and Class Names.
+
+Examples:     import   mysql-connector 
+-------------------------------------------------------------------------------------------------------------------------------
+2. Python Program must get the connection from MySQL DB
+-------------------------------------------------------------------------------------------------------------------------------
+=>To do any Data Base Operations, First python program must get the connection from MySQL.
+=>To get the connection from any Database, we use connect() which is present in mysql.connector module.
+=>Syntax:-                 varame=mysql.connector.connect("Connection URL")
+
+=>Here connection URL Represents :    host="DNS" , user="User Name"   passwd="password"
+		con=mysql.connector.connect(host="DNS" , 
+								     user="User Name",
+								     passwd="password" )
+
+Examples:   	con=mysql.connector.connect(host="localhost" , 
+								     user="root",
+								     passwd="root" )
+
+
+=>Here Varname is an object of <class, mysql.connector.Connection>
+=>Here "UserName" represents User Name of MySQL Data Base (Ex: root )
+=>here "passwd"  represents Password of MySQL Data Base (Ex: root )
+=>here DNS(Domain Naming Service) represents name of the machine where Database 
+    Software Installed. The default Name of Every Machine is "localhost".
+=>Here IPAddress (Internet Protocal Address) represents An address of Physical Machine where Database software Installed. The default IP Address of Every Machine is 127.0.0.1 (Loop back address)
+=>When we use / write Invalid Connection URL then we get mysql.connector.DatabaseError as an exception and must handle.
+-------------------------------------------------------------------------------------------------------------------------------------
+3. Create an object of  Cursor
+-------------------------------------------------------------------------------------
+=>The purpose of creating an object of Cursor is that "To carry the Query from Python Program, hand over to Database, and obtains Result from Database and Gives to Python Program".
+=>To create an object of Cursor, we use  cursor() which is present in Connection Object.
+=>Syntax:       varname=conobject.cursor()
+=>Here Varname reprsents an object of <class, mysql.connector.Cursor>
+---------------------------------------------------------------------------------------------------------------------------
+4. Python program must  Prepare the Query and Execute the Query in MySQL DB
+---------------------------------------------------------------------------------------------------------------------------
+=>A Query is a statement or Request or Question to database software for obtaining data base results.
+=>To execute the query in any Database software, we use execute() which is present in cursor object.
+=>Syntax:                 cursorobj.execute("Query")
+=>Here Query is of type str and In any database software  we have different Queries (DDL,DML,DRL )
+----------------------------------------------------------------------------------------------------------------------------------
+5. Python Program Process the Result of the Query.
+--------------------------------------------------------------------------------
+=>After Executing DML statements, the result of DML statements is present in cursor object. To extract the  result from cursor object, we use  "rowcount" attribute of cursor object. "rowcount" attribute gives number of updated / deleted / inserted in the the data base.
+
+=>After Executing DRL statements, the result of DRL statements is present in cursor object. To extract the from cursor object, have 3 Functions in cursor object. They are
+		a) fetchone()
+		b) fetchmany(no. of records)
+		c) fetchall()
+=>fetchone() is used for obtaining One Record at a Time in the form of tuple. if no records found then we  this function returns None.
+=>fetchmany(no. of records) is used for obtaining specified number of records.
+	case-1: if specified number of records==0 then this function obtains all records
+	case-2:  if specified number of records<=Total Number of Records then this function			gives specified number of records
+	case-3:  if specified number of records>Total Number of Records then this function 
+	              obtains all records
+	case-4: if specified number of records<0 then this function  never gives any records.
+
+=>fetchall()  is used for obtaining all the records from cursor object.
+------------------------------------------------------------------------------------------------------------------------------

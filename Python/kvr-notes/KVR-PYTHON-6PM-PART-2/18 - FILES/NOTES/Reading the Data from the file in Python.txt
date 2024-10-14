@@ -1,0 +1,21 @@
+				===================================
+					Reading the Data from the file in Python
+				===================================
+=>To read the data from Files, we have Two pre-defined functions which are present in File Pointer. They are
+			
+			1. read()
+			2. readlines()
+-------------------------------------------------------------------------------------------------------------------------
+1. read()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:    varname=filepointer.read()
+=>This Function is used for reading entire data of the  file in the form of str.
+=>Here varname contains total content of file in the form of str.
+-------------------------------------------------------------------------------------------------------------------------
+2. readlines()
+-------------------------------------------------------------------------------------------------------------------------
+Syntax:    varname=filepointer.readlines()
+=>This Function is used for reading entire data of the  file in the form of list.
+=>Here varname contains total content of file in the form of list.
+-------------------------------------------------------------------------------------------------------------------------
+

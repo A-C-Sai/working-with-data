@@ -1,0 +1,32 @@
+			================================
+				Exception Handling in Python
+			================================
+=>The purpose of Exception Handling is that "To Develop Robust(Strong) Applications".
+=>In Real time to develop any project, we need to programing Lang and by using that 
+     language we develop, compile and execute Various Programs. During this Process we get THREE types of Errors. They are
+
+		1. Compile Time Errors
+		2. Logical Errors
+		3. Runtime Errors
+-------------------------------------------------------------------------------------------
+1. Compile Time Errors
+-------------------------------------------------------------------------------------------
+=>Compile Time Errors are those which are occuring during Compilation Process(.py-->.pyc)
+=>Compile Time Errors are occuring due to Syntaxes are Not followed.
+=>Compile Time Errors are Solved by Programmers During Application Development Time.
+-------------------------------------------------------------------------------------------
+2.  Logical Errors
+-------------------------------------------------------------------------------------------
+=>Logical Errors are those which are occuring during Run / Execution time.
+=>Logical Errors are occuring due to Wrong Representation of Logics
+=>Logical Errors always gives Wrong / Inconsistent Result
+=>Logical Errors are Solved by Programmers During Application Development Time.
+-------------------------------------------------------------------------------------------
+3. Runtime Errors
+-------------------------------------------------------------------------------------------
+=>Runtime Errors are those which are occuring during Run / Execution time.
+=>Runtime Errors are occuring Due to INVALID / WRONG INPUT entered by End-user OR 
+     Application User
+=>Runtime Errors are by default Generates Technical Error Message which are  by 
+     understandable  by Programmers but not by End-Users. Which is not a Recommended  Process. Industry is Highly Recommended to Convert Technical Error Messages into User-Friendly Error Messages by using Exception Handling.
+-------------------------------------------------------------------------------------------

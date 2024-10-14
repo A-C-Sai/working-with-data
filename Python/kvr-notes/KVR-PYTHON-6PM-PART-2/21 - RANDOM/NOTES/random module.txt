@@ -1,0 +1,230 @@
+		========================================
+			random module
+		========================================
+=>random one of pre-defined module present in python
+=>The purpose of random is that "To generate random values in various contexts".
+=>random module contains the follwoing essential functions.
+		a) randrange()
+		b) randint()
+		----------------------------------
+		c) random()
+		d) uniform()
+		----------------------------------
+		e) choice()
+		f)  shuffle()
+		g) sample()
+		--------------------------------------
+===============================================================
+a) randrange()
+  -------------------------
+=>This function is used for generating random integer values between specified limits.
+Syntax1:-         random.randrang(Value)
+		This syntax generates any random value between 0 to Value-1
+
+Syntax-2:		random.rangerange(start,stop)
+		This syntax generates any random value between start to stop-1 
+
+Examples:
+---------------
+>>> import random
+>>> print(random.randrange(100,150))----133
+>>> print(random.randrange(100,150))----121
+>>> print(random.randrange(100,150))----139
+>>> print(random.randrange(100,150))----143
+>>> print(random.randrange(100,150))---106
+>>> print(random.randrange(100,150))---133
+>>> print(random.randrange(10))----5
+>>> print(random.randrange(10))----9
+-----------------------------------------------------
+#randrangeex.py
+import random
+for i in range(1,6):
+	print(random.randrange(10))
+print("---------------------------------------")
+for i in range(1,6):
+	print(random.randrange(1000,1100))
+print("---------------------------------------")
+================================X============================
+b) randint():
+--------------------
+=>Syntax:-     random.radint(start,stop)
+=>This syntax generates any random value between start to stop. Here start and stop are inclusive. 
+Examples:
+----------------
+>>> print(random.randint(10,15))------10
+>>> print(random.randint(10,15))-----13
+>>> print(random.randint(10,15))----14
+>>> print(random.randint(10,15))----11
+>>> print(random.randint(10,15))----15
+----------------------------------------------------------
+#randintex.py
+import random
+for i in range(1,6):
+	print(random.randint(10,20))
+print("---------------------------------------")
+==============================X================================
+c) random()
+-----------------------
+=>Syntax:-      random.random()
+=>This syntax generates floating point random values between 0.0 and 1.0 (Exlusive))
+Examples:
+----------------
+>>> import random
+>>> print(random.random())----------0.1623906138450063
+>>> print(random.random())--------0.15382209709271966
+>>> print(random.random())-------0.09542283007844476
+>>> print(random.random())-----0.6134301633766425  
+-------------------------
+#randomex.py
+import random
+lst=[]
+for i in range(1,6):
+	lst.append("%0.2f" %random.random())
+print("---------------------------------------")
+print("Content of lst={}".format(lst))
+============================X=============================
+d) uniform()
+----------------------
+Syntax:-     random.uniform(start,stop)
+=>This generates random floting point values from start to stop-1 values 
+=>The values of start and stop can both Integer or floating point values.
+Examples:
+----------------
+>>> import random
+>>> print(random.uniform(10,15))----------14.416746067678286
+>>> print(random.uniform(10,15))----13.2420406264978
+>>> print(random.uniform(10,15))-----11.716110933506432
+>>> print(random.uniform(10,15))--------10.703499588966528
+>>> print(random.uniform(10,15))-----11.306226559323017
+>>> print(random.uniform(10.75,15.75))--------13.939787347170148
+>>> print(random.uniform(10.75,15.75))----10.760428232717597
+-------------------------------------------------------------------------------------------
+#uniformex.py
+import random
+lst=[]
+for i in range(1,6):
+	lst.append(float("%0.2f" %random.uniform(10,15.5)))
+print("---------------------------------------")
+print("Content of lst={}".format(lst))
+===========================X================================
+e) choice():
+-------------------
+Syntax:-     random.choice(Iterable_object)
+=>This function obtains random values from Iterable_object.
+---------------------
+EXAMPLES:
+---------------------
+>>> print(random.choice([10,20,30,40,50]),random.choice("PYTHON"),random.choice(range(10,15)))---40 T 11
+>>> print(random.choice([10,20,30,40,50]),random.choice("PYTHON"),random.choice(range(10,15)))----------30 P 12
+>>> print(random.choice([10,20,30,40,50]),random.choice("PYTHON"),random.choice(range(10,15)))-----------40 N 12
+-------------------------------------
+#choiceex.py
+import random
+s="AaBRe#^%@8YuQLPau*&"
+for i in range(1,6):
+     print(random.choice(s),random.choice(s),random.choice(s),random.choice(s))
+===========================X================================
+f)  shuffle():
+--------------------
+=>This Function is used for re-organizing the elements of any mutable object but not on immutable object.
+
+Syntax:-    random.shuffle(list)
+=>We can shuffle the data of list but not other objects of Data Types
+Examples:
+-------------------
+>>> d={10:"cadburry",20:"kitkat",30:"malkybar", 40:"dairymilk"}
+>>> print(d)---{10: 'cadburry', 20: 'kitkat', 30: 'malkybar', 40: 'dairymilk'}
+>>> for k,v in d.items():
+...     print(k,"--",v)
+...
+	10 -- cadburry
+	20 -- kitkat
+	30 -- malkybar
+	40 -- dairymilk
+>>> import random
+>>> print(random.shuffle(d))----Traceback (most recent call last):
+							  File "<stdin>", line 1, in <module>
+							  File "C:\Users\nareshit\AppData\Local\Programs\Python\Python310\lib\random.py", line 394, in shuffle
+							    x[i], x[j] = x[j], x[i]
+							KeyError: 3
+>>> s={10,20,30,40,50}
+>>> print(random.shuffle(s))
+						Traceback (most recent call last):
+						  File "<stdin>", line 1, in <module>
+						  File "C:\Users\nareshit\AppData\Local\Programs\Python\Python310\lib\random.py", line 394, in shuffle
+						    x[i], x[j] = x[j], x[i]
+						TypeError: 'set' object is not subscriptable
+
+>>> t=(10,20,30,40,50)
+>>> print(random.shuffle(t))
+						Traceback (most recent call last):
+						  File "<stdin>", line 1, in <module>
+						  File "C:\Users\nareshit\AppData\Local\Programs\Python\Python310\lib\random.py", line 394, in shuffle
+						    x[i], x[j] = x[j], x[i]
+						TypeError: 'tuple' object does not support item assignment
+>>> l=[10,20,30,40,50]
+>>> print(random.shuffle(l))-----None
+>>> print(l)-------------[30, 40, 50, 10, 20]
+>>> random.shuffle(l)
+>>> print(l)------------[40, 30, 10, 20, 50]
+>>> random.shuffle(l)
+>>> print(l)---------[40, 10, 50, 20, 30]
+>>> random.shuffle(l)
+>>> print(l)------------[30, 50, 20, 40, 10]
+
+#shuffleex.py
+import random as r
+l=[10,"Python","Rossum",34.56,True]
+for i in range(1,6):
+	r.shuffle(l)
+	print("content of l=",l)
+===================================X============================
+g) sample()
+------------------
+=>This Function is used for selecting random samples from any Iterable object based on number of samples(+ve)
+Syntax:-       random.sample(iterable_object, k)
+=>Here 'k' can be number of samples.
+
+Examples:
+------------------
+>>> import random
+>>> s="ABCabcERTYUertyu$%^&*#@!%^&ghjkiyl"
+>>> print(random.sample(s,5))----------['A', '*', '^', 'j', 't']
+>>> print(random.sample(s,5))---------['%', 'l', 'b', 'C', 'y']
+>>> print(random.sample(s,5))----------['%', 'e', 'Y', 'j', 'u']
+>>> print(random.sample(s,5))------['y', 'E', '&', '$', '#']
+>>> print(random.sample(s,5))----------['j', '*', 't', '$', 'u']
+-----------------------------------------------------------------
+#sampleex.py
+import random
+lst=[10,"Rossum","Python",34.56,True]
+for i in range(1,6):
+	print(random.sample(lst,2))
+================================X===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

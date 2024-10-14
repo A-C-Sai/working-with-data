@@ -1,0 +1,14 @@
+		=========================================
+			Data Structures used in Pandas
+		=========================================
+=>In Pandas programming, we can store the data in 2 types of Data structures. They are.
+		a) Series
+		b) DataFrame
+		
+
+=>The best of way of thinking of these data structires is that The higher dimensional Data Structure is a container of its lower dimensional  data structure.
+Examples:
+--------------
+=>Series is part of DataFrame.
+=>DataFrame is a Part of Panel
+-----------------------------------------------------------------------------------------------------------

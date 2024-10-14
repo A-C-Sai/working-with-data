@@ -1,0 +1,51 @@
+		=====================================================
+			Number of approaches to develop Program in Python
+		=====================================================
+=>In Python language, we have 2 Approaches to develop the programs. They are
+
+			1. Interative Approach
+			2. Batch Mode Approach
+------------------------------------------------------------------------------------------------------------------------
+1. Interactive Approach
+------------------------------------------------------------------------------------------------------------------------
+=>In this mode of development, Python Programmer can issue One Statement at a time 
+    and gets One Output at a time
+=>This Mode of Development is Most useful to test One Instruction at a time But it is not usefult to Solve Big Problems in the form of Programs bcoz the the Instructions are not possible to Save in Interactive Approach and we can't use in other part of Project.
+=>To solve Big Problems / Tasks in the form of Programs, we must use Batch Mode 
+   Approach.
+=>Example Softwares:   Python Command Prompt, Python IDLE Shell
+-------------------------------------
+	=>Example Task:
+	>>> a=10
+	>>> b=20
+	>>> c=a+b
+	>>> print(a)---------10
+	>>> print(b)---------20
+	>>> print(c)---------30
+
+------------------------------------------------------------------------------------------------------------------------
+2. Batch Mode  Approach
+------------------------------------------------------------------------------------------------------------------------
+=>In this mode of Approach, we develop mutiple Instructions in any Editor / IDE and save 
+   it on some file name with an extension .py (FileName.py). So that we can use such type code in other part of the project.
+=>Examples Softwares:
+------------------------------------
+			I) Python Software---->Python IDLE Shell
+			----------------------------------------------------------------------
+			II)  Third Party Editors--> Edit Plus
+			----------------------------------------------------------------------
+			III) Third Pary IDES---->Pycharm---JetBrains
+							Anaconda Jupiter Note Book
+							Atom
+							VS CODE
+							Sub Lime Text
+							Google Clab
+							spider
+							...many more
+			----------------------------------------------------------------------
+---------------------------
+Def of Program:
+---------------------------
+A Program is a collection of Optimized Instructions.
+=>A program will be developed for solving Big applications / problems / Tasks.
+-----------------------------------------------------------------------------------------------------------------------

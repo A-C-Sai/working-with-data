@@ -1,0 +1,17 @@
+		===========================================
+				Pandas module
+		===========================================
+Index
+------------
+=>Purpose of Pandas
+=>Set-up of Pandas Module
+=>Data Structures	in Pandas
+		a) Series
+		b) DataFrame
+=>Purpose of Series
+=>Number of approaches to cerate Series object .
+=>Purpose of DataFrame
+=>Number of  approaches to cerate DataFrame object .
+=>Operations of DataFrame
+=>Reading the Data From CSV Files by Using DataFrame in Pandas
+---------------------------------------------------------x---------------------------------------

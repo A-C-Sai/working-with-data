@@ -1,0 +1,21 @@
+		============================================
+			Reading the Data from the File
+		============================================
+=>To read the data from file, we have two pre-defined functions present in file pointer object. 
+    They are
+			1. read()
+			2. readlines()
+---------------------------------------------------------------------------------------------------------
+1. read()
+---------------------------------------------------------------------------------------------------------
+=>Syntax:     varname=filepointerobj.read()
+=>This function is used for reading complete data of file and placed in varname which is type  <class,'str'>
+Examples:    Refer FileReadEx1.py
+---------------------------------------------------------------------------------------------------------
+2. readlines()
+---------------------------------------------------------------------------------------------------------
+=>Syntax:     varname=filepointerobj.readlines()
+=>This function is used for reading complete data of file and placed in varname which is type  <class,'list'>
+
+Examples:  Refer FileReadEx2.py
+===============================x========================================

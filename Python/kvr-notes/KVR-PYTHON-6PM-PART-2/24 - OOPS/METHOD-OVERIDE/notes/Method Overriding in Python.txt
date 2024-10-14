@@ -1,0 +1,48 @@
+		===========================================
+			Method Overriding in Python
+		===========================================
+=>Method Overriding=Method Heading is same + Method Body is Different
+			(OR)
+=>The process of re-defining the original method of base class into various derived classes for performing different operations is called Method Overriding.
+=>To use Method Overriding in python program we must apply Inheritance Principle.
+=>Method Overriding used for implementing Polymorphism Principle.
+    ( PLOYMORPHISM<----METHOD OVERRIDING<-----INHERITANCE<----CLASS AND OBJECTS )
+-----------------------
+Examples:
+-----------------------
+#methodoverex1.py
+class Circle:
+	def  draw(self):  # original Method
+		print("Drawing Circle")
+
+class Rect(Circle):
+	def draw(self):    # overridden Method
+		print("Drawing Rect:")
+		super().draw()
+
+class Square(Rect):
+	def  draw(self): # overridden Method
+		print("Drawing Square:")
+		super().draw()
+
+#main program
+so=Square()
+so.draw()
+------------------------------------------------------------------------
+#teacher.py
+class Teacher:
+	def   readsub(self):
+		print("Teacher advises to read 2 hours")
+
+class LazyStudent(Teacher):
+	def readsub(self):
+		print("LazyStudent never read at all")
+class PerfectStudent(Teacher):
+	def readsub(self):
+		print(" Perfect Student 2hrs reading and practicing")
+
+ls=LazyStudent()
+ls.readsub()
+ps=PerfectStudent()
+ps.readsub()
+-----------------------------------------------------------------------------

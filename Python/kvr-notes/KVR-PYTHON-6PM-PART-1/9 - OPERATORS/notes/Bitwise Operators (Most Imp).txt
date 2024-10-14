@@ -1,0 +1,19 @@
+			==========================================
+					5. Bitwise Operators (Most Imp)
+			==========================================
+=>The purpose of Biwise Operators is that " To perform Various Operations on Integer 
+     Data      in inform of Bits"
+=>Biwise Operators  are applicable only on Integer Data but not on floating point data bcoz 
+    floating point values does not contain certainity.
+=>Internally Bitwise Operators Converts Integer data into Binary Format and Performs 
+    Operations in the form of bit by bit and finally gives the result in the form deciaml number data.
+=>In Python Programming, we have 6 Bitwise Operators. They are
+		
+		1. Bitwise Left Shift Operator ( << )
+		2. Bitwise Right Shift Operator ( >> )
+		3. Bitwise AND Operator ( & )
+		4. Bitwise OR Operator ( | )
+		5. Bitwise Complement Operator ( ~ )
+		6. Bitwise XOR Operator ( ^ )
+-----------------------------------------------------------------------------------------------------------------
+

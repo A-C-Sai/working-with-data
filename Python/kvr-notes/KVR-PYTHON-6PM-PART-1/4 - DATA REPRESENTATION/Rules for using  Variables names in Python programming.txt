@@ -1,0 +1,51 @@
+		=======================================================
+			Rules for using  Variables names in Python programming
+		=======================================================
+=>The following are rules used for naming Variables  in Python programming
+
+1. A Variable Name is a combination  of Alphabets, Digits and a Special Symbol  called Under 
+    Score ( _ )
+
+2. The First Letter of Variable Name Must starts with either An alphabet or  with Under Score.
+
+			Examples:
+			--------------
+						sal=34---valid
+						1sal=45--Invalid
+						sal123=56---valid
+						_sal=34---valid
+						_sal_=56--valid
+						_123=5.6--valid
+						_123_=56---valid
+						__sal=4.5---valid
+						__=34----valid
+						one--=45--invalid
+
+3. Within in the Variable Name , Special Symbols are not allowed Except Under Score ( _ ).
+		Examples:
+		----------------
+				sal$emp=4.5----invalid
+				sal emp=56--invalid
+				sal>emp=56--invalid
+				sal$emp=4.5--invalid
+				sal_emp=45----valid
+				_sal_emp_cname="IBM"-----valid
+
+4. No keywrds to be used as Variable Names ( Key words are the Reserved Words and they some  specific Meaning to language Compilers)
+		
+		Examples:      if=23------invalid
+					while=56--invalid
+					else=5.6---invalid
+					if_=45---valid
+					_else=5.6--valid
+					1if=45-----invalid
+					int=45----valid--(bcoz All class names can be used as Variable name)
+
+5. All the Variables are Case Sensitive
+		>>> AGE=99
+		>>> age=98
+		>>> Age=97
+		>>> aGe=96
+		>>> print(AGE,age,Age,aGe)-----------		99 98 97 96
+
+6. All the variable names are recommended to user-freindly names 

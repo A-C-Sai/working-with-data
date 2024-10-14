@@ -1,0 +1,19 @@
+			=======================================
+				1. Bitwise Left Shift Operator ( << )
+			=======================================
+------------
+Syntax:		varname=GivenNumber << No. of Bits
+------------
+--------------
+Concept:		The Bitwise Left Shift Operator ( << )  shifts No. of Bits Towards Left Side By	--------------		Adding No. of Zero at Right Side (depends on No. of Bits). So that					result value will displayed in the form decial number system data.
+------------------
+Examples:
+------------------
+>>> a=10
+>>> b=3
+>>> c=a<<b
+>>> print(c)-----------80
+>>> print(10<<3)--------80
+>>> print(3<<2)---------12
+>>> print(100<<2)-----400
+-----------------------------------------------

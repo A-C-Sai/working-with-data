@@ -1,0 +1,56 @@
+			==============================================================
+				Module Name required for developing Client-Server Applications
+			==============================================================
+=>To develop Client-Server Applications, we use pre-defined module called socket module and it present in 
+    Python.
+---------------------------------------------------------------------------------------------------------------------
+1) socket()
+---------------------------------------------------------------------------------------------------------------------
+=>Syntax:   varname=socket.socket()
+=>This Function is used for creating an object socket 
+=>Here varname is an object of <class,socket.Socket>
+Examples:
+----------------		ss=socket.socket()
+-----------------------------------------------------------------------------------------------------------------------
+2) bind()
+-----------------------------------------------------------------------------------------------------------------------
+=>Syntax:       socketobj.bind( ("DNS/IPAddress",portno) )
+=>This Function is used for Making the Program as Server Side Program by binding with DNS / IP Address and 
+    Porno.
+=>Examples:    ss.bind(("localhost",8888))
+					(OR)
+			ss.bind(("127.0.0.1",7889))
+-----------------------------------------------------------------------------------------------------------------------
+3) listen()
+-----------------------------------------------------------------------------------------------------------------------
+=>Syntax:     socketobj.listen(Noi. of Clients)
+=>This Function is used for making  Configuring Server Side Program in such way that to how many client side 
+    programs gives Response.    
+Examples:    ss.listen(3)
+-----------------------------------------------------------------------------------------------------------------------
+4) accept()
+-----------------------------------------------------------------------------------------------------------------------
+=>Syntax:           clientsockobj, clientsockaddr = socketobj.accept()
+=>This Function is used for accepting Client Reuqest in the form of Client Socket object and Its Address.
+-----------------------------------------------------------------------------------------------------------------------
+5) recv() with decode()
+-----------------------------------------------------------------------------------------------------------------------
+=>Syntax:          strdata=clientsockobj.recv(1024).decode()
+=>This Function is used for Reveciving and Reading Client data at Server Side Program
+Examples:     clientdata=clientsockobj.recv(1024).decode()
+-----------------------------------------------------------------------------------------------------------------------
+6) send() with encode()
+-----------------------------------------------------------------------------------------------------------------------
+Syntax:     clientsockobj.send(strdata.encode())
+=>This Function is used for Sending  Server Side Program Response to Client Suide Program
+Example: clientsockobj.send("Hello".encode())
+-----------------------------------------------------------------------------------------------------------------------
+7) connect()
+-----------------------------------------------------------------------------------------------------------------------
+Syntax:    clientsocketobj.connct(("DNS/IP Address",portno))
+=>This Function is used for obtaining Connection from Server Side Program at Client Side Program
+=>Example:    s=socket.socket()
+			s.connect(("localhost",8888))
+-----------------------------------------------------------------------------------------------------------------------
+
+

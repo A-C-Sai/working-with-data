@@ -1,0 +1,64 @@
+		=========================================
+				2. bytes
+		=========================================
+=>bytes is one of the pre-defined class and treated as Sequence Data Type.
+=>The purpose of bytes data type is that " To maintain End-End Encryption(Converting 
+    Plain Text into Cipher text / Encrypted Format)".
+=>In Order to impelement End-End Encryption Process, bytes data data type orangizes the 
+    data in the form of Possitive Numerical Integer values ranges from [0,256) ".
+=>bytes data type does not contain any symbolic notation but we can convert other type of 
+    values into bytes by using bytes()
+=>bytes object maintains Insertion Order. i.e In whichever order, we enter the data in the 
+    same order data will be displayed.
+=>on the object of bytes, we can perform Both Indexing and Slicing Operations.
+=>An Object of bytes belongs to Immutable bcoz bytes' object does not support item 
+    assignment
+-------------------------------------------------
+Examples
+-------------------------------------------------
+>>> l1=[10,20,30,0,45,256]
+>>> print(l1,type(l1))-----------[10, 20, 30, 0, 45, 256] <class 'list'>
+>>> b=bytes(l1)----------ValueError: bytes must be in range(0, 256)
+>>> l1=[-10,20,30,0,45,255]
+>>> print(l1,type(l1))-----------[-10, 20, 30, 0, 45, 255] <class 'list'>
+>>> b=bytes(l1)------------ValueError: bytes must be in range(0, 256)
+>>> l1=[10,20,30,0,45,255]
+>>> print(l1,type(l1))-------------[10, 20, 30, 0, 45, 255] <class 'list'>
+>>> b=bytes(l1)
+>>> print(b,type(b))----b'\n\x14\x1e\x00-\xff' <class 'bytes'>
+>>>
+>>> for val in b:
+...	      print(val)
+...
+			10
+			20
+			30
+			0
+			45
+			255
+
+>>> b[0]--------------------10
+>>> b[-1]------------------ 255
+>>> b[0:4]--------------- b'\n\x14\x1e\x00'
+>>>
+>>> for val in b[0:4]:
+...     print(val)
+				...
+				10
+				20
+				30
+				0
+>>> for val in b[::-1]:
+...		print(val)
+...
+			255
+			45
+			0
+			30
+			20
+			10
+
+>>> print(b,type(b),id(b))-------------b'\n\x14\x1e\x00-\xff' <class 'bytes'> 2530772810944
+>>> b[0]=123----------TypeError: 'bytes' object does not support item assignment
+===================================x===================================
+

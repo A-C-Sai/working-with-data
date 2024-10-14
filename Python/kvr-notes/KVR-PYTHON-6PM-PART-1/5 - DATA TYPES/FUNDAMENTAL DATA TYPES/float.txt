@@ -1,0 +1,34 @@
+			==========================================
+						2. float
+			==========================================
+Properties
+------------------
+=>float  is one of the pre-defined class and treated as Fundamental Category Data Type.
+=>The purpose of float data type is that " To Store Real Constant Values OR Floating point 
+    Values (Numbers with decimal Places)."
+=>This data type allows us to store floating values in The form of Scientific Notation. The advantage of Scientific Notation is that "To Minimize the floating values Memory Space".
+=>This data type never supports to Store Binary, Octal and Hexa Decimal Data.
+------------------
+Examples:
+------------------
+>>> a=10.2
+>>> b=2.3
+>>> c=a+b
+>>> print(a,type(a))---------------------10.2 <class 'float'>
+>>> print(b,type(b))----------------------2.3 <class 'float'>
+>>> print(c,type(c))----------------------12.5 <class 'float'>
+>>> print(22/7)----------------------------3.142857142857143
+------------------------------------------------------------------------------------
+>>> a=0b1010.0b1010---------------SyntaxError: invalid decimal literal
+>>> a=0o123.0o345------------------SyntaxError: invalid decimal literal
+>>> a=0xbee.0xface----------------SyntaxError: invalid decimal literal
+>>> a=0b1111.0xbee-----------------SyntaxError: invalid decimal literal
+-------------------------------------------------------------------------------------------------
+>>> k=4e2
+>>> print(k,type(k))----------------------------400.0 <class 'float'>
+-------------------------------------
+>>> a=0.00000000000000000000000000000000000002
+>>> print(a,type(a))------------------2e-38 <class 'float'>
+>>> k=4e-2
+>>> print(k,type(k))-------------0.04 <class 'float'>
+------------------------------------------------------------------------------------------------

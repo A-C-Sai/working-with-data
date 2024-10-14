@@ -1,0 +1,73 @@
+		===============================================
+		Numpy--selecting the elements based on condition
+					(OR)
+			Creating Filter Directly From ndArray
+		===============================================
+=>To select any element from ndarray object, we have two approaches. They are
+-------------------
+Approach-1:
+-------------------
+=>Prepare Boolean Array ( It contains True or False. True represents Condition  
+    satisfied and False represents Condition not satisfied]
+
+    Syntax:-        varname=ndarrayobject with condition
+
+                          varname is called boolean array.
+
+=>Pass the Boolean Array to the ndarray object. so that we can get  those elements from ndarray which satisfies  with the entry True(or) we can get  those elements from ndarray corresponding True entries of Boolean array.
+
+	Syntax:        ndarray [ Boolean Array ]
+
+-------------------
+Approach-2:
+-------------------
+=>In this approach, we directly pass Boolean array values to the ndarray for getting required elements based on condition.
+
+		Syntax:       ndarray[ndarrayobject with condition]
+------------------------------------------------------------------------------------------------------------------------
+Examples:
+-----------------------------
+Q1) Select the Possitive Elements from ndarray
+>>> import numpy as np
+>>> l=[10,21,-34,23,-45,30,-40]
+>>> print(l)--------------[10, 21, -34, 23, -45, 30, -40]
+>>> a=np.array(l)
+>>> a------------array([ 10,  21, -34,  23, -45,  30, -40])
+>>> b=a>0    # Boolean Array
+>>> print(b)----[ True  True False  True False  True False]
+>>> a[b]-------array([10, 21, 23, 30])
+===================OR=========================
+>>> a[ a>0 ]-----------array([10, 21, 23, 30])
+-------------------------------------------------------------------
+Q2) Select the Negative Elements from ndarray
+	>>> l=[10,21,-34,23,-45,30,-40]
+	>>> a=np.array(l)
+	>>> a----------	array([ 10,  21, -34,  23, -45,  30, -40])
+	>>> b=a<0  # Boolean Array
+	>>> b----	array([False, False,  True, False,  True, False,  True])
+	>>> a[b]-------	array([-34, -45, -40])
+		=================OR=============
+	>>> a[a<0]--------------	array([-34, -45, -40])
+---------------------------------------------------------------------------------
+Q3) Select the Even and Odd  Elements from ndarray
+>>> a=np.array([11,20,33,31,41,47,46,12,13])
+>>> a------------------array([11, 20, 33, 31, 41, 47, 46, 12, 13])
+>>> a[a%2==0]-----------------array([20, 46, 12])
+>>> a[a%2!=0]-----------------array([11, 33, 31, 41, 47, 13])
+-------------------------------------------------------------------------------------------------------------------------
+>>> a=np.array([10,20,30,40,50,60,70,80,90])
+>>> b=a.reshape(3,3)
+>>> b
+		array([[10, 20, 30],
+		       [40, 50, 60],
+		       [70, 80, 90]])
+#Get Multiples of 3
+>>> m3=(b%3==0)
+>>> m3  #----------------------Boolean array
+			array([[False, False,  True],
+			       [False, False,  True],
+			       [False, False,  True]])
+>>> b[m3]--------------------------array([30, 60, 90])
+======================OR===========================
+>>> b[b%3==0]-------------------array([30, 60, 90])
+===================================================================

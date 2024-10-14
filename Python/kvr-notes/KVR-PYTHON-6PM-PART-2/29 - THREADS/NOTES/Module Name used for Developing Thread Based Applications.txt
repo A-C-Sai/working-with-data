@@ -1,0 +1,85 @@
+  		======================================================
+		Module Name used for Developing Thread Based Applications
+		======================================================
+=>For Developing Thread Based Applications, we use a pre-defined module called 
+   "threading".
+================================================================
+MODULE NAME :  threading
+================================================================
+Functions Names in "threading" module
+-----------------------------------------------------------------------------------------------------------
+1) current_thread():- This Function is used for obtaining Name of the thread.
+				Syntax:   varname=threading.current_thread()
+				-----------------
+				Examples:-
+				-----------------
+				tname=threading.current_thread()
+				print("Default Name of thread=",tname.name)		
+						OR
+				print("Default thread name=",threading.current_thread().name)
+
+2) active_count(): This Function is used obtaining number of therads which are	running / active.
+			      Syntax:     varname=threading.active_count()
+			      -----------------
+			      Example
+			      -----------------
+			      noat=threading.active_count()
+			      print("Number of active threads=",noat) # 1
+			     -------------------
+================================================================
+Class Name in "threading" module : "Thread"
+---------------------------------------------------------------------------------------------------------------
+Methods in Thread Class
+---------------------------------------------------------------------------------------------------------------
+1) Thread(target,args)
+-------------------------------------
+Syntax:-
+	varname=threading.Thread(target=FunctionName,args=(list of values if any) )
+=>here varname is an object of Thread class and treated as sub thread / child 
+   thread.
+=>Examples:   t1=threading.Thread(target=findsqauares,args=(lst,) )
+			t2=threading.Thread(traget=welcome)
+Here t1 and t2 are called Sub Threads OR Child Threads.
+---------------------------------------------
+2) is_alive()
+---------------------------------------------
+=>This Function is used for checking wether the Sub thread is under execution or  not.
+=>If the sub thread is under running Process then it returns True otherwise it returns False.
+=>Syntax:    var name=threading.is_alive()
+--------------------------------------------------------
+3. start()
+--------------------------------------------------------
+=>This Function is used for dispatching sub threads to the corresponding target  function.
+=>Syntax:        subthreadobj.start()
+================================================================
+4. setName(): It is used for setting the User-Freindly thread name for sub thread
+
+			syntax:  subthreadobj.setName(" User-Freindly thread name")
+			----------
+			Here  setName() deprecated on the name of "name" attribute
+
+			Syntax:   subthreadobj.name=User-Freindly thread name
+			----------
+---------------------------------------------
+5. getName()
+---------------------------------------------
+=> It is used for getting the thread name 
+			----------
+			syntax:  varname=threadobj.getName(")
+			----------
+			Here  getName() deprecated on the name of "name" attribute
+			-----------
+			Syntax:		threadobj.name
+			----------
+-----------------------------------------------------------------------------------------------------
+6) join():
+---------------------------------------------
+=>This Function is used for making sub threads to join with main thread.
+=>When subthreads object calls join() then main thread will wait until until sub threads complete their execution.
+=>Syntyax:-    subthreadobj1.join()
+		       subthreadobj2.join()
+			----------------------------
+			----------------------------
+		       subthreadobj-n.join()
+
+-----------------------------------------------------------------------------------------------------

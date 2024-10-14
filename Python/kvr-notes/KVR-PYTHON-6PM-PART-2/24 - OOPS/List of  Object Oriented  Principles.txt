@@ -1,0 +1,12 @@
+		=================================================
+			 List of  Object Oriented  Principles 
+		=================================================
+=>To say a languge is Object Oriented , It has to sastisfy the following Principles.
+			
+			1. Classes
+			2. Objects
+			3. Data Encapsulation
+			4. Data Abstraction
+			5. Inheritance
+			6. Polymorphism
+			7. Message Passing(already discussed )

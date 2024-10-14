@@ -1,0 +1,32 @@
+		===============================================
+				5. Interpreted Programming
+		===============================================
+=>When we develop any python program, we must give some file name with an extension .py (File Name.py).
+=>When we execute python program, two process taken place internally
+		a) Compilation Process
+		b) Execution Process.
+=>In COMPILATION PROCESS, The python Source Code submitted to Python Compiler and It reads the source Code line by line , Check for errors by verifying syntaxes and if no errors found then Python Compiler Converts into Intermediate Code called BYTE CODE with an extension .pyc (FileName.pyc). If erros found in source code  then we error displyed on the console.
+=>In EXECUTION PROCESS, The PVM reads the Python Intermediate Code(Byte Code) and Line by Line and Converted into Machine Understable Code (Executable or binary Code) and It is read by OS and Processer and finally Gives Result.
+=>Hence In Python Program execution, Compilation Process and Execution Process is taking place Line by Line conversion and  It is one of the Interpretation Based Programming Language.
+--------------------------------------------------------------------
+Definition of PVM ( Python Virtual Machine)
+--------------------------------------------------------------------
+=>PVM is one program in Python Software and whose role is to read LINE by LINE of Byte Code and Converted into Machine Understable Code (Executable or binary Code) 
+=====================================================================
+		Basic Definitions
+=====================================================================
+=>Interpreter:- Software / program whose Role is converting Line by Line into Intermediate 
+                                                                                                                        code
+=>Compiler:-  Software / program whose Role is converting all Lines into Intermdiate Code
+=>Interpretation: Line by Line Conversion Process is Called Interpretation
+=>Compilation:- all Lines  Conversion Process is Called Compilation
+=>Program: Set of Optimized Instructions is called Program
+=>Source Code:-The Instructions Written by Python Programmer and Understandable by 
+                            Other Programmer is called Source Code.
+=>Intermediate Code: Source Code Compiled into some type of code and it is called 
+                                     Intermediate Code
+
+=>Executable Code or Machine Code or Binary Code: 
+
+The Code which is Understandable By OS and  Processor Is called Executable Code or Machine Code or Binary Code
+========================================================================

@@ -1,0 +1,72 @@
+		========================================
+					File Opening Modes in Python
+		========================================
+=>The purpose of File Opening Modes is that To specify which mode we are opening the file.
+=>In Python , we have 8 file Opening Modes. They are
+		1. r			
+		2. w
+		3. a
+		4. r+
+		5. w+
+		6. a+
+		7. x
+		8. x+
+--------------------------------------------------------------------------------------------------------------
+1. r
+--------------------------------------------------------------------------------------------------------------
+=>This mode is used for Opening the File Read Mode
+=>'r' is the default file mode 
+=>When the file name in "r" mode and if that file name does not exist then we get FileNotFoundError.
+--------------------------------------------------------------------------------------------------------------
+2. w
+--------------------------------------------------------------------------------------------------------------
+=>This Mode is used for Creating a New File and Open it in write mode always.
+=>When Open NEW FILE in "w" Mode then it will be created and opened in Write Mode
+=>When Open EXISTING FILE in "w" Mode then it will be opened in Write Mode and Existing Data 
+     OVERLAPPED with new data
+--------------------------------------------------------------------------------------------------------------
+3. a
+--------------------------------------------------------------------------------------------------------------
+=>When Open NEW FILE in "a" Mode then it will be created newly and opened in Write Mode
+=>When Open EXISTING FILE in "a" Mode then it will be opened in Write Mode and Existing Data 
+     APPENDED with new data.
+--------------------------------------------------------------------------------------------------------------
+4. r+
+--------------------------------------------------------------------------------------------------------------
+=>This mode is used for Opening the File Read Mode
+=>When the file name in "r+" mode  thhen the file name opened in read read mode and we  can First Read 
+     the data and later additionally  we can perform write Operation also.
+=>When we open the file in "r+" and if that file name does not exist then we get FileNotFoundError.
+--------------------------------------------------------------------------------------------------------------
+5. w+
+--------------------------------------------------------------------------------------------------------------
+=>This Mode is used for Creating a New File and Open it in write mode always.
+=>When Open NEW FILE in "w+" Mode then it will be created and opened in Write Mode
+=>When Open EXISTING FILE in "w+" Mode then it will be opened in Write Mode and Existing Data 
+     OVERLAPPED with new data
+=>Additionally, with this mode First we can perform Write Operation and later we can perform Read 
+     Operation and There is possibility of getting IOError, OSError  
+--------------------------------------------------------------------------------------------------------------
+6. a+
+--------------------------------------------------------------------------------------------------------------
+=>When Open NEW FILE in "a+" Mode then it will be created newly and opened in Write Mode
+=>When Open EXISTING FILE in "a+" Mode then it will be opened in Write Mode and Existing Data 
+     APPENDED with new data.
+=>Additionally, with this mode First we can perform Write Operation with appending ,and later we can 
+    perform Read  Operation and There is possibility of getting IOError, OSError  
+--------------------------------------------------------------------------------------------------------------
+7. x
+--------------------------------------------------------------------------------------------------------------
+=>This mode is used for opening the NEW FILE NAME eXclusively in Write Mode and we can perform write 
+     Operations.
+=>If we open EXISTING FILE in 'x' mode then we get FileExistError.
+--------------------------------------------------------------------------------------------------------------
+8. x+
+--------------------------------------------------------------------------------------------------------------
+=>This mode is used for opening the NEW FILE NAME eXclusively in Write Mode and First we can perform 
+     write  Operation and later additionally we can also perform Read Operation.
+=>If we open EXISTING FILE in 'x+' mode then we get FileExistError.
+-------------------------------------------------------------------------------------------------------------------
+
+
+

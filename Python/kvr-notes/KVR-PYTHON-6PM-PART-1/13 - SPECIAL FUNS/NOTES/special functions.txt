@@ -1,0 +1,21 @@
+		===========================================
+			Special Functions in Python
+		===========================================
+=>In Python, we have 3 special Functions. They are
+
+			1) filter()
+			2) map()
+			3) reduce()
+			4) zip() ----> packs corresponding elements of two or more objects?
+				lst = [1,2,3,4]
+				lst2 = ["A","B","C","D"]
+				z = zip(lst,lst2)
+				z
+				<zip object at 0x108ba56c0>
+				z = list(z)
+				z
+				[(1, 'A'), (2, 'B'), (3, 'C'), (4, 'D')] ----> can convert this 										into dict also.
+				if we have irregular sizes then only equal elements will be 					packed.
+				
+				for k,v in z: pass
+----------------------------------------------------------------------------------------------------------------

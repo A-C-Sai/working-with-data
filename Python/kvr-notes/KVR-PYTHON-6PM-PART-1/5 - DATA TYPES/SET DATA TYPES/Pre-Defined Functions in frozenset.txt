@@ -1,0 +1,30 @@
+			=====================================
+				Pre-Defined Functions in frozenset 
+			=====================================
+=>frozenset  contains the following Functions
+			a) copy()
+			b) isdisjoint()
+			c) issuperset()
+			d) issubset()
+			e) union()
+			f) intersection()
+			g) difference()
+			h) symmertic_difference()
+
+NOTE:
+-------------
+>>> fs1=frozenset({10,20,30,409})
+>>> print(fs1,type(fs1),id(fs1))--------frozenset({409, 10, 20, 30}) <class 'frozenset'>																2068835340960
+>>> fs2=fs1.copy()
+>>> print(fs2,type(fs2),id(fs2))-----frozenset({409, 10, 20, 30}) <class 'frozenset'>															2068835340960
+
+=>In General Immutable Object content is Not Possible to copy( in the case of tuple). Where as in the frozenset, we are able to copy its content to another frozenset object. Here Original frozenset object and copied frozenset object contains Same Address and Not at all possible to Modify / Change their content.
+
+=>frozenset  does not contain the following Functions
+			a) clear()
+			b) add()
+			c) remove()
+			d) discard()
+			e) pop()
+			f) update()
+--------------------------------------------------------------------------------------------------------------

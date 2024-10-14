@@ -1,0 +1,22 @@
+		==========================================
+			5. Bitwise Complement Operator ( ~ )
+		==========================================
+=>Syntax:-   varname= ~Number
+=>Bitwise Complement Operator ( ~ ) Inverts Bits of Given Number
+=>Complement of a Number = - ( Number + 1 )
+=> A negative number, -x, is written using the bit pattern for (x-1) with all of the bits complemented (switched from 1 to 0 or 0 to 1)
+
+Examples:
+----------------
+>>>a=10
+>>>b=~a
+>>>print(b)------->   -11
+------------------------------
+>>> a=4
+>>> b=~a
+>>> print(b)---------    -5
+--------------------------------
+>>> a=-101
+>>> b=~a
+>>> print(b)------>100
+----------------------------------------------------------------------------

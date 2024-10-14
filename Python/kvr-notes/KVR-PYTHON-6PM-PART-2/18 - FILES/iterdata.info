@@ -1,0 +1,4 @@
+[10, 'Rossum', 34.56, True]
+(100, 'Travis', 64.56, True, (3+4j))
+{50, 20, 40, 10, 30}
+{10: 'Python', 30: 'Data Science', 20: 'Java'}

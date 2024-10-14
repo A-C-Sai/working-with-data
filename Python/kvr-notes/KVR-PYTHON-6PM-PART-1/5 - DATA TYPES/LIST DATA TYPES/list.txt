@@ -1,0 +1,89 @@
+			======================================
+					1. list
+			======================================
+Index
+----------
+=>Properties of list
+=>Types of list
+		a) Empty List
+		b) Non-Empty List
+=>Operations on list
+			a) Indexing
+			b) Slicing
+=>Pre-Defined Functions in list
+=>Inner / Nested List
+=>Programming Examples
+-------------------------------------------------------------------------------------------------------------------------------
+=>Properties of list
+-------------------------------------------------------------------------------------------------------------------------------
+=>'list' is one of the pre-defined class and treated as list data type.
+=>Purpose of list data type is that " To store multiple values either of same type or 
+    different type with Unique and duplicates in single Variable."
+=>In List data must be organized within Square Brackets [ ] and values must separated by 
+   comma.
+	Syntax:    listobj=[Val1,Val2...val-n]
+=>An object of list maintains Insertion Order ( In whichever Order, we insert the data in the 
+    same order Elements will displyed)
+=>On the Object of list, we can perform Both Ondexing and Slicing Operations.
+=>An object of list belongs to Mutable.
+=>In Python Programming, we can create Two Types of List objects. They are
+			1) Empty List
+			2) Non-Empty List
+----------------------
+1) Empty List
+----------------------
+=>An Empty List is One, which does not contain any Elements and whose length is 0
+=>Syntax:   varname=[]
+			(OR
+		    varname=list()
+----------------------
+2) Non-Empty List
+----------------------
+=>A Non-Empty List is One, which  contains Elements and whose length >0
+=>Syntax:   varname=[Val1,Val2,val3....Val-n]
+			(OR
+		    varname=list(object)
+-----------------------------------------------------------------------------------------------------------
+Examples:
+------------------------------------------------------------------------------------------------------------
+>>> l1=[10,20,30,10,20,34.56,0.99]
+>>> print(l1,type(l1))-------------[10, 20, 30, 10, 20, 34.56, 0.99] <class 'list'>
+>>> len(l1)-----------7
+>>> l2=[10,20,30,40,345,1000]
+>>> print(l2,type(l2))-------------[10, 20, 30, 40, 345, 1000] <class 'list'>
+>>> len(l2)------------6
+>>> l3=[10,"Samir",34.56,True,2+3j]
+>>> print(l3,type(l3),id(l3))---------[10, 'Samir', 34.56, True, (2+3j)] <class 'list'> 2774283308160
+>>> l3[0]----------10
+>>> l3[-1]---------(2+3j)
+>>> l3[0]=100  # Update the list Elements
+>>> print(l3,type(l3),id(l3))---[100, 'Samir', 34.56, True, (2+3j)] <class 'list'> 2774283308160
+>>> l3[0:3]----------[100, 'Samir', 34.56]
+>>> l3[::-1]----------[(2+3j), True, 34.56, 'Samir', 100]
+>>> l3[::2]----------[100, 34.56, (2+3j)]
+>>> print(l3)---------[100, 'Samir', 34.56, True, (2+3j)]
+>>> l3[1][::2]---------'Smr'
+>>> l3[1]-------------'Samir'
+>>> l3[1][::-1]-----------'rimaS'
+-------------------------------------------
+>>> l1=[100,"Rossum",34.56]
+>>> print(l1,type(l1),len(l1))-------------[100, 'Rossum', 34.56]    <class 'list'>     3
+
+>>> l2=[]
+>>> print(l2,type(l2),len(l2))----------- [] <class 'list'>    0
+>>>
+>>> l3=list()
+>>> print(l3,type(l3),len(l3))---------------   [] <class 'list'> 0
+>>>
+>>> s="PYTHON"
+>>> print(s,type(s))-------------------PYTHON <class 'str'>
+>>> l=list(s)
+>>> print(l,type(l))------------------['P', 'Y', 'T', 'H', 'O', 'N'] <class 'list'>
+>>> len(l)------------------6
+>>>
+>>> l1=[10,20,30,40,50]
+>>> ba=bytearray(l1)
+>>> print(ba,type(ba))--------------bytearray(b'\n\x14\x1e(2') <class 'bytearray'>
+>>> l2=list(ba)
+>>> print(l2,type(l2))------------------[10, 20, 30, 40, 50] <class 'list'>
+-------------------------------------------------------------------------------------------------------------

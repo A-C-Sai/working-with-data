@@ -1,0 +1,24 @@
+		====================================
+				Multi Threading in Python
+		====================================
+Index
+------------
+=>Purpose of Multi Threading
+=>Types of Applications
+		a) Process Based OR Single Theraded Modelling Lang / Applications
+		b) Therad  Based OR Multi Theraded Modelling Lang / Applications
+=>Development of Therad  Based Applications
+=>Module Name of Development of Therad  Based Applications ( threading)
+=>Detailed Discussion about "threading"module
+=>Programming Examples
+=>Number of approaches to Develop of Therad  Based Applications
+			a) Functional Programming Approach
+			b) Object Orieneted Approach
+=>Programming Examples
+------------------------------------------------------------------------------------
+=>Synchnronizatrion in Threading / DeadLocks in Threading
+=>Elimination of DeadLocks in Threading
+=>Implemetation Lock class of threading Module
+=>Programming Examples
+------------------------------------------------------------------------------------
+
